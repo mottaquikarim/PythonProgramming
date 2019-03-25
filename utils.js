@@ -56,7 +56,7 @@ const reloadSummary = () => glob(SRC + '/**/*', (err, res) => {
 						break;
 					}
 					if (isUseableFilePrev) {
-						a = a.slice(0,k-1).concat([usableFiles[0]]).concat(a.slice(k-1));
+						a = a.slice(0,k).concat([usableFiles[0]]).concat(a.slice(k));
 						usableFiles = usableFiles.slice(1)
 						isBroke = true;
 						break;
