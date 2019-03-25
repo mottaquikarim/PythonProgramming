@@ -126,7 +126,7 @@ We use booleans primarily in conditional statements
 
 `None` represents variables that have not yet been defined.
 
-```
+```python
 print(type(None)) # <class 'NoneType'>
 ```
 
@@ -203,7 +203,7 @@ item_quant_5
 
 Print to the console the name and price of each item defined above as follows:
 
-```
+```text
 1 Coco Puffs = $8.95.
 ```
 
@@ -218,13 +218,13 @@ Given the code above, now implement the "calculator" part
 
 Write a program that will output not only the:
 
-```
+```text
 1 Coco Puffs = $8.95.
 ```
 
 from above, but will also calculate the total price *and* price with tax. Sample output:
 
-```
+```text
 1 Coco Puffs = $8.95.
 2 Pop tarts = $5.00. # this means price of pop tarts is 2.50
 1 Eggs = $3.25.
@@ -241,7 +241,7 @@ TOTAL: $34.04 # use round() to solve this
 
 Update the code above to solicit **user** input for name, price, quantity. The `input()` command will help us solve this:
 
-```
+```text
 item_name_1 = input('Name your first item') # this will ask user to input value of item_name_1
 ```
 
