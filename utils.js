@@ -8,7 +8,14 @@ const SRC = 'app/src';
 
 
 const getFileData = file => new Promise((resolve, reject) => {
+	console.log('file', file)
+	if (fs.lstatSync(file).isDirectory()) {
+		console.log(`file ${file} is dir, skipping`)
+		resolve(null)
+		return;
+	}
 	fs.readFile(file, 'utf8', (err, data) => {
+		console.log(err, file)
 		const meta = data.match(/<!---([^]*)-->/);
 		if (meta && meta.length) {
 			const metaObj = JSON.parse(meta[1]);
@@ -25,13 +32,23 @@ const reloadSummary = () => glob(SRC + '/**/*', (err, res) => {
 		console.log('ERR: ', err)
 		return;
 	}
+	console.log(res)
 
 	let a = [];
 	const files = Promise.all(res.map(file => getFileData(file)));
+	
 	files
 		.then(allFiles => allFiles.filter(f => f !== null))
 		.then(usableFiles => {
+			console.log('usableFiles are:', usableFiles)
+			let i = 0;
 			while (usableFiles.length > 0) {
+				++i;
+				// if (i > 6) break;
+				console.log('--------------------')
+				console.log(usableFiles.map(f => `FILE: ${f.file}; NEXT: ${f.next}`).join('\n'))
+				console.log(a.map(f => `A: FILE: ${f.file}; NEXT: ${f.next}`).join('\n'))
+				console.log('--------------------')
 				if (a.length === 0) {
 					a = a.concat([usableFiles[0]]);
 					usableFiles = usableFiles.slice(1)
@@ -42,6 +59,12 @@ const reloadSummary = () => glob(SRC + '/**/*', (err, res) => {
 					a = [usableFiles[0]].concat(a);
 					usableFiles = usableFiles.slice(1)
 					continue;
+				}
+
+				if (usableFiles[0].next === '') {
+					a = a.concat([usableFiles[0]])
+					usableFiles = usableFiles.slice(1)
+					continue
 				}
 
 				let isBroke = false
@@ -69,10 +92,34 @@ const reloadSummary = () => glob(SRC + '/**/*', (err, res) => {
 			return a;
 		})
 		.then(files => {
-			const md = files.map(({title, file}) => `- [${title}](${file.split('/').pop()})`)
+
+			files = files.map(f => {
+				const {file, next, title} = f;
+
+				return {
+					file: file.split(SRC+'/').pop(),
+					next: next.split(SRC+'/').pop(),
+					title,
+				};
+			})
+			let str = "";
+			const strbuilder = files.reduce((hash, f) => {
+				const {file, title} = f;
+				const starter = file.split('/')[0]
+				if (!hash[starter]) {
+					hash = {};
+					hash[starter] = true;
+					str += `- [${title}](${file})\n`
+					return hash;
+				}
+
+				str += `\t- [${title}](${file})\n`
+				return hash;
+
+			}, {});
 			fs.writeFile(SRC + '/SUMMARY.md', `# Summary 
 
-${md.join('\n')}`, (err) => {
+${str}`, (err) => {
 				reBuild();
 			});
 		})

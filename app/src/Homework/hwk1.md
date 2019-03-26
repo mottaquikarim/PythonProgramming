@@ -1,20 +1,8 @@
 <!---
-{"next": "essential_terminology.md","title": "LECTURE ONE: Basic Data Types"}
+{"next":"about.md","title":"Homework 1"}
 -->
 
-# Basic Data Types
-
-1. Learn the essential words and concepts that are used on a daily basis by engineers and project/product managers on the job.
-2. Understand what basic data types are in Python
-
-## Agenda
-
-**[Essential Terminology](essential_terminology.html)**
-
-**[Pythonic Data Types](basic_data_types.html)**
-
-## Homework 1 
-*Due on the first Tuesday of the following week*
+# Homework 1
 
 For the challenges below, you will create a new `.py` file and write code to solve the problem. In this case, you will create `solution.py` for your solution code to the problem. Run the file from the command line to check your work. Detailed directions are given below
 

@@ -1,8 +1,8 @@
 <!---
-{"next": "chapter_4.md","title": "Pythonic Data Types"}
+{"next": "Homework/README.md","title": "Basic Data Types"}
 -->
 
-# Pythonic Data Types
+# Basic Data Types
 
 Let's discuss data types, variables, and naming.
 

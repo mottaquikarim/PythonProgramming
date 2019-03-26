@@ -1,8 +1,6 @@
 <!---
-{"next":"tools.md","title":"Welcome!","first":true}
+{"next":"Intro/README.md","title":"Guten Tag!","first":true}
 -->
-
-![pycon](https://github.com/mottaquikarim/PythonBootcamp/blob/master/assets/pycon.png?raw=true)
 
 # Python Development
 *🎉🎈🎂🍾🎊🍻💃*
