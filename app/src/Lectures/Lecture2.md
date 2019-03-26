@@ -1,5 +1,5 @@
 <!---
-{"next":"Topics/README.md","title":"Lecture 2: Basic Data Types"}
+{"next":"Lectures/Lecture3.md","title":"Lecture 2: Basic Data Types"}
 -->
 
 # Lecture 2: Basic Data Types
