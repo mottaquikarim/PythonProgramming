@@ -39,7 +39,7 @@ Let's improve our calculator! Remember **[this](basic_data_types.md#-practice-sh
 
 (The *>* is computer prompt, *<* is user response)
 
-```
+```text
 > How many items?
 < 2
 > 1. Enter name of item:
