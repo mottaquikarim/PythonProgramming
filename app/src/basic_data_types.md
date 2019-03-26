@@ -1,8 +1,8 @@
 <!---
-{"next": "chapter_4.md","title": "Basic Data Types"}
+{"next": "chapter_4.md","title": "Pythonic Data Types"}
 -->
 
-# Basic Data Types
+# Pythonic Data Types
 
 Let's discuss data types, variables, and naming.
 
@@ -244,4 +244,16 @@ Update the code above to solicit **user** input for name, price, quantity. The `
 ```text
 item_name_1 = input('Name your first item') # this will ask user to input value of item_name_1
 ```
+
+## 🚗 Additional Resources
+
+* [A Repl.it Summarizing Print Statements](https://repl.it/@brandiw/Python-01-Variables-4?lite=true)
+* [Python For Beginners](http://www.pythonforbeginners.com/basics/python-variables)
+* [Python Programming Tutorial: Variables](https://www.youtube.com/watch?v=vKqVnr0BEJQ)
+* [Variables in Python](https://www.guru99.com/variables-in-python.html)
+* [Operators Cheatsheet](http://python-reference.readthedocs.io/en/latest/docs/operators/)
+* [Python Style Guide: Naming](https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles)
+- [Python-Strings](https://www.tutorialspoint.com/python/python_strings.htm)
+- [String Concatenation and Formatting](http://www.pythonforbeginners.com/concatenation/string-concatenation-and-formatting-in-python)
+- [String Concatenation and Formatting - Video](https://www.youtube.com/watch?v=jA5LW3bR0Us)
 

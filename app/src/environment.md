@@ -12,7 +12,10 @@ We will use **[REPL.IT](https://repl.it/)** as a quick, fast, simple way to get 
 
 After signing up, please visit **[this link](https://repl.it/languages)** and type in **PYTHON** to choose the correct python environment.
 
-For the purposes of this course, this is greatly preferred! We don't have much time and we don't have time to work on getting stuff installed on a machine (which can have particular caveats based on type (ie: mac vs pc, etc)). Do note that we are essentially taking a shortcut for the sake of practicality - if you are interested in installing python *for realsies*, take a look at **[this documentation](Anaconda.md)**.
+## Download Sublime Text
+
+[Sublime Text](http://www.sublimetext.com/3) &mdash; code editor &mdash; you'll be writing code here. This is a free tool, but they will ask you to donate every few saves. However, you can use the program for free as long as you'd like.
+
 
 
 ## Setting up PythonAnywhere Account

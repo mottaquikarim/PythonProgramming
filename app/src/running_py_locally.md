@@ -1,68 +1,236 @@
 <!---
-{"next":"basic_data_types.md","title":"Running Python Locally"}
+{"next":"lecture_1.md","title":"Running Python Locally"}
 -->
 
-# Running Python Locally (Optional!)
+# Running Python Locally
 
 Before we get into writing our code, we will have to install a few programs and tools. It may take about a half hr to pull off but ultimately a properly established development environment will pay off in spades as we navigate the rest of our day.
 
-## Tools to Download
+## Installing Python 3
 
-We will need to download two programs today. Links to download below.
+Instructions vary slightly depending on what kind of machine you're using. Click the link below that applies to you:
 
-### **[Anaconda](https://www.anaconda.com/download/)**
-Anaconda is a free python environment. This program is **LARGE** and mainly unnecessary. However setting up with it does seem simple: just download, wait a billion minutes and **BOOM**, python is installed. Feel free to delete after class is over.
+[Installation Instructions: Mac](#installation-instructions-mac)
 
-### **[PyCharm](https://www.jetbrains.com/pycharm/download/)**
-**⚡⚡ BE SURE TO DOWNLOAD THE COMMUNITY EDITION ⚡⚡**.
+[Installation Instructions: Linux](#installation-instructions-linux)
 
-PyCharm is an IDE (integrated development environment) that will allow you to write and run your python code in one simple program. Again, ideally we'd want to be able to do this in a more "regular" way (ie: via command line) but due to time restrictions and the beginner nature of this class, it is much simpler and easier to just go this route. 
+[Installation Instructions: Windows](#installation-instructions-windows)
 
-## Connecting Anaconda and PyCharm
 
-Anaconda kinda sucks for doing just pure, basic coding. They have a bunch of (tbf, cool looking) tools that you are free to explore after class...but we are here today to learn to code. As such, we cannot *only* use Anaconda, I find their UX to be painful and annoying for the simple usecases (ie: write some code, run the code, view the output, repeat).
+## Installation Instructions: Mac
 
-So, we will be using **PyCharm** to **write** and **run** our python programs. However, we need PyCharm to point to **Anaconda** because that's where python is **"installed"**. Luckily, there seems to be good support for this. Follow the instructions below to get started.
+Macs usually come with Python 2 already installed. We're going to run through some installation steps to make sure you've got the latest and greatest that Python has to offer.
 
-### 1. Create New PyCharm Project.
+### 1. Open up your terminal.
 
-Open PyCharm, run through their configs (ok to just use defaults, that's what I did). Then, go to **File>New Project**.
+You can do this by pressing command+space bar and typing "terminal," or by locating the application and clicking on the icon.
 
-### 2. Point Project Interpreter to Anaconda
 
-Use this **[handly tutorial](https://docs.anaconda.com/anaconda/user-guide/tasks/integration/pycharm)** from the Anaconda Documentation to associate PyCharm and Anaconda.
+### 2. Install XCode with the following command.
 
-### 3. Run Sample Code
-
-Now, let's write our first line of python! First, create a new file in project. Name the file `app.py`
-
-![new_file](https://github.com/mottaquikarim/PythonBootcamp/blob/master/assets/PyCharm_New_File.png?raw=true)
-
-Then, write the following line of code:
-
-```python
-print('Hello, Wrold!')
+```bash
+xcode-select --install
 ```
 
-Finally, run your code and ensure that you see the `Hello, Wrold` output as expected.
+This may take a few minutes. Once it's done, you can run the following command to make sure it's installed properly.
 
-![run_code](https://github.com/mottaquikarim/PythonBootcamp/blob/master/assets/PyCharm_Run_File.png)
+```bash
+xcode-select -p
+```
 
-![verify](https://github.com/mottaquikarim/PythonBootcamp/blob/master/assets/PyCharm_Verify_Output.png?raw=true)
+Your output should look something like this:
 
-## Setting up PythonAnywhere Account
+> /Applications/Xcode.app/Contents/Developer
 
-Although wrangling the PyCharm / Anaconda set up described above will allow us to safely and happily write python code **locally**, it is in some ways severely limiting because we are not able to run long standing processes or communicate with our code from real world inputs.
+### 3. Install `Homebrew` by running the following command.
 
-In order to truly achieve freedom to do anything we want with python, we must configure an environment in the **cloud** that is accessible via the internet.
+> **Pro tip:** Do not try to type this in. Copy and paste to make sure everything is correct. Do this by selecting the text with your cursor and pressing command+C. Then, go to your terminal and press command+V.
 
-Normally, this is an expensive and skills-intensive process. But! The Future is Now fam, and our service based economy affords us the ability to relatively easily set up a python environment for experimenting around in the cloud for **free**(...mium).
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-Pls go to **[Python Anywhere](https://www.pythonanywhere.com/)** and create a free account. If you find the service useful, feel free to upgrade later. For now, just create the account and verify that you can log in. We will have instructions for transferring some of our projects to the internets later on in the day.
+Once this command runs, type `brew doctor` on your terminal prompt. If you get the output `Your system is ready to brew`, you are ready to move on to the next step.
+
+
+### 4. Add PATH environment variable.
+
+This is a bit confusing, but basically we're setting the path up so Homebrew knows where to install something.
+
+```bash
+open ~/.profile
+```
+
+The file should open up. Ask your instructor for help if it didn't. Copy and paste the following line at the bottom of this file:
+
+> export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+Save the changes and close the file.
+
+
+### 5. Install Python 3 (finally!).
+
+Homebrew, by default, gets the latest stable version of whatever you're trying to install.
+
+```bash
+brew install python
+```
+
+### 6. Create an alias for `python3`.
+
+```bash
+open ~/.bashrc
+```
+
+At the bottom of that file, copy and paste the following lines:
+
+```bash
+alias python=python3
+alias pip=pip3
+```
+
+Learn more about aliases [here](https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3).
+
+
+### 7. Restart your Terminal.
+
+Right click (control+click on most Macs) on the Terminal icon in your application tray. Select `Quit` from the menu to make sure Terminal is fully stopped. Then, open it again (see Step 1).
+
+> **Pro tip:** Your settings won't be updated until Terminal is fully stopped and restarted. If you simply minimize the program, you will not see any updates!
+
+### 8. Check version.
+
+```bash
+python --version
+```
+
+You will get something like this. As long as it starts with a 3, you're good to go!
+
+> Python 3.6.5
+
+Now let's check `pip`, the package installer.
+
+```bash
+pip --version
+```
+
+> pip 10.0.1 from /usr/local/lib/python3.6/site-packages/pip (python 3.6)
+
+You want `pip` to be pointing to the Python 3.x version. If either `python` or `pip` are still pointing to version 2, please alert your instructor.
+
+
+You are now in a development environment!
+
+## Installation Instructions: Linux
+
+> **Pro tip:** The instructions are for Ubuntu. If you have another version of Linux, please follow these [suggested directions](http://docs.python-guide.org/en/latest/starting/install3/linux/).
+
+### 1. Open your terminal.
+
+Either:
+
+* Click Ubuntu icon (upper-left corner) to open Dash. Then, type "terminal" and select Terminal from the results.
+
+Or:
+
+* Hit the keyboard shortcut `Ctrl - Alt + T`.
+
+
+### 2. Check to see if Python 3 exists.
+
+Some distributions of Linux come with Python 3 already installed. How nice! To check if you have Python 3 already, run the following command:
+
+```bash
+python3 --version
+```
+
+If it gives you a version, you're good to go! Otherwise, move to Step 3.
+
+
+### 3. Install Python 3.6.
+
+```bash
+sudo apt-get update
+sudo apt-get install python3.6
+```
+
+Check again for the Python 3 version.
+
+```bash
+python3 --version
+```
+
+This time, things should be all good.
+
+If you are still unable to get Python 3, please alert your instructor now.
+
+---
+
+## Installation Instructions: Windows
+
+> **Pro tip:** If you have Windows XP, you need to be downgraded from Python 3.6 to 3.4. Please ask your instructor for help if you plan on using Windows XP.
+
+### 1. Download the Python installer.
+
+Visit [python.org](https://www.python.org/downloads/release/python-365/) and download the web-based installer for Windows. You'll find this under a "Files" section at the bottom of the page.
+
+If you have 64-bit Windows, use the link that contains `64`. If you have 32-bit Windows, download the one without `64`. If you have no idea what you have, [click here to learn how to find out](#windows-64-bit-or-32-bit).
+
+
+### 2. Run the installer.
+
+* Make sure both `Add Python 3.6 to PATH` and `Install for all users` are checked.
+* Click `Install Now`.
+
+
+### 3. Disable length limit.
+
+After the initial installation is finished, there will be an additional option that says something about a max character limit. **You want this!** Provide permission for this setting to be changed.
+
+### 4. Open your terminal.
+
+```text
+    * Click *Start*.
+    * Open *Windows System* menu.
+    * Select *Command Prompt*.
+```
+
+### 5. Run the `py` command.
+
+```bash
+py
+```
+
+You should get a message telling you what version of Python you're using as well as opening an in-terminal REPL. If you did, great! Skip to the next step.
+
+If you instead received an error message like the one below, something went wrong and Python didn't install correctly.
+
+```bash
+'py' is not recognized as an internal or external command,
+operable program or batch file.
+```
+
+In this case, ask your instructor for assistance.
+
+## Windows 64-Bit or 32-Bit
+
+> **Pro tip:** These directions are for Windows 7 and Windows Vista operating systems. If you have Windows 10, you most likely have a 64-bit machine, but if you want to be extra sure, [check here](https://support.microsoft.com/en-us/help/13443/windows-which-operating-system).
+
+1. Open "System" by clicking the "Start" button.
+
+2. Right click "Computer."
+
+3. Click "Properties."
+
+4. Under "System," you can view the system type.
+
+This will give you a bunch of stats about your machine, including whether it is 32-bit or 64-bit.
+
+5. Return to [Installation Instructions: Windows](#installation-instructions-windows).
 
 
 ## 🚗 Parking Lot
 
-Just some interesting/useful links I found while prepping for this class...
-
-1. [Adding Packages to PyCharm Project](https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html)
+* [Official OSX Installation Instructions](http://docs.python-guide.org/en/latest/starting/install3/osx/)
+* [Official Windows Installation Instructions](https://docs.python.org/3/using/windows.html)
+* [Windows-Specific Modules](https://docs.python.org/3/library/windows.html#mswin-specific-services)
