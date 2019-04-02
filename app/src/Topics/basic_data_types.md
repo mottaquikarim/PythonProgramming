@@ -73,12 +73,20 @@ another_int = example_int % 5 # modulus operator
 Sequences of characters are called "strings"
 
 ```python
-
 my_name = 'Taq Karim'
 your_name = "John Smith" # single or double quotes are valid
 
 string_type = type("testing") # <class 'str'>
+```
+You can also store several separate snippets of text within a single string. Let's say you're storing song lyrics, so you want to have a line break between each line of the song. To do this, you can use triple quotes i.e. `'''` or `"""`. You can use single and double quotes within the string freely, so no need to worry about that detail!
 
+```python
+'''
+'Cause if you liked it, then you should have put a ring on it
+If you liked it, then you should have put a ring on it
+Don't be mad once you see that he want it
+If you liked it, then you should have put a ring on it
+'''
 ```
 
 ## String operators
@@ -168,82 +176,17 @@ isinstance(False, bool) # True
 
 ```
 
-## 🚗 Practice: Shopping List Calculator I
+## 🚗 Problems
 
-Create five variables, set them to strings that represent 5 common shopping list items
+**[How to use the PSETS Repo](https://github.com/mottaquikarim/pydev-psets#getting-started)**
 
-```python
-item_name_1
-item_name_2
-item_name_3
-item_name_4
-item_name_5
-```
-
-Create five more variables, set them to floats that represent the prices of each of the items above
-
-```python
-item_price_1
-item_price_2
-item_price_3
-item_price_4
-item_price_5
-```
-
-Create five more variables, set them to ints that represent the **quantity** of each of the items above
-
-```python
-item_quant_1
-item_quant_2
-item_quant_3
-item_quant_4
-item_quant_5
-```
+* **[PRACTICE: Shopping List Calculator I](https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p1.py)**
 
 
-Print to the console the name and price of each item defined above as follows:
+* **[PRACTICE: Shopping List Calculator II](https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p2.py)**
 
-```text
-1 Coco Puffs = $8.95.
-```
 
-where:
-* `1` would be `item_quant_1`
-* `Coco Puffs` would be `item_name_1`
-* `8.95` would be `item_name_2`
-
-## 🚗 Practice: Shopping List Calculator II
-
-Given the code above, now implement the "calculator" part
-
-Write a program that will output not only the:
-
-```text
-1 Coco Puffs = $8.95.
-```
-
-from above, but will also calculate the total price *and* price with tax. Sample output:
-
-```text
-1 Coco Puffs = $8.95.
-2 Pop tarts = $5.00. # this means price of pop tarts is 2.50
-1 Eggs = $3.25.
-1 Steak = $12.00
-1 Milk = $2.25.
-
-TOTAL: $31.45 # this is calculated by adding the above
-TAX: $2.594625. # this is calculated by 8.25% of TOTAL
-
-TOTAL: $34.04 # use round() to solve this
-```
-
-## 🚗 Practice: Shopping List Calculator III
-
-Update the code above to solicit **user** input for name, price, quantity. The `input()` command will help us solve this:
-
-```text
-item_name_1 = input('Name your first item') # this will ask user to input value of item_name_1
-```
+* **[PRACTICE: Shopping List Calculator III](https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p3.py)**
 
 ## 🚗 Additional Resources
 

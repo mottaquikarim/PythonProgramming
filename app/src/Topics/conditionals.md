@@ -134,7 +134,7 @@ result = not is_it_hot # True
 
 ### `or` operator
 
-The **or** operator evaluates to `True` is any one of the operands is true.
+The **or** operator evaluates to `True` if any one of the operands is true.
 
 ```python
 is_it_warm = True

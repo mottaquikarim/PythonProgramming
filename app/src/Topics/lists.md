@@ -1,56 +1,34 @@
 <!---
-{"next": "Topics/loops.md","title": "Lists"}
+{"next": "Topics/dicts.md","title": "Lists"}
 -->
 
 # Lists
 
 In order to begin to truly write dynamic programs, we need to be able to work with *dynamic* data where we do not know how much of a certain type of variable we have.
 
-The problem, essentially is, **variables hold one item**.
+The problem, essentially is, **variables hold only one item**.
 
 ```python
 my_color = "red"
 my_peer = "Brandi"
 ```
+Lists hold multiple items - and lists can hold any datatype.
 
-Lists hold multiple items - and lists can hold anything.
+## Creating lists
 
-## Working with lists
-
-Here's how we may declare a list variable.
+Here are some different ways to declare a list variable:
 
 ```python
-colors = ["red", "yellow", "green"]
-grades = [100, 99, 65, 54, 19]
+colors = ['red', 'yellow', 'green'] #strings
+grades = [100, 99, 65, 54, 19] #numbers
+bools = [True, False, True, True] #booleans
 ```
 
-### Strings
-```python
-colors = ["red", "yellow", "green"]
-```
+To create a new **blank** list, simply use ```python blank_list = list()```.
 
-### Numbers
-```python
-my_nums = [4, 7, 9, 1, 4]
-```
+## Accessing Elements in the List
 
-### Booleans
-```python
-bools = [True, False, True, True]
-```
-
-### Other lists
-```python
-taq = [100, 100, 100]
-john = [85, 98, 54]
-
-students = [taq, john]
-```
-
-## Accessing Elements
-
-
-**List Index** means the location of something (an *element*) in the list.
+The **list index** means the location of something (an *element*) in the list.
 
 List indexes start counting at 0!
 
@@ -59,20 +37,26 @@ List indexes start counting at 0!
 | Index |     0    |   1   |    2    |    3   |    4   |
 
 ```python
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
 print(my_class[0]) # Prints "Brandi"
 print(my_class[1]) # Prints "Zoe"
 print(my_class[4]) # Prints "Dasha"
 ```
 
-## List Operations - Length
+## Built-in Operations for Analyzing Lists
 
+Python has some built-in operations that allow you to analyze the content of a list. Some basic ones include:
 
-`len()`:
+* ```len()```: tells you how many items are in the list; can be used for lists composed of any data type (i.e. strings, numbers, booleans)
+* ```sum()```: returns the sum of all items in *numerical lists*. 
+* ```min()```: returns the smallest number *in a numerical list*.
+* ```max()```: returns the largest number *in a numerical list*.
+* ```any()```: returns a Boolean to indicates whether the list contains any values that evaluate to True
+* ```all()```: returns a Boolean to indicates whether the list contains only values that evaluate to True
 
-- A built in `list` operation.
-- How long is the list?
+Here are some examples of each of these:
 
+#### Length of a List
 ```python
 # length_variable = len(your_list)
 
@@ -82,13 +66,64 @@ print("There are", num_students, "students in the class")
 # => 5
 ```
 
-## Adding Elements: Append
+#### Sum of Items in a Numerical List
+```python
+# sum_variable = sum(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+sum_avgs = sum(team_batting_avgs)
+print(f"The total of all the batting averages is {sum_avgs}")
+# => 2.409
+```
+
+#### Min and Max of a Numerical List
+```python
+# max(your_numeric_list)
+# min(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+print(f"The highest batting average is {max(team_batting_avgs}")
+# => 0.328
+print("The lowest batting average is", min(team_batting_avgs))
+# => 0.208
+```
+
+#### Checking a List for Any Instances of an Element
+Did anyone in the class get a perfect SAT score (i.e. 2400)?
+```python
+SAT_scores = [1890, 2010, 1740, 2400, 1970, 2400, 2150, 2280]
+perfect_score = any(x = 2400 for x in SAT_scores)
+
+if perfect_score is True:
+	print("At least one person got a perfect SAT score!")
+	# Based on the scores above, it will print this.
+```
+
+#### Checking for Consistency Between all Elements in a List
+Consider this:
+You just heard about a new Peruvian restaurant and want to try it. You take a poll asking whether your friends like Peruvian food or not to see if everyone would be okay with going to the new restaurant. If you get a unanimous yes, you can start dreaming about lomo saltado and ceviche - yum!
+
+```python
+poll_results = [True, False, True, False, True] # using booleans!
+decision = all(poll_results)
+print(decision)
+```
+Sadly, not all your friends like Peruvian food! Your all() function found 2 people who said "no" (i.e. False), so it returned ```False```. The decision is not unanimous, so you suggest a Korean restaurant you like and take another poll...
+
+```python
+poll_results = [True, True, True, True, True]
+decision = all(poll_results)
+print(decision)
+```
+
+## Built-In Operations for Manipulating Lists
+
+#### Add Items to a List
+
+If you want to extend the content of a single list, you can use `.append()` or `.insert()` to add elements of any data type.
 
 `.append()`:
-
-- A built in `list` operation.
 - Adds to the end of the list.
-- Takes any element.
 
 ```python
 # your_list.append(item)
@@ -99,13 +134,9 @@ print(my_class)
 # => ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
 ```
 
-## Adding Elements: Insert
-
 `.insert()`:
-
-- A built in `list` operation.
-- Adds to any point in the list
-- Takes any element and an index.
+- Adds to any point in the list.
+- Takes a index argument.
 
 ```python
 # your_list.insert(index, item)
@@ -116,12 +147,11 @@ print(my_class)
 # => ["Brandi", "Sanju", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
 ```
 
-## Removing elements - Pop
+#### Delete Items from a List
 
+Likewise, you can use `.pop()` or `.pop(index)` to remove any type of element from a list.
 
 `.pop()`:
-
-- A built in `list` operation.
 - Removes an item from the end of the list.
 
 ```python
@@ -135,11 +165,7 @@ print(my_class)
 # => ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
 ```
 
-## Removing elements - Pop(index)
-
 `.pop(index)`:
-
-- A built in `list` operation.
 - Removes an item from the list.
 - Can take an index.
 
@@ -154,7 +180,36 @@ print(my_class)
 # => ["Brandi", "Zoe", "Aleksander", "Dasha", "Sonyl"]
 ```
 
-## Quick Review: Basic List Operations
+#### Sorting Lists
+
+If you want to organize your lists better, you can sort them with the `sorted()` method. At the some basic level, you can sort both numerically and alphabetically.
+
+**Numbers - Ascending & Descending
+
+```python
+numbers = [1, 3, 7, 5, 6, 4, 2]
+
+ascending = sorted(numbers)
+print(ascending) # [1, 2, 3, 4, 5, 6, 7]
+```
+To do this in descending order, simply add `reverse=True` as an argument in `sorted()` like this:
+```python
+descending = sorted(numbers, reverse=True)
+print(descending) # [7, 6, 5, 4, 3, 2, 1]
+```
+Letters - Alphabetically & Reverse
+
+```python
+letters = ['b', 'e', 'c', 'a', 'd']
+
+ascending = sorted(letters)
+print(ascending) # ['a', 'b', 'c', 'd', 'e']
+
+descending = sorted(letters, reverse=True)
+print(descending) # ['e', 'd', 'c', 'b', 'a']
+```
+
+### Review of Basic List Operations
 
 ```python
 # List Creation
@@ -177,44 +232,11 @@ student_that_left = my_list.pop() # "Yi"; ["red", "Sanju", 7, "yellow", 1]
 
 # List Delete at Index
 student_that_left = my_list.pop(2) # 7; ["red", "Sanju", "yellow", 1]
-```
 
-## Numerical List Operations - Sum
-
-Some actions can only be performed on lists with numbers.
-
-`sum()`:
-
-- A built in `list` operation.
-- Adds the list together.
-- Only works on lists with numbers!
-
-```python
-# sum(your_numeric_list)
-
-team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
-sum_avgs = sum(team_batting_avgs)
-print("The total of all the batting averages is", sum_avgs)
-# => 2.409
-```
-
-## List Operations - Max/Min
-
-
-`max()` or `min()`:
-
-- Built in `list` operations.
-- Finds highest, or lowest, in the list.
-
-```python
-# max(your_numeric_list)
-# min(your_numeric_list)
-
-team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
-print("The highest batting average is", max(team_batting_avgs))
-# => 0.328
-print("The lowest batting average is", min(team_batting_avgs))
-# => 0.208
+# List Sorting
+numbers = [1, 5, 7, 3, 6, 4, 2]
+ascending = sorted(numbers) # [1, 2, 3, 4, 5, 6, 7]
+descending = sorted(numbers, reverse=True) # [7, 6, 5, 4, 3, 2, 1]
 ```
 
 ## Tuples
@@ -257,7 +279,6 @@ Sets are not indexed, so you cannot access say the 3rd element in a set. Instead
 print(2 in set_1) # True
 print(9 in set_1) # False
 ```
-
 Here's a **[helpful list](https://snakify.org/en/lessons/sets/#section_4)** of set operations.
 
 
@@ -268,14 +289,16 @@ Here's a **[helpful list](https://snakify.org/en/lessons/sets/#section_4)** of s
 3. Create a **list** with the numbers `2`,`4`, `6`, and `8`.
 4. Print the first number.
 
-
-## 🚗 2. Pop, Insert, and Append
+## 🚗 2. Editing & Manipulating Lists
 
 1. Declare a list with the names of your classmates
 2. Print out the length of that list
 3. Print the 3rd name on the list
 4. Delete the first name on the list
 5. Re-add the name you deleted to the end of the list
+6. You work for Spotify and are creating a feature for users to alphabetize their playlists by song title. Below are is a list of titles from one user's playlist. Alphabetize these songs.
+`playlist_titles = ["Rollin' Stone", "At Last", "Tiny Dancer", "Hey Jude", "Movin' Out"]`
+7. Create a list with 6 numbers and sort it in descending order.
 
 ## 🚗 3. Math Operations
 
@@ -286,5 +309,14 @@ On your local computer, create a `.py` file named `list_practice.py`. In it:
 3. Pop the last element in `numbers` off; re-insert it at index `2`.
 4. Pop the second number in `numbers` off.
 5. Append `3` to `numbers`.
-6. Print out the average number (divide the sum of `numbers` by the length).
+6. Print out the average number.
 7. Print `numbers`.
+
+
+
+## Additional Resources
+
+- [Python Lists - Khan Academy Video](https://www.youtube.com/watch?v=zEyEC34MY1A)
+- [Google For Education: Python Lists](https://developers.google.com/edu/python/lists)
+- [Python-Lists](https://www.tutorialspoint.com/python/python_lists.htm)
+- [Python List Methods](https://www.programiz.com/python-programming/methods/list/)
