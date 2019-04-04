@@ -240,6 +240,14 @@ else:
 
 In the example above, we print one of 4 possibilities - the elif allows us to go from 2 potential conditions to N potential conditions.
 
+## 🚗 [PSETS](https://github.com/mottaquikarim/pydev-psets)
+
+The problems are reproduced below, but you will want to run on github. First,
+
+```bash
+$ . ./update
+```
+
 ## 🚗 1. Generate Traffic Light
 
 ```python

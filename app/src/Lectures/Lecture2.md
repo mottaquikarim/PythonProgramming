@@ -1,8 +1,8 @@
 <!---
-{"next":"Lectures/Lecture3.md","title":"Lecture 2: Basic Data Types"}
+{"next":"Lectures/Lecture3.md","title":"Lecture 2: Essential Terminology"}
 -->
 
-# Lecture 2: Basic Data Types
+# Lecture 2: Essential Terminology
 
 ## Objectives
 
@@ -12,7 +12,7 @@
 ## Agenda
 
 1. **[Essential Terminology](../Topics/essential_terminology.md)**
-2. **[Basic Data Types](../Topics/basic_data_types.md)**
+2. <strike>**[Basic Data Types](../Topics/basic_data_types.md)**</strike>
 
 ## [Homework](../Homework/hwk1.md)
 *Due Tuesday April 2nd, 6:30PM*

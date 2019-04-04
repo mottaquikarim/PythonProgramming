@@ -1,8 +1,9 @@
 <!---
-{"next":"Lectures/Lecture4.md","title":"Lecture 3: Basic Data Types"}
+{"next":"Topics/README.md","title":"Lecture 4: Conditionals and Lists"}
 -->
 
-# Lecture 3: <strike>Conditionals and Lists</strike> Basic Data Types
+
+# Lecture 4: Conditionals and Lists
 
 ## Objectives
 
@@ -14,6 +15,10 @@
 
 ## Agenda
 
-1. **[Homework 1 Review](../Homework/hwk1.md)**
 2. **[Conditionals](../Topics/conditionals.md)**
 3. **[Lists](../Topics/lists.md)**
+
+
+## [Homework](../Homework/hwk1.md)
+*Due Tuesday April 9th, 6:30PM*
+
