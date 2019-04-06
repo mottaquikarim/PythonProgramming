@@ -1,8 +1,8 @@
 <!---
-{"next":"Lectures/Lecture2.md","title":"Lecture 1: Getting Started"}
+{"next":"Lectures/Lecture2.md","title":"✅ Installing Python"}
 -->
 
-# Lecture 1: Getting Started
+# ✅ Lecture 1: Installing Python
 
 ## Objectives
 
