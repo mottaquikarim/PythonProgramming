@@ -1,5 +1,5 @@
 <!---
-{"next":"Resources/librariestools.md","title":"Glossary"}
+{"next":"Resources/cheatsheets.md","title":"Glossary"}
 -->
 
 # Glossary

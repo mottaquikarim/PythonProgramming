@@ -23,7 +23,6 @@
 	- [Homework 1](Homework/hwk1.md)
 - [Resources](Resources/README.md)
 	- [Glossary](Resources/glossary.md)
-	- [Libraries & Tools](Resources/librariestools.md)
 	- [Cheat Sheets](Resources/cheatsheets.md)
 	- [Tips & Tricks](Resources/tipstricks.md)
 - [About](about.md)

@@ -1,5 +1,5 @@
 <!---
-{"next": "Topics/pandas.md","title": "Loops"}
+{"next":"Topics/pandas.md","title":"Loops"}
 -->
 
 # Iterating with Loops
@@ -18,7 +18,7 @@ print(visible_colors[5])
 
 Attempting to print each item in this list - while redundant - isn't so bad. But what if there were over 1000 items in that list? Or, worse still, what if that list changed based on user input (ie: *either* 10 items *or* 10000 items)?
 
-To solve such problems, we can create a **loop** that will iterate through each item on our list and run the `print()` function. This way, we only have to write the print() one time to print out the whole list!
+To solve such problems, we can create a **loop** that will iterate through each item on our list and run the `print()` method. This way, we only have to write the print() one time to print out the whole list!
 
 ## the `while` loop
 
@@ -56,6 +56,10 @@ However, we can iterate over lists and dicts! Neato!
 List iteration example:
 
 ```python
+testvar = [1,2,3]
+```
+
+
 test_scores = [100, 68, 95, 84, 79, 99]
 for score in test_scores:
   if score > 85:
@@ -70,9 +74,90 @@ for score in test_scores:
 # 79 failed!
 # 99 passed!
 
-```
 
 Dict iteration example:
+
+
+
+
+```python
+transaction = {
+  "amount": 10.00,
+  "payee": "Joe Bloggs",
+  "account": 1234
+}
+```
+
+#### Iterate Via Keys
+
+```python
+for key in transaction:
+    print("{}: {}".format(key, transaction[key]))
+
+# Output:
+account: 1234
+payee: Joe Bloggs
+amount: 10.0
+```
+
+#### Iterate Values Only
+
+```python
+for value in transaction.values():
+    print(value)
+
+# Output:
+1234
+Joe Bloggs
+10.0
+```
+
+#### Iterate Over Key Value Pairs
+
+```python
+for key, value in transaction.items():
+    print("{}: {}".format(key, value))
+
+# Output:
+account: 1234
+payee: Joe Bloggs
+amount: 10.0
+```
+
+This loop will sort items in each item's  list alphabetically in a dictionary
+
+```python 
+dict ={ 
+  "L1":[87, 34, 56, 12], 
+  "L2":[23, 00, 30, 10], 
+  "L3":[1, 6, 2, 9], 
+  "L4":[40, 34, 21, 67] 
+} 
+
+print("\nBefore Sorting: ") 
+for x in dict.items(): 
+  print(x) 
+
+print("\nAfter Sorting: ") 
+
+for i, j in dict.items(): 
+  sorted_dict ={i:sorted(j)} 
+  print(sorted_dict)
+```
+
+#### Iterate Over Keys in their Sorted Order
+
+```python
+for key in sorted(transaction):
+    print("{}: {}".format(key, transaction[key]))
+
+# Output:
+account: 1234
+amount: 10.0
+payee: Joe Bloggs
+```
+
+
 
 ```python
 students = {
