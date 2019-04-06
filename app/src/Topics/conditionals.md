@@ -320,7 +320,6 @@ p2 = # from user input
 # print -1 if invalid input
 # expects both p1 and p2 inputs to be either
 # "r", "p", or "s"
-
 ```
 
 ## 🚗 6. Play RPS w/Bad Input
@@ -334,7 +333,6 @@ This is the same as the original RPS problem, except that cannot expect the inpu
 Implement conditional statements that will sanitize the user input or let user know that input is invalid.
 
 ```python
-
 p1 = # from user input
 p2 = # from user input
 
@@ -345,7 +343,6 @@ p2 = # from user input
 # print -1 if invalid input
 # expects both p1 and p2 inputs to be either
 # "r", "p", or "s"
-
 ```
 
 ## 🚗 7. Play RPS against Computer

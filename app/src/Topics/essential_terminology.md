@@ -22,10 +22,13 @@ All programs are composed with a collection of **fundamental** concepts that, wh
 
 Here are a collection of these most important concepts:
 
-* **Declarations**: typically, we can store and retrieve data in our programs by associating them with intermediary values that we call **variables**
-* **Expressions**: we use expressions to evaluate stuff. For example, **`2 + 2`** is an example of an expression that will **evaluate** a value, namely 4. 
+#### Declarations
+Typically, we can store and retrieve data in our programs by associating them with intermediary values that we call **variables**
+#### Expressions
+We use expressions to evaluate stuff. For example, **`2 + 2`** is an example of an expression that will **evaluate** a value, namely 4. 
 * **NOTE**: typically we can use expressions and declarations in tandem to perform complex tasks. For instance, we can reference a variable we declared in an expression to help us evaluate new values which can then be stored.
-* **Statements**: statements will use expressions and declarations to alternate a program's **control flow**, which is essentially the order in which declarations, expressions, and other statements are executed.
+#### Statements & Control Flow
+Statements will use expressions and declarations to alternate a program's **control flow**, which is essentially the order in which declarations, expressions, and other statements are executed.
 
 Aside from these fundamental concepts, we also talk a lot about this idea of **algorithms**. An **algorithm** is simple a series of declarations, expressions, and statements that can be used over and over again to solve well defined problems of a certain type.
 
@@ -63,7 +66,11 @@ These languages all build on the same concepts defined above; the main differenc
 
 In general, anything programmable can be programmed in each of the languages defined above. However, some languages are better suited for certain tasks above others. 
 
-For example, to perform web programming on the front-end, you'll want to write JavaScript. This is because all browsers collectively support running javascript within it's environment. 
+For example, to perform web programming on the front-end, you'll want to write JavaScript. This is because all browsers collectively support running javascript within it's environment.
+
+## Why Learn Python
+
+Here's a blog post from Dan Bader that outlines some data-driven reasons learning python right now can pay off -- https://dbader.org/blog/why-learn-python
 
 ## 🚗 Practice: WE DO
 

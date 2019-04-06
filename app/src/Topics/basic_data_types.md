@@ -13,9 +13,7 @@ A data type is a unit of information that can be stored and retrieved using a pr
 ### Creating a Variable
 
 ```python
-
 first_prime = 2
-
 ```
 
 ### Reading a Variable

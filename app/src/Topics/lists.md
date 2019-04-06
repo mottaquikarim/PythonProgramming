@@ -1,5 +1,5 @@
 <!---
-{"next": "Topics/dicts.md","title": "Lists"}
+{"next":"Topics/dicts.md","title":"Lists"}
 -->
 
 # Lists
@@ -43,100 +43,40 @@ print(my_class[1]) # Prints "Zoe"
 print(my_class[4]) # Prints "Dasha"
 ```
 
-## Built-in Operations for Analyzing Lists
-
-Python has some built-in operations that allow you to analyze the content of a list. Some basic ones include:
-
-* ```len()```: tells you how many items are in the list; can be used for lists composed of any data type (i.e. strings, numbers, booleans)
-* ```sum()```: returns the sum of all items in *numerical lists*. 
-* ```min()```: returns the smallest number *in a numerical list*.
-* ```max()```: returns the largest number *in a numerical list*.
-* ```any()```: returns a Boolean to indicates whether the list contains any values that evaluate to True
-* ```all()```: returns a Boolean to indicates whether the list contains only values that evaluate to True
-
-Here are some examples of each of these:
-
-#### Length of a List
-```python
-# length_variable = len(your_list)
-
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
-num_students = len(my_class)
-print("There are", num_students, "students in the class")
-# => 5
-```
-
-#### Sum of Items in a Numerical List
-```python
-# sum_variable = sum(your_numeric_list)
-
-team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
-sum_avgs = sum(team_batting_avgs)
-print(f"The total of all the batting averages is {sum_avgs}")
-# => 2.409
-```
-
-#### Min and Max of a Numerical List
-```python
-# max(your_numeric_list)
-# min(your_numeric_list)
-
-team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
-print(f"The highest batting average is {max(team_batting_avgs}")
-# => 0.328
-print("The lowest batting average is", min(team_batting_avgs))
-# => 0.208
-```
-
-#### Checking a List for Any Instances of an Element
-Did anyone in the class get a perfect SAT score (i.e. 2400)?
-```python
-SAT_scores = [1890, 2010, 1740, 2400, 1970, 2400, 2150, 2280]
-perfect_score = any(x = 2400 for x in SAT_scores)
-
-if perfect_score is True:
-	print("At least one person got a perfect SAT score!")
-	# Based on the scores above, it will print this.
-```
-
-#### Checking for Consistency Between all Elements in a List
-Consider this:
-You just heard about a new Peruvian restaurant and want to try it. You take a poll asking whether your friends like Peruvian food or not to see if everyone would be okay with going to the new restaurant. If you get a unanimous yes, you can start dreaming about lomo saltado and ceviche - yum!
-
-```python
-poll_results = [True, False, True, False, True] # using booleans!
-decision = all(poll_results)
-print(decision)
-```
-Sadly, not all your friends like Peruvian food! Your all() function found 2 people who said "no" (i.e. False), so it returned ```False```. The decision is not unanimous, so you suggest a Korean restaurant you like and take another poll...
-
-```python
-poll_results = [True, True, True, True, True]
-decision = all(poll_results)
-print(decision)
-```
-
 ## Built-In Operations for Manipulating Lists
 
-#### Add Items to a List
+#### Add or Edit Items to a List
+If you want to extend the content of a single list, you can use `.append()`, `.extend()` `.insert()` to add elements of any data type.
 
-If you want to extend the content of a single list, you can use `.append()` or `.insert()` to add elements of any data type.
-
-`.append()`:
-- Adds to the end of the list.
+`.append()` & `.extend()`:
+These methods both add items to the end of the list. The difference here is that `.append()` will add whatever value or group of values you pass it *in one chunk*. In contrast, if you pass a group of values into `.extend()`, it will add each element of the group *individually*. Here are a few examples to show you the difference in outcomes.
 
 ```python
-# your_list.append(item)
+# passing direct argument
+x = ['a', 'b', 'c', 'd']
+x.append(['e', 'f', 'g'])
+print(x) # ['a', 'b', 'c', 'd', ['e', 'f', 'g']]
 
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
-my_class.append("Sonyl")
-print(my_class)
-# => ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
+x = ['a', 'b', 'c', 'd']
+x.extend(['e', 'f', 'g'])
+print(x) # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+# passing argument within a var
+x = ['a', 'b', 'c', 'd']
+y = ['e', ('f', 'g'), ['h', 'i'], 'j']
+x.append(y)
+print(y) # ['a', 'b', 'c', 'd', ['e', ('f', 'g'), ['h', 'i'], 'j']]
+
+x = ['a', 'b', 'c', 'd']
+y = ['e', ('f', 'g'), ['h', 'i'], 'j']
+x.extend(y)
+print(x) # ['a', 'b', 'c', 'd', 'e', ('f', 'g'), ['h', 'i'], 'j']
 ```
 
-`.insert()`:
-- Adds to any point in the list.
-- Takes a index argument.
+Notice that `.extend()` only considers individual values of the parent list. It still added the tuple and list - `('f', 'g')` and `['h', 'i']` - to our list `x` as their own items.
+
+`.insert(index, value)`:
+If you want to add an item to a specific point in your list, you can pass the desired index and value into `.insert()` as follows.
 
 ```python
 # your_list.insert(index, item)
@@ -147,8 +87,30 @@ print(my_class)
 # => ["Brandi", "Sanju", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
 ```
 
-#### Delete Items from a List
+`l[index:index]=`:
+To *replace* items in a list by their index position, you can use the same syntax for adding a single new value. You simply reference which indeces you want to replace and specify the new values.
 
+```python
+x = ['a', 'b', 'c', 'd']
+x[1] = 'r'
+x[2:] = ['s', 't']
+print(x) # ['a', 'r', 's', 't']
+```
+
+`.join()`:
+If you need to, you can compile your list items into a single string 
+
+```python
+letters = ['j', 'u', 'l', 'i', 'a', 'n', 'n', 'a']
+name = ''.join(x)
+print(name) # 'julianna'
+
+words = ['this', 'is', 'fun']
+sentence = ' '.join(words)
+print(f'{sentence}.') # 'this is fun.'
+```
+
+#### Remove Items from a List
 Likewise, you can use `.pop()` or `.pop(index)` to remove any type of element from a list.
 
 `.pop()`:
@@ -180,11 +142,55 @@ print(my_class)
 # => ["Brandi", "Zoe", "Aleksander", "Dasha", "Sonyl"]
 ```
 
+## Built-in Operators for Analyzing Lists
+
+Python has some built-in operations that allow you to analyze the content of a list. Some basic ones include:
+
+`len()`:
+This tells you how many items are in the list; can be used for lists composed of any data type (i.e. strings, numbers, booleans)
+
+```python
+# length_variable = len(your_list)
+
+my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
+num_students = len(my_class)
+print("There are", num_students, "students in the class")
+# => 5
+```
+
+`sum()`:
+This returns the sum of all items in *numerical lists*.
+
+```python
+
+# sum_variable = sum(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+sum_avgs = sum(team_batting_avgs)
+print(f"The total of all the batting averages is {sum_avgs}")
+# => 2.409
+```
+
+`min()` & `max()`: 
+
+These return the smallest and largest numbers *in a numerical list* respectively.
+
+```python
+# max(your_numeric_list)
+# min(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+print(f"The highest batting average is {max(team_batting_avgs}")
+# => 0.328
+print("The lowest batting average is", min(team_batting_avgs))
+# => 0.208
+```
+
 #### Sorting Lists
 
-If you want to organize your lists better, you can sort them with the `sorted()` method. At the some basic level, you can sort both numerically and alphabetically.
+If you want to organize your lists better, you can sort them with the `sorted()` operator. At the some basic level, you can sort both numerically and alphabetically.
 
-**Numbers - Ascending & Descending
+**Numbers** - Ascending & Descending
 
 ```python
 numbers = [1, 3, 7, 5, 6, 4, 2]
@@ -193,11 +199,13 @@ ascending = sorted(numbers)
 print(ascending) # [1, 2, 3, 4, 5, 6, 7]
 ```
 To do this in descending order, simply add `reverse=True` as an argument in `sorted()` like this:
+
 ```python
 descending = sorted(numbers, reverse=True)
 print(descending) # [7, 6, 5, 4, 3, 2, 1]
 ```
-Letters - Alphabetically & Reverse
+
+**Letters** - Alphabetically & Reverse
 
 ```python
 letters = ['b', 'e', 'c', 'a', 'd']
@@ -209,35 +217,7 @@ descending = sorted(letters, reverse=True)
 print(descending) # ['e', 'd', 'c', 'b', 'a']
 ```
 
-### Review of Basic List Operations
-
-```python
-# List Creation
-my_list = ["red", 7, "yellow", 1]
-
-# List Length
-list_length = len(my_list) # 4
-
-# List Index
-print(my_list[0]) # red
-
-# List Append
-my_list.append("Yi") # ["red", 7, "yellow", 1, "Yi"]
-
-# List Insert at Index
-my_list.insert(1, "Sanju") # ["red", "Sanju", 7, "yellow", 1, "Yi"]
-
-# List Delete
-student_that_left = my_list.pop() # "Yi"; ["red", "Sanju", 7, "yellow", 1]
-
-# List Delete at Index
-student_that_left = my_list.pop(2) # 7; ["red", "Sanju", "yellow", 1]
-
-# List Sorting
-numbers = [1, 5, 7, 3, 6, 4, 2]
-ascending = sorted(numbers) # [1, 2, 3, 4, 5, 6, 7]
-descending = sorted(numbers, reverse=True) # [7, 6, 5, 4, 3, 2, 1]
-```
+**NOTE!** You cannot sort a list that includes different data types. 
 
 ## Tuples
 
@@ -320,3 +300,4 @@ On your local computer, create a `.py` file named `list_practice.py`. In it:
 - [Google For Education: Python Lists](https://developers.google.com/edu/python/lists)
 - [Python-Lists](https://www.tutorialspoint.com/python/python_lists.htm)
 - [Python List Methods](https://www.programiz.com/python-programming/methods/list/)
+- [Python Data Structures: Lists, Tuples, Sets, and Dictionaries Video](https://www.youtube.com/watch?v=R-HLU9Fl5ug)
