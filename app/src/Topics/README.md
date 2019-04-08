@@ -26,13 +26,15 @@ These are the main topics that we will explore in this course. These topics will
 	* [List Updates & Operators](lists.md#built-in-operations-for-manipulating-lists)
 	* [Tuples & Sets](lists.md#tuples)
 * **[Dicts](dicts.md)**
-	* [Creating & Accessing Dicts](dicts.md#)
-	* [Updating Dicts](dicts.md#)
-	* [Dict Operators](dicts.md#)
+	* [Creating Dicts](dicts.md#creating-dicts)
+	* [Accessing Dict Data](dicts.md#accessing-dict-data)
+	* [Manipulating Dict Data](dicts.md#built-in-operators-for-manipulating-dicts)
 * **[Loops](loops.md)**
-	* [Iteration](loops.md#)
-	* [while loops](loops.md#)
-	* [for loops](loops.md#)
+	* [while Loops](loops.md#the-while-loop)
+	* [for Loops](loops.md#the-for-loop)
+	* [Iterating over Dicts](loops.md#iterating-over-dicts)
+	* [Control Flow & Infinite Loops](loops.md#control-flow--infinite-loops)
+	* [Nested Loops](loops.md#nested-loops)
 
 
 ...

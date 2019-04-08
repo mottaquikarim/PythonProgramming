@@ -1,5 +1,5 @@
 <!---
-{"next":"Resources/cheatsheets.md","title":"Glossary"}
+{"next":"Resources/tipstricks.md","title":"Glossary"}
 -->
 
 # Glossary

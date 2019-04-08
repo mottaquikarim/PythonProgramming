@@ -98,16 +98,29 @@ print(x) # ['a', 'r', 's', 't']
 ```
 
 `.join()`:
-If you need to, you can compile your list items into a single string 
+If you need to, you can compile your list items into a single string.
 
 ```python
 letters = ['j', 'u', 'l', 'i', 'a', 'n', 'n', 'a']
-name = ''.join(x)
+name = ''.join(letters)
 print(name) # 'julianna'
 
 words = ['this', 'is', 'fun']
 sentence = ' '.join(words)
 print(f'{sentence}.') # 'this is fun.'
+```
+
+`.split('split_char')`:
+You can also do the opposite - split values out of a string and turn each value into a list item. This one doesn't work for single words you might want to split into individual characters. That said, you *can* specify what character should convey to the method when to split out a new item. By default, `.split()` will use a space character to split the string.
+
+```python
+x = 'this is fun'
+sentence = x.split() # note - using default split char
+print(sentence) # ['this', 'is', 'fun']
+
+y = 'Sandra,hi@email.com,646-212-1234,8 Cherry Lane,Splitsville,FL,58028'
+data = y.split(',')
+print(data) # ['Sandra', 'hi@email.com', '646-212-1234', '8 Cherry Lane', 'Splitsville', 'FL', '58028']
 ```
 
 #### Remove Items from a List

@@ -4,6 +4,8 @@
 
 # Resources
 
+*Always adding more! :D*
+
 ## Libraries, Packages, & Other Tools
 
 * [Pandas](http://pandas.pydata.org/) / ([Pandas github repo](https://github.com/pandas-dev/pandas))
@@ -12,6 +14,7 @@
 * [Matplotlib](https://matplotlib.org/) / ([Matplotlib github repo](https://github.com/matplotlib/matplotlib))
 * [scikit-learn](https://scikit-learn.org/) / ([scikit-learn github repo](https://github.com/scikit-learn/scikit-learn))
 * [Python package index](https://pypi.org/)
+* [Python's `itertools` library](https://docs.python.org/3/library/itertools.html)
 * [Flask](http://flask.pocoo.org/) / [Flask github repo](https://github.com/pallets/flask)
 * [Dan Bader's Python Repos](https://github.com/dbader?tab=repositories)
 * [Python Patterns Repo](https://github.com/faif/python-patterns)
@@ -26,9 +29,30 @@
 * [Real Python](https://realpython.com)
 * [DataCamp](https://www.datacamp.com/)
 
-## Helpful Articles
+## Cheat Sheets
 
+* [How to Install and Uninstall Python Packages Using Pip](https://dbader.org/blog/install-and-uninstall-python-packages-using-pip)
+* [Python String Formatting Best Practices](https://realpython.com/python-string-formatting/)
+* [PyFormat](https://pyformat.info/)
+* [List of basic operators](https://python-reference.readthedocs.io/en/latest/docs/operators/)
+* [Built-in functions for containers](https://python-reference.readthedocs.io/en/latest/docs/functions/index.html#operating-on-containers)
+* [Built-in functions for iterable objects](https://python-reference.readthedocs.io/en/latest/docs/functions/index.html#operating-on-containers)
+* [Built-in object oriented functions](https://python-reference.readthedocs.io/en/latest/docs/functions/index.html#object-oriented-functions)
+* [Python Data Science 'For Dummies' Cheat Sheet](https://www.dummies.com/programming/python/python-for-data-science-for-dummies-cheat-sheet/)
+* [DataCamp: Panda Basics Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/fbc502d0-46b2-4e1b-b6b0-5402ff273251)
+* [DataCamp: Panda Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/9f0f2ae1-8bd8-4302-a67b-e17f3059d9e8)
+* [DataCamp: Scikit-Learn Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116)
+* [DataCamp: Matplotlib Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/28b8210c-60cc-4f13-b0b4-5b4f2ad4790b)
+* [DataCamp: NumPy Basics Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/e9f83f72-a81b-42c7-af44-4e35b48b20b7)
+
+## Helpful Articles & Tutorials
+
+* [Examples of Itertools in Python 3](https://realpython.com/python-itertools/)
 * [Comprehending Python’s Comprehensions](https://dbader.org/blog/list-dict-set-comprehensions-in-python)
+* [Real Python's PyTest Tutorial](https://realpython.com/courses/test-driven-development-pytest/)
 * [Python Iterators: A Step-By-Step Introduction](https://dbader.org/blog/python-iterators)
 * [Working with Random Numbers in Python](https://dbader.org/blog/python-random-numbers)
-* * [Python Design Patterns](https://www.toptal.com/python/python-design-patterns)
+* [Python Design Patterns](https://www.toptal.com/python/python-design-patterns)
+* [Pandas Tricks & Features You May Not Know](https://realpython.com/python-pandas-tricks/)
+* [Python Histogram Plotting: NumPy, Matplotlib, Pandas & Seaborn](https://realpython.com/python-histograms/)
+* [Rounding NumPy Arrays](https://realpython.com/python-rounding/#rounding-numpy-arrays)
