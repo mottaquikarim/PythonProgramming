@@ -35,7 +35,16 @@ These are the main topics that we will explore in this course. These topics will
 	* [Iterating over Dicts](loops.md#iterating-over-dicts)
 	* [Control Flow & Infinite Loops](loops.md#control-flow--infinite-loops)
 	* [Nested Loops](loops.md#nested-loops)
-
+* **[Functions](functions.md)**
+	* [Elements of a Function](functions.md#elements-of-a-function)
+	* [Function Arguments & the return Statement](functions.md#inputoutput-function-arguments--the-return-statement)
+	* [Anonymous Functions](functions.md#anonymous-functions)
+	* [Variable Scope](functions.md#variable-scope)
+* **[Modules](modules.md)**
+	* [Importing & Using Modules](modules.md#importing--using-modules)
+	* [Module Scope](modules.md#module-scope)
+	* [Common & Featured Modules](modules.md#common--featured-modules)
+* **[Classes](classes.md)**
 
 ...
 * **[Pandas](pandas.md)**
