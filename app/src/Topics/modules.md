@@ -54,34 +54,48 @@ s(25) # 5
 By importing the `sqrt() as s`, you can call the function as `s()` instead of `math.sqrt()`. The same works for modules. Note the difference in how we reference the square root function though... 
 
 ```python
-from math as m
-m.sqrt(25) # 5
+import math as m
+m.sqrt(25) # 5.0
 ```
 
 ...we only renamed the module in this import and not the function. So we have to go back to the `module_name.function()` syntax. *However*, because we renamed the module on import, we can reference it in function calls by its shortened name, i.e. `m.sqrt()`.
 
 #### Importing Packages (aka Libraries)
-Importing packages works similarly to importing modules. 
+Importing packages works similarly to importing modules. There is one syntactic difference worth noting. If the package directory resides in one of the directories contained in sys.path, you can refer to its two modules with dot notation (package.module1).
 
 ```python
-import unittest.mock # a packages
+import package
 # OR
-from unittest.mock import patch # patch is a module in this package
+import package as pkg1
+# OR
+import package.module1
+# OR
+from package import module1, module2
+# OR
+from package.module1 import function1
+# OR
 ```
 
-## Package Initialization
-If a file named __init__.py is present in a package directory, it is invoked when the package or a module in the package is imported. This can be used for execution of package initialization code, such as initialization of package-level data.
+So why use the dot notation here instead of being consistent with module import statements? Well, it has to do with efficiency when calling functions from the imported package's modules. Here's the difference:
 
-For example, consider the following __init__.py file:
+```python
+import package.module1
+package.module1.function1(some_argument)
+```
+Because of scope, you have to reference module1's functions along with the package. BUT if you do this instead...
 
-__init__.py
+```python
+from package import module1
+module1.function1(some_argument)
+```
 
-print(f'Invoking __init__.py for {__name__}')
-A = ['quux', 'corge', 'grault']
+...it's much cleaner. Yay!
 
-if the __init__.py file in the package directory contains a list named __all__, it is taken to be a list of modules that should be imported when the statement from <package_name> import * is encountered.
+## Common & Featured Modules & Packages
 
-
-## Common & Featured Modules
-
-[](https://pythontips.com/2013/07/30/20-python-libraries-you-cant-live-without/)
+* [Python's `itertools` library](https://docs.python.org/3/library/itertools.html)
+* [Pandas](http://pandas.pydata.org/) / ([Pandas github repo](https://github.com/pandas-dev/pandas))
+* [NumPy](https://www.numpy.org/) / ([NumPy github repo](https://github.com/numpy/numpy))
+* [SciPy](https://www.scipy.org/) / ([SciPy github repo](https://github.com/scipy/scipy))
+* [Matplotlib](https://matplotlib.org/) / ([Matplotlib github repo](https://github.com/matplotlib/matplotlib))
+* [scikit-learn](https://scikit-learn.org/) / ([scikit-learn github repo](https://github.com/scikit-learn/scikit-learn))

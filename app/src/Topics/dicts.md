@@ -85,7 +85,7 @@ state_capitals = {
 We can access each value in the list by referencing its key like so:
 
 ```python
-MAcap = reverse_lookup("MA")
+MAcap = state_capitals['MA']
 print('The capital of MA is {}.'.format(MAcap)) # 'The capital of MA is Boston.'
 ```
 

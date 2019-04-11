@@ -62,31 +62,95 @@ print(sq12)
 
 **NOTE!** You should store the function call within a var so that the return value gets stored in the var. If you don't, how will you access the output you wanted??
 
-## Anonymous Functions
-
-#### The `lambda` Keyword
-
-
-
-## Variable Scope
+One last thing - you should know that the `return` statement can return multiple values *by using tuples*. Once you return the tuple from the function, you can *unpack* its values by simultaneously assigning each one to a new var as follows...
 
 ```python
-x = "global"
+	# some function...
+	return 3,'a',True
 
-def foo():
-    print("x inside :", x)
-
-foo()
-print("x outside:", x)
+x, y, z = (3,'a',True)
+print(x, type(x)) # 3 <class 'int'>
+print(y, type(y)) # a  <class 'str'>
+print(z, type(z)) # True <class 'bool'>
 ```
 
+## Argument Types
+
+#### Required Arguments
+If your function won't work without specific arguments, you can define the function with **required arguments**. In order for anyone to call the function, that user *must* always pass values for the required arguments in the correct positional order with the correct syntax you defined in advance. For example...
 
 ```python
-def foo():
-    y = "local"
+def plus(a,b):
+  return a + b
 
-foo()
-print(y)
+c = plus(8,12)
+print(c) # 20
 ```
 
-The above code will output `NameError: name 'y' is not defined` because `y` only exists within the function.
+#### Keyword Arguments
+Now switch perspectives. You're using a function that your colleague defined. If you want to make sure that you call all the required arguments in the right order, you can use the **keyword arguments** in your function call. Essentially, this means that you mention each argument's parameter name when you assign it a value during the function call. It works like this...
+
+```python
+def plus(a,b):
+  return a + b
+
+c = plus(a=8,b=12)
+print(c) # 20
+```
+
+#### Default Arguments
+Back to writing our own functions! If you want, you can give your function a **default argument**. Functions with default arguments take some pre-defined default value if no argument value is passed when you call the function. When defining your own function, you can assign this default value like this:
+
+```python
+def plus(a,b = 12):
+  return a + b
+  
+# Only passing a value for `a`...
+c = plus(a=8)
+print(c) # 20
+
+# ...vs. passing values for `a` and `b`
+c = plus(8, 17)
+print(c) # 25
+```
+
+#### Variable number of Arguments
+Even if you're not sure how many arguments you will need to pass to your function, you can still define it. To do this, you use the parameter `*args` as a stand-in. This signals to the function that it should expect any variety of arguments. Let's take a look at a few different ways to implement this.
+
+**Using integers** (as we did in the earlier examples)
+
+```python
+def plus(*args):
+  return sum(args)
+
+c = plus(8,12,17)
+print(c) # 37
+```
+
+**Using different data types**
+
+```python
+def length(*args):
+  list1 = [*args]
+  return len(list1)
+
+c = length(8,'a',True)
+print(c) # 3
+```
+
+**Using a variable**
+
+```python
+var1 = 'h' + 'i'
+def print_all(*args):
+  list1 = [*args]
+  return list1
+
+c = print_all(8,'a',True,var1)
+print(c) # [8, 'a', True, 'hi']
+```
+
+**NOTE!** If you use `*args`, your function will be more flexible, *but only if you write it that way*. If you expect different types of arguments, you will have to write the function such that it can handle every use case you expect could occur.
+
+
+## Practice Problems
