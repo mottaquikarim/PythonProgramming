@@ -4,7 +4,7 @@
 
 # Dict 
 
-In addition to lists, another more comprehensive method for storing complex data are **dicts**, or dictionaries. Dicts are key value pairs that act as another method for storing complex data. In the example below, we associate a `key` (e.g. 'taq')  to a `value` (e.g. 'karim').
+In addition to lists, another more comprehensive method for storing complex data are **dicts**, or dictionaries. In the example below, we associate a `key` (e.g. 'taq')  to a `value` (e.g. 'karim').
 
 ```python
 dict1 = {
@@ -203,7 +203,3 @@ seceded1 = state_capitals.popitem()
 # ^ removes a random item and returns it as a tuple
 print(seceded1) # ('GA': 'Atlanta') for example
 ```
-
-## 🚗 1. Practice Problems
-
-

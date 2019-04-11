@@ -20,7 +20,7 @@ print(visible_colors[5])
 
 Attempting to print each item in this list - while redundant - isn't so bad. But what if there were over 1000 items in that list? Or, worse still, what if that list changed based on user input (ie: *either* 10 items *or* 10000 items)?
 
-To solve such problems, we can create a **loop** that will iterate through each item on our list and run the `print()` method. This way, we only have to write the print() one time to print out the whole list!
+To solve such problems, we can create a **loop** that will iterate through each item on our list and run the `print()` function. This way, we only have to write the print() one time to print out the whole list!
 
 When you can iterate through an object (e.g. a string, list, dict, tuple, set, etc.), we say that the object is `iterable`. Python has many built-in iterables. You can reference some of the most common ones in the `itertools` module (read more about itertools [here](https://realpython.com/python-itertools/)). 
 
