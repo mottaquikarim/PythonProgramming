@@ -6,6 +6,10 @@
 
 *Always adding more! :D*
 
+## Python Communities
+
+* [Pyladies](https://www.pyladies.com/)
+
 ## Libraries, Packages, & Other Tools
 
 * [Pandas](http://pandas.pydata.org/) / ([Pandas github repo](https://github.com/pandas-dev/pandas))

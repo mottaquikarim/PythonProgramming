@@ -1,5 +1,5 @@
 <!---
-{"next":"Topics/modules.md","title":"Functions"}
+{"next":"Topics/classes.md","title":"Functions"}
 -->
 
 # Functions
@@ -60,7 +60,7 @@ sq12 = NumSquared(12)
 print(sq12)
 ```
 
-**NOTE!!** You should store the function call within a var so that the return value gets stored in the var. If you don't, how will you access the output you wanted??
+**NOTE!** You should store the function call within a var so that the return value gets stored in the var. If you don't, how will you access the output you wanted??
 
 ## Anonymous Functions
 
@@ -69,3 +69,24 @@ print(sq12)
 
 
 ## Variable Scope
+
+```python
+x = "global"
+
+def foo():
+    print("x inside :", x)
+
+foo()
+print("x outside:", x)
+```
+
+
+```python
+def foo():
+    y = "local"
+
+foo()
+print(y)
+```
+
+The above code will output `NameError: name 'y' is not defined` because `y` only exists within the function.
