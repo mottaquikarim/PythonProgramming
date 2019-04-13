@@ -38,27 +38,27 @@ dir(math)
 You can also import one specific object from a module like this:
 
 ```python
-from math import sqrt()
+from math import sqrt
 math.sqrt(25) # 5
 ```
 
-Notice how we included `math.` when we called the `sqrt()` function. Because of *variable scope*, you need to reference the `namespace` where `sqrt()` is defined. Simply importing `sqrt()` does not give it `global scope`. It still has `local scope` within the math module.
+Notice how we included `math.` when we called the `sqrt` function. Because of *variable scope*, you need to reference the `namespace` where `sqrt` is defined. Simply importing `sqrt` does not give it `global scope`. It still has `local scope` within the math module.
 
 However, you can help avoid verbose code by importing modules and their items like this:
 
 ```python
-from math import sqrt() as s
+from math import sqrt as s
 s(25) # 5
 ```
 
-By importing the `sqrt() as s`, you can call the function as `s()` instead of `math.sqrt()`. The same works for modules. Note the difference in how we reference the square root function though... 
+By importing the `sqrt as s`, you can call the function as `s()` instead of `math.sqrt`. The same works for modules. Note the difference in how we reference the square root function though... 
 
 ```python
 import math as m
 m.sqrt(25) # 5.0
 ```
 
-...we only renamed the module in this import and not the function. So we have to go back to the `module_name.function()` syntax. *However*, because we renamed the module on import, we can reference it in function calls by its shortened name, i.e. `m.sqrt()`.
+...we only renamed the module in this import and not the function. So we have to go back to the `module_name.function()` syntax. *However*, because we renamed the module on import, we can reference it in function calls by its shortened name, i.e. `m.sqrt`.
 
 #### Importing Packages (aka Libraries)
 Importing packages works similarly to importing modules. There is one syntactic difference worth noting. If the package directory resides in one of the directories contained in sys.path, you can refer to its two modules with dot notation (package.module1).

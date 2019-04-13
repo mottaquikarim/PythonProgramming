@@ -1,17 +1,25 @@
 <!---
-{"next":"Topics/README.md","title":"Loops"}
+{"next":"Lectures/Lecture7.md","title":"✅ Dicts"}
 -->
 
-# Lecture 6: Loops
 
+# ✅ Lecture 6: Dicts
+
+## ➡️ REMINDER
+**[Homework 1](../Homework/hwk1.md)** is due tonight!
 
 ## Objectives
 
-1. Understand how to write code that repeats itself
-2. Understand the different ways to create loops in python
-3. Use loops to iterate dicts and loops
+4. Perform common dictionary actions.
+5. Build more complex dictionaries.
 
 
 ## Agenda
 
-1. **[Loops](../Topics/loops.md)**
+2. **[Dicts](../Topics/dicts.md)**
+
+
+## [Homework](../Homework/hwk2.md)
+*Due Tuesday April 18th, 6:30PM*
+
+
