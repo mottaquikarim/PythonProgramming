@@ -12,6 +12,9 @@
 
 ## Libraries, Packages, & Other Tools
 
+* [pip](https://pip.pypa.io/en/stable/)
+* [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+* [twine](https://pypi.org/project/twine/)
 * [Pandas](http://pandas.pydata.org/) / ([Pandas github repo](https://github.com/pandas-dev/pandas))
 * [NumPy](https://www.numpy.org/) / ([NumPy github repo](https://github.com/numpy/numpy))
 * [SciPy](https://www.scipy.org/) / ([SciPy github repo](https://github.com/scipy/scipy))
@@ -26,12 +29,14 @@
 ## General Reference Guides
 
 * [Official Python Documentation](https://docs.python.org/)
-* [Python for Beginners](https://www.pythonforbeginners.com/)
+* [Official Python Packaging Tool Recommendations](https://packaging.python.org/guides/tool-recommendations/)
 * [Python Reference](https://python-reference.readthedocs.io/en/latest/)
 * [Dan Bader's blog](https://dbader.org/)
 * [thispointer.com](https://thispointer.com/learn-python/)
 * [Real Python](https://realpython.com)
 * [DataCamp](https://www.datacamp.com/)
+* [Geeks for Geeks](https://www.geeksforgeeks.org/)
+* [Python for Beginners](https://www.pythonforbeginners.com/)
 
 ## Cheat Sheets
 
@@ -51,6 +56,7 @@
 
 ## Helpful Articles & Tutorials
 
+* [Understanding Python Installation and VirtualEnv](https://codeburst.io/understanding-python-installation-and-virtualenv-a-friendly-guide-for-beginners-and-2b82859b06ae)
 * [Examples of Itertools in Python 3](https://realpython.com/python-itertools/)
 * [Comprehending Python’s Comprehensions](https://dbader.org/blog/list-dict-set-comprehensions-in-python)
 * [Real Python's PyTest Tutorial](https://realpython.com/courses/test-driven-development-pytest/)

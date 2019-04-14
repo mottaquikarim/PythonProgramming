@@ -47,7 +47,7 @@ def NumSquared(num):
 ```
 
 1. Input the number we want to square 
-	We create an argument called `num` to represent the number we will past into our function as an argument. Remember that arguments should always be passed in the correct format and positional order, or the function will not be able to recognize them.
+	We create an *parameter* called `num` to represent the number we will past into our function as an argument. (p.s. Parameters are the names used when defining a function.) Remember that arguments should always be passed in the correct format and positional order, or the function will not be able to recognize them.
 2. Calculate the square of that number
 	Using the value of `num`, we write the formula for calculating a square and assign it to the variable `square`.
 3. Output the square of that number
@@ -152,5 +152,41 @@ print(c) # [8, 'a', True, 'hi']
 
 **NOTE!** If you use `*args`, your function will be more flexible, *but only if you write it that way*. If you expect different types of arguments, you will have to write the function such that it can handle every use case you expect could occur.
 
+## Variable Scope Recap
+
+* `global variable`: a variable declared outside a function; any function in your script can access this
+* `local variable`: a variable declared within a function's code block; you can only access this variable within the function where it is declard, otherwise you will get a `NameError` telling you that variable is not defined.
+
+
+```python
+x = 'I\'m a global variable.'
+
+def foo():
+	x = 'I\'m a local variable.'
+    print(x) # I'm a local variable.
+    return x
+
+y = foo()
+
+print(x) # I'm a global variable.
+print(y) # I'm a local variable.
+```
+
+Notice that even though the function `foo()` above says `return x`, it **only returns the value of the local variable `x`**. We assign this *value* to the variable `y` when we call foo().
+
+Look at the nuanced difference in this example though:
+
+```python
+def foo():
+    x = 'I\'m a local variable.'
+    print(x) # I'm a local variable.
+    return x
+
+foo()
+
+print(x) # NameError: name 'x' is not defined
+```
+
+Even though we called the function `foo()`, we did not assign its return value to a variable outside the function. Therefore, trying to print `x` will output `NameError: name 'x' is not defined`. This is because `x` only exists within the function.
 
 ## Practice Problems

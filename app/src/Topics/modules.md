@@ -16,11 +16,26 @@ Essentially, packages and modules are a means of `modularizing` code by grouping
 
 One of the reasons Python leverages modular programming is because it helps avoid conflicts between `local` and `global` variables by creating separate `namespaces`. `Namespaces` are the place where variables are stored, and they exist on several independent levels, including **local, global, built-in, and nested namespaces**. For instance, the functions `builtin.open()` and `os.open()` are distinguished by their namespaces. Namespaces also aid readability and maintainability by making it clear which module implements a function. 
 
-At a high level, a variable declared outside a function has `global scope`, meaning you can access a it inside or outside functions. A variable declared within a function has `local scope`, which means you can only access it within the object you created it. If you try to oaccess it outside that, you will get a `NameError` telling you that variable is not defined.
+At a high level, a variable declared outside a function has `global scope`, meaning you can access a it inside or outside functions. A variable declared within a function has `local scope`, which means you can only access it within the object you created it. If you try to access it outside that, you will get a `NameError` telling you that variable is not defined.
 
 We'll get more into how to use and interpret local and global scope as we dive into modules and functions...
 
-## Importing
+## Installing Packages
+
+
+
+#### pip
+
+
+#### `virtualenv`
+
+i.e., it creates a dedicated folder say fA, where you can install modules and use them in project A. It creates another dedicated folder, say fB where you can install modules for project B. The best part, fA and fB do not know about each other and are completely separate.
+
+Also called `venv`, it is best used for isolating application specific dependencies from a shared Python installation. It allows you to avoid installing Python packages globally which could break system tools or other projects. You can *install virtualenv using pip.*
+
+And someday, when you're creating your own packages, you can use the [twine](https://pypi.org/project/twine/) package to publish them on PyPI! :D
+
+## Importing Modules & Packages
 
 Importing modules and packages is very easy and saves you a lot of time you'd otherwise spend reinventing the wheel. Modules can even import other modules! The best practice is to place all import statements at the of your script file so you can easily see everything you've imported right at the top. 
 
