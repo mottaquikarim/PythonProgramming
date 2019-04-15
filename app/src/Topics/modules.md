@@ -40,7 +40,7 @@ You can also import one specific object from a module like this:
 
 ```python
 from math import sqrt
-math.sqrt(25) # 5
+sqrt(25) # 5
 ```
 
 Notice how we included `math.` when we called the `sqrt` function. Because of *variable scope*, you need to reference the `namespace` where `sqrt` is defined. Simply importing `sqrt` does not give it `global scope`. It still has `local scope` within the math module.
@@ -61,36 +61,46 @@ m.sqrt(25) # 5.0
 
 ...we only renamed the module in this import and not the function. So we have to go back to the `module_name.function()` syntax. *However*, because we renamed the module on import, we can reference it in function calls by its shortened name, i.e. `m.sqrt`.
 
-#### Importing Packages (aka Libraries)
-Importing packages works similarly to importing modules. There is one syntactic difference worth noting. If the package directory resides in one of the directories contained in sys.path, you can refer to its two modules with dot notation (package.module1).
+## Managing Dependencies
 
-```python
-import package
-# OR
-import package as pkg1
-# OR
-import package.module1
-# OR
-from package import module1, module2
-# OR
-from package.module1 import function1
-# OR
+In addition to "built-in" modules, we have the ability in python to create, distribute and most importantly *consume* community defined python modules.
+
+This is powerful because anyone who builds something useful has the ability to share with the larger python community. Creating and distributing python modules is outside the scope of this class, but we can consume any module we'd like by running the:
+
+```bash
+pip install [module_name]
 ```
 
-So why use the dot notation here instead of being consistent with module import statements? Well, it has to do with efficiency when calling functions from the imported package's modules. Here's the difference:
+Modules can be found in [**PyPI**](https://pypi.org/), or, the Python Package Index. Any registered module in pypi is installable via pip.
 
-```python
-import package.module1
-package.module1.function1(some_argument)
-```
-Because of scope, you have to reference module1's functions along with the package. BUT if you do this instead...
+However, in order to safely install modules across projects (ie: perhaps project A requires module 1 v1 but then project B, started a year later needs to use module 1 v2) we need to create what are called **virtual environments**, isolated python environments where we can safely install our pip modules and rest assured that they don't interfere with other projects / the system at lare.
 
-```python
-from package import module1
-module1.function1(some_argument)
+In order to create a virtual environment:
+
+```bash
+python3 -m venv .env
+source .env/bin/activate
 ```
 
-...it's much cleaner. Yay!
+The `.env` folder contains everything needed for this **"virtualenv"**. We go *inside* the env by running the `source ./env/bin/activate` command. To deactivate, (while in virtualenv):
+
+```bash
+deactivate
+```
+
+The best part about this is not only can we install our pip modules safely, we can also do this:
+
+```bash
+pip freeze > requirements.txt
+```
+
+This will collect all the installed pip modules in the virtual env and store into a file (that we are calling `requirements.txt`). This is useful because if we ever wanted to run this software from a different computer, all we would have to do is pull down the python files, create a new virtualenv and then:
+
+```bash
+pip install -r requirements.txt
+```
+
+and this would effectively "copy" our installed modules into the new virtualenv.
 
 ## Common & Featured Modules & Packages
 
