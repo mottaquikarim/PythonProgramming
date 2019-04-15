@@ -57,6 +57,8 @@
 ## Helpful Articles & Tutorials
 
 * [Understanding Python Installation and VirtualEnv](https://codeburst.io/understanding-python-installation-and-virtualenv-a-friendly-guide-for-beginners-and-2b82859b06ae)
+* [The Ultimate List of Python YouTube Channels](https://realpython.com/python-youtube-channels/)
+* [List of the Best Python Books](https://realpython.com/best-python-books/)
 * [Examples of Itertools in Python 3](https://realpython.com/python-itertools/)
 * [Comprehending Python’s Comprehensions](https://dbader.org/blog/list-dict-set-comprehensions-in-python)
 * [Real Python's PyTest Tutorial](https://realpython.com/courses/test-driven-development-pytest/)

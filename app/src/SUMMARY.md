@@ -21,6 +21,7 @@
 	- [Loops](Topics/loops.md)
 	- [Modules & Packages](Topics/modules.md)
 	- [Functions](Topics/functions.md)
+	- [List Comprehensions](Topics/list_comprehensions.md)
 	- [Classes](Topics/classes.md)
 	- [Pandas](Topics/pandas.md)
 	- [Course Review](Topics/course_review.md)

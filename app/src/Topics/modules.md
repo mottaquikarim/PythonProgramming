@@ -20,20 +20,6 @@ At a high level, a variable declared outside a function has `global scope`, mean
 
 We'll get more into how to use and interpret local and global scope as we dive into modules and functions...
 
-## Installing Packages
-
-
-
-#### pip
-
-
-#### `virtualenv`
-
-i.e., it creates a dedicated folder say fA, where you can install modules and use them in project A. It creates another dedicated folder, say fB where you can install modules for project B. The best part, fA and fB do not know about each other and are completely separate.
-
-Also called `venv`, it is best used for isolating application specific dependencies from a shared Python installation. It allows you to avoid installing Python packages globally which could break system tools or other projects. You can *install virtualenv using pip.*
-
-And someday, when you're creating your own packages, you can use the [twine](https://pypi.org/project/twine/) package to publish them on PyPI! :D
 
 ## Importing Modules & Packages
 
