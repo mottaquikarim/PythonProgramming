@@ -2,7 +2,7 @@
 {"next":"Lectures/Lecture8.md","title":"Loops"}
 -->
 
-# Lecture 7: Loops
+# ✅ Lecture 7: Loops
 
 ## ➡️ REMINDER
 **[Homework 2](../Homework/hwk2.md)** is due Thursday!

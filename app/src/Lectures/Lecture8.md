@@ -1,9 +1,9 @@
 <!---
-{"next":"Topics/README.md","title":"Modules"}
+{"next":"Lectures/Lecture9.md","title":"Loops Practice"}
 -->
 
 
-# Lecture 8: Modules
+# ✅ Lecture 8: Loops - Practice Only
 
 ## ➡️ REMINDER
 **[Homework 2](../Homework/hwk2.md)** is due TODAY!

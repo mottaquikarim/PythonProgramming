@@ -1,5 +1,5 @@
 <!---
-{"next":"Resources/README.md","title":"Homework 2"}
+{"next":"Homework/hwk3.md","title":"Homework 2"}
 -->
 
 
