@@ -78,7 +78,19 @@ class Elephant(Animal):
     # etc ...
 ```
 
-Although the child class has access to everything defined for its parent class, the child class can also override or extend the parent class's traits and behavior. Note that this *does NOT redefine the parent class*. The new attributes and methods the child class declares apply only to instances of the child class. Parent class instances still adhere to the original parent class specs.
+Although the child class has access to everything defined for its parent class, the child class can also override or extend the parent class's traits and behavior. Note that this *does NOT redefine the parent class*. The new attributes and methods the child class declares apply only to instances of the child class. Parent class instances still adhere to the original parent class specs. For example:
+
+```python
+class Animal:
+    category = 'Animals'
+    # etc ...
+
+class Toucan(Animal):
+    category = 'Birds'
+    # etc ...
+```
+
+If you wanted, the `Toucan` class could simply inherit the `category` class attribute from its parent class `Animal`. In this case, every instance of `Toucan` would  would have the same value for `category` -- `Animals`. However, it makes sense that you'd want to differentiate further for the child class `Toucan`. To do that, you'd simply override `category` when you define `Toucan` by setting its value to `Birds`.
 
 #### The __init__() Method & the self Keyword
 
@@ -110,9 +122,11 @@ class Animal():
         # ...
 ```
 
-Notice we used the same notation as we did for defining functions. The `__init__()` method must have at least one argument, including the **self variable**. The `self` variable serves as a reference to the *current instance of the class*, and it must be the first parameter of *any* method in a class, including the `__init__()` method. 
+Notice we used the same notation as we did for defining functions. The `__init__()` method must have at least one argument, including the **self variable**. The `self` variable serves as a reference to the *current instance of the class*, and it must be the first parameter of *any* method in a class, including the `__init__()` method.
 
-## Class Definition Example
+**NOTE!** Any methods defined inside the `__init__()` method **will NOT be _called_** upon instantiation.
+
+## Class Definition Example 1 - Basic Elements in Context
 Now that we've isolated each key component of classes, let's put everything together by completing the code for our zoology scenario. At the highest level, we define a class called `Animal`. The annotated code below illustrates how each key structural element we covered above fits into this task.
 
 ```python
@@ -143,77 +157,100 @@ C. Each instance of the `Animal` class will store unique values for the **instan
 D. ALL instances of the Animal class will have the `kingdom` **class attribute** with the value `Animalia`.
 E. We can call **instance methods** `my_kingdom` and `feed_me` on ANY instance of the `Animal` class. **Note!** In `my_kingdom`, we access the class variable `kingdom`, but still reference it using `self`.
 
-#### Class Instantiation
+## Class Definition Example 2 - Child Classes & Inheritance
 
-To instantiate a member of our `Animal` class, you would pass arguments for `species` and `diet`. This automatically invokes the `__init__()` method and assigns the values of the arguments you passed to your new instance attributes.
-
-```python
-# Instantiate a new member of the Animal class. Notice we left the diet arg blank, so it will default to a blank string.
-chameleons = Animal('Chameleon')
-
-# Access this instance's species attribute
-print(chameleons.species) # Chameleon
-
-# Call the feed_me method on this instance
-chameleons.feed_me() # A chameleon eats meat!
-```
-
-#### Modifying Class Instances
-
-Since each instance is meant to be unique, you of course need a way to modify its values or create new ones after its initial instantiation. 
-
-```python
-# Update the values of an instance attribute for chameleons.
-print(chameleons.diet) # (empty string)
-chameleons.diet = 'Carnivore'
-
-# Define a new instance attribute, which will apply only to chameleons.
-chameleons.avg_weight_pounds = 31
-```
-
-#### Defining a Child Class (Inheritance)
-
-Let's go into some more detail
+Let's go into some more detail with a new child class for `Animal`. In the `Elephant` class below, we define `__init__()` method and its parameters, class attributes, and instance methods with the same syntax used for any class we might create. There are a few key differences annotated in the comments below.
 
 ```python
 class Elephant(Animal): # A.
-    def __init__(self, name = '', genus = '', species = '', habitat = '', age = None): # B.
-        self.name = name # C. 
-        self.genus = genus # C.
-        self.species = species # C.
-        self.habitat = habitat # C.
-        self.age = age # C.
-        self.taxonomy = {} # C.
+    def __init__(self, name, genus = '', species = '', habitat = '', age = None): # B.
+        self.name = name
+        self.genus = genus
+        self.species = species
+        self.habitat = habitat
+        self.age = age
+        self.taxonomy = {'Kingdom': Animal.kingdom, 'Class': self.common_taxonomy['Class'], 'Family': self.common_taxonomy['Family'], 'Genus': self.genus, 'Species': self.species} # C.
 
     diet = 'Herbivore' # D.
 
-    common_taxonomy = { # D.
+    common_taxonomy = {
     'Class': 'Mammalia',
     'Family': 'Elephantidae',
     }
 
-    def complete_taxonomy(self): # E.
-      x = self.common_taxonomy
-      y = self.taxonomy
-      y.update({'Kingdom': Animal.kingdom})
-      for k, v in x.items():
-        y.update({k: v})
-      y.update({'Genus': self.genus, 'Species': self.species})
-      self.taxonomy = y
-      return self.taxonomy
-
-    def summary(self): # E.
-      print(f'{self.name} \nElephant, age {self.age}\n{self.diet}')
+    def summary(self):
+      print(f'All about {self.name} -')
+      print(f'Elephant, age {self.age}\nHabitat: {self.habitat}\nDiet: {self.diet}\n\nTaxonomy:')
       for k,v in self.taxonomy.items():
         print(f'{k}: {v}')
 ```
 
-A. Declares `Elephant` as a *child class* of `Animal`.
-B. The `__init__()` method
-C. These are *instance attributes*. Notice that even though `taxonomy` is not a parameter for the `__init__()` method, we can still define it upon every instantiation.
-D. *Class attributes*
-LL instances of the Animal class will have the `kingdom` **class attribute** with the value `Animalia`.
-E. We will be able to call the **instance method** `identify` on ALL instances of the Animal class.
+A. Declares `Elephant` as a *child class* of `Animal` by adding `Animal` into it as a definition parameter.
+
+B. Notice that even though `taxonomy` is not a parameter for the `__init__()` method, we can still define it as an instance attribute upon every instantiation.
+
+C. If you look closely, you'll see that the values for `taxonomy` all come from different places.
+
+* Some of the taxonomy attributes are inherited from `Animal`; while
+* some are constant class attributes across all elephants; and 
+* others are instance attributes unique to each elephant at the zoo.
+
+This is a great opportunity to dissect the syntax for referencing attributes from different sources.
+
+D. Here's a potential "gotcha". Remember that the `Animal` class also had an attribute called `diet`? `Elephant` does NOT inherit the `diet` attribute's value from `Animal`. Why? Two reasons:
+
+* First, `Elephant` defines `diet` as a class attribute for itself. This would supercede any variable called `diet` from the parent class.
+* Second, for `Animal`, `diet` is an instance attribute. Even if `Elephant` didn't define any type of attribute called `diet` for itself, a child class *never inherits the instance attributes* from their its parent.
+
+#### Class Instantiation & Modification
+Now we'll create the first instance of the `Elephant` class. To do so, you would pass arguments for the `__init__()` parameters defined above. This automatically invokes the `__init__()` method and assigns the values of the arguments you passed to your new instance attributes. Note that the `name` argument is required, but the rest are optional. Their values will default to empty strings if no argument for them is passed.
+
+```python
+elephant1 = Elephant('Felicia', 'Elephas', 'Elephas maximus', '', 38)
+# Notice we passed the default empty string for the habitat argument.
+```
+
+You can access or modify any *instance* attribute like so:
+
+```python
+# Access
+print(elephant1.name) # Felicia
+
+
+# Add value for an empty attribute
+print(elephant1.habitat) # empty string by default
+elephant1.habitat = 'Asian forests'
+
+
+# Update an existing attribute value
+print(elephant1.age) # 38
+elephant1.age = 39 # Update the value of the age attribute.
+print(elephant1.age) # 39
+
+# Define a new instance attribute, which will apply only to elephant1.
+elephant1.weight_pounds = 6000
+```
+
+Finally, here's what happens when we call the `summary()` instance method:
+
+```python
+elephant1.summary()
+
+# Here's the output
+"""
+All about Felicia -
+Elephant, age 38
+Habitat: Asian forests
+Diet: Herbivore
+
+Taxonomy:
+Kingdom: Animalia
+Class: Mammalia
+Family: Elephantidae
+Genus: Elephas
+Species: Elephas maximus
+"""
+```
 
 #### Checking Class Values
 
@@ -226,28 +263,6 @@ print(isinstance(elephant1, Animal)) # True
 # Is toucan1 an instance of Elephant()?
 print(isinstance(toucan1, Elephant)) # False
 ```
-
-#### Overriding the Functionality of a Parent Class
-
-Remember that child classes can also override parent attributes and behaviors without redefining the parent class. For example:
-
-```python
-class Animal:
-    category = 'Animals'
-    # etc ...
-
-class Toucan(Animal):
-    category = 'Birds'
-    # etc ...
-
-harvey = Animal() # plus any required input
-harvey.category # Animals
-
-talulah = Toucan() # plus any required input
-talulah.category # Birds
-```
-
-If you wanted, the `Toucan` class could simply inherit the `category` class attribute from its parent class `Animal`. In this case, every instance of `Toucan` would  would have the same value -- `Animals`. However, it makes sense that you'd want to differentiate further for the child class `Toucan`. To do that, you'd simply override `category` when you define `Toucan` by setting its value to `Birds`.
 
 ## Review of Classes & Inheritance
 * A **class** outlines a set of **attributes** and **methods**, which will help categorize other objects.
