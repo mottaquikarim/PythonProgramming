@@ -1,5 +1,5 @@
 <!---
-{"next":"Lectures/Lecture8.md","title":"Loops"}
+{"next":"Lectures/Lecture8.md","title":"✅ Loops"}
 -->
 
 # ✅ Lecture 7: Loops

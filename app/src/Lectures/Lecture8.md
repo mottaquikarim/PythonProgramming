@@ -1,5 +1,5 @@
 <!---
-{"next":"Lectures/Lecture9.md","title":"Loops Practice"}
+{"next":"Lectures/Lecture9.md","title":"✅ Loops Practice"}
 -->
 
 

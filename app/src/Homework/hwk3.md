@@ -7,6 +7,7 @@
 From the **[Class PSETs](https://github.com/mottaquikarim/pydev-psets)**, solve:
 
 1. [Functions & Modules](https://github.com/mottaquikarim/pydev-psets#functions--modules)
+2. [Classes](https://github.com/mottaquikarim/pydev-psets#classes)
 
 ## How to Submit
 
