@@ -9,6 +9,10 @@
 ## Python Communities
 
 * [Pyladies](https://www.pyladies.com/)
+* [Pythonista Cafe](https://www.pythonistacafe.com/)
+* [PySlackers](https://pyslackers.com/)
+* [PyCon](http://pycon.org/)
+* [PyCon US](https://us.pycon.org/)
 
 ## Libraries, Packages, & Other Tools
 
