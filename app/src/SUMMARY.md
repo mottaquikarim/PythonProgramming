@@ -27,6 +27,7 @@
 	- [Functions](Topics/functions.md)
 	- [List Comprehensions](Topics/list_comprehensions.md)
 	- [Classes](Topics/classes.md)
+	- [Data Science](Topics/data_science.md)
 	- [Pandas](Topics/pandas.md)
 	- [Course Review](Topics/course_review.md)
 	- [Python Project Ideas](Topics/project_ideas.md)
@@ -38,5 +39,4 @@
 	- [Python Glossary](Resources/python_glossary.md)
 	- [Basic Statistics](Resources/basic_stats.md)
 	- [Pandas Glossary](Resources/pandas_glossary.md)
-	- [Tips & Tricks](Resources/tipstricks.md)
 - [About](about.md)

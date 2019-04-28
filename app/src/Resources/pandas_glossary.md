@@ -1,5 +1,5 @@
 <!---
-{"next":"Resources/tipstricks.md","title":"Pandas Glossary"}
+{"next":"About/README.md","title":"Pandas Glossary"}
 -->
 
 # Pandas Glossary
@@ -54,7 +54,6 @@
 * `df.median()` -- returns the median of each column
 * `df.std()` -- returns the standard deviation of each column
 
-
 ## Selecting & Organizating Data
 
 * `df[col]` -- select and name a column and return it as a Series
@@ -72,6 +71,8 @@
 
 ## Statistical Analysis
 
+* `describe()` -- returns basic summary statistics (e.g. count, mean, std, min, quartiles, & max)
+* `value_counts()` -- returns count of each category in a categorical attributed series of values
 * `mean()` -- mean
 * `median()` -- median
 * `min()` -- minimum
@@ -92,4 +93,4 @@
 
 
 #### Sources
-
+* [Pandas Docs](http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)

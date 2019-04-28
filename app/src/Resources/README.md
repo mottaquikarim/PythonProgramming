@@ -39,9 +39,9 @@
 * [DataCamp](https://www.datacamp.com/)
 * [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/)
 * [Python for Beginners](https://www.pythonforbeginners.com/)
-* [Python Health Care - Data Science Applications](https://pythonhealthcare.org/)
-* [Towards Data Science](https://towardsdatascience.com/)
 * [Data Flair](https://data-flair.training/blogs)
+* [Towards Data Science](https://towardsdatascience.com/)
+* [Elite Data Science](https://elitedatascience.com/)
 
 ## Cheat Sheets
 
@@ -59,6 +59,23 @@
 * [DataCamp: Scikit-Learn Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116)
 * [DataCamp: Matplotlib Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/28b8210c-60cc-4f13-b0b4-5b4f2ad4790b)
 * [DataCamp: NumPy Basics Cheat Sheet](https://datacamp-community-prod.s3.amazonaws.com/e9f83f72-a81b-42c7-af44-4e35b48b20b7)
+
+## Open Source Data Sets
+* [Kaggle](https://www.kaggle.com/datasets)
+* [World Bank Open Knowledge Repository](https://openknowledge.worldbank.org/)
+* [Our World in Data (University of Oxford)](https://ourworldindata.org/)
+* [Census.gov](https://www.census.gov/)
+* [CIA World Factbook](https://www.cia.gov/library/publications/the-world-factbook/)
+* [Google BigQuery Public Data](https://cloud.google.com/bigquery/public-data/)
+* [AWS Public Datasets](https://aws.amazon.com/datasets/)
+* [Microsoft Azure Public Datasets](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-public-data-sets)
+* [Curated by EliteDataScience](https://elitedatascience.com/datasets)
+* [Climate Resilince | ResourceWatch](https://resourcewatch.org/data/explore)
+* [Climate Resilince | PREP](https://www.prepdata.org/)
+* [Financial Data & Economic Indicators | CEIC](https://www.ceicdata.com/en)
+* [NYC Open Data](https://opendata.cityofnewyork.us/)
+* [Data.gov](https://www.data.gov/)
+
 
 ## Helpful Articles & Tutorials
 

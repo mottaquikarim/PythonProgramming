@@ -1,5 +1,5 @@
 <!---
-{"next":"Topics/pandas.md","title":"Classes"}
+{"next":"Topics/data_science.md","title":"Classes"}
 -->
 
 # Classes & Inheritance
