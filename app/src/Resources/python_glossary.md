@@ -1,8 +1,8 @@
 <!---
-{"next":"Resources/tipstricks.md","title":"Glossary"}
+{"next":"Resources/basic_stats.md","title":"Python Glossary"}
 -->
 
-# Glossary
+# Python Glossary
 *Source: [https://docs.python.org/2/glossary.html](https://docs.python.org/2/glossary.html)*
 
 ### >>>
