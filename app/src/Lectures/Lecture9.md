@@ -1,8 +1,8 @@
 <!---
-{"next":"Topics/README.md","title":"Modules & Functions"}
+{"next":"Lectures/Lecture10.md","title":"✅ Modules & Functions"}
 -->
 
-# Lecture 9: Modules, Packages, & Functions
+# ✅ Lecture 9: Modules, Packages, & Functions
 
 ## Objectives
 
