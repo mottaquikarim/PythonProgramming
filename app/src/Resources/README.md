@@ -18,6 +18,7 @@
 
 * [pip](https://pip.pypa.io/en/stable/)
 * [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+* [Anaconda](https://www.anaconda.com/)
 * [twine](https://pypi.org/project/twine/)
 * [Pandas](http://pandas.pydata.org/) / ([Pandas github repo](https://github.com/pandas-dev/pandas))
 * [NumPy](https://www.numpy.org/) / ([NumPy github repo](https://github.com/numpy/numpy))
