@@ -113,7 +113,9 @@ This step is where we transition from merely describing and summarizing the data
 
 * We previously assumed the relationship between Time-to-Fill and Years of Service is negative. Is this true? How strong is this negative correlation? If it's significantly and consistently strong, we might choose to use this as hiring criteria going forward. To determine this, we would conduct a statistical correlation analysis.
 
-* We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline.
+* We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline. Here are two examples, where **the first visibly suggests a positive linear relationship** and **the second clearly shows no real correlation**.
+
+<img src="https://i1.wp.com/gforge.se/wp-content/uploads/2013/02/Cairo_PNG_72_dpi.png" style="margin: 0 auto; width: 45%;"/><img src="https://i.stack.imgur.com/93QUB.png" style="margin: 0 auto; width: 45%;"/>
 
 * In more complex situations, we might conduct regression analysis to determine the potential for accurately predicting values for Years of Service based on Time-to-Fill values. We could use this to justify building machine learning model to generate a predictive algorithm.
 
