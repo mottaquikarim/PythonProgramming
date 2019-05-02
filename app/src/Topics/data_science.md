@@ -1,5 +1,5 @@
 <!---
-{"next":"Topics/pandas.md","title":"Data Science"}
+{"next":"Topics/pandas_basics.md","title":"Data Science"}
 -->
 
 # Data Science
@@ -136,11 +136,10 @@ The single most important takeaway from this walk-through is this - *The value o
 
 Now, a data scientist might not present results to clients or high-level managers, but you do need to be able to explain results to team members who are not expert data scientists. Success in this endeavor The process of communication requires honing a cohesive narrative that establishes a thesis and includes evidence to back up said statement. Backing up the statement relies mainly on visualizing results and highlighting meaningful key metrics.
 
-## Python Data Science Environment Setup
+## Python Tools for Data Science
 
-Now that we understand the process we'll follow, we can jump into applying it with our Python skills. First, we have to set up our environments and ensure we have all the tools we need to conduct a thorough data science analysis.
+Now that we understand the process we'll follow, we can jump into applying it with our Python skills. First, we have to set up our environments and ensure we have all the tools we need to conduct a thorough data science analysis. We won't use all of these in this introductory class, but these are the most common across the industry.
 
-#### Python Tools for Data Science
 * **NumPy** for computational operations on large multi-dimensional arrays and matrices
 * **Pandas** for data structuring, manipulation, and analysis
 * **Matplotlib** & **Seaborn** for data visualization
