@@ -98,12 +98,12 @@ The inconsistencies and `N/A` missing values you see above are incredibly common
 
 We already looked at the columns in this dataset, but now we want to gain a deeper understanding and create some meaning to help determine our path forward. To do so, we will look at descriptive statistics, probably starting with summary statistics for the different categories in the dataset. 
 
-count
-min max years of service and their corresp values
-means
-plot distribution to gain a visual understanding of variance, spread, and skew -- create histograms of each var
+* Min & max years of service and their corresp values
+* Means of each var
+* Frequency counts of each value in a var
+* Plot the distribution of values as a histogram. A histogram uses the frequency counts for a single var, where the values themselves appear on the x-axis and the frequency of each one appears on the y-axis. This helps us gain a quick visual understanding of variance, spread, and skew.
 
-mean -- The average Years of Service (from these 3 years only) is ~1.33 years. 
+<img src="http://www.mbaexcel.com/wp-content/uploads/2016/01/Histogram-Adjustable-Bins-Template-01.png" style="margin: 0 auto; max-width= 50%; display: block;"/>
 
 **NOTE!** *Based on this, our original goal of minimizing turnover might change!*
 
