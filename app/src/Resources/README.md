@@ -47,6 +47,9 @@
 * [Data Flair](https://data-flair.training/blogs)
 * [Towards Data Science](https://towardsdatascience.com/)
 * [Elite Data Science](https://elitedatascience.com/)
+* [Python Graph Gallery](https://python-graph-gallery.com/)
+* [Data to Viz Interactive Diagram](https://www.data-to-viz.com/#explore)
+* [Data to Viz Visualization Style Tips](https://www.data-to-viz.com/caveats.html)
 
 ## Cheat Sheets
 

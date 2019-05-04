@@ -132,11 +132,38 @@ This is where the magic happens. We won't get into the details of machine learni
 
 Remember that your results might not be sufficient after only one iteration. They might point you in the right direction, but they won't necessarily answer all your questions sufficiently. You'll probably have to repeat parts of the cycle several times before you can confidently draw conclusions and make recommendations.
 
-### 7) DATA VISUALIZATION (& COMMUNICATION OF RESULTS!)
+### 7) DATA VISUALIZATION
 
-The single most important takeaway from this walk-through is this - *The value of your results depends directly on how well key stakeholders understand them!* You can have all the mathematical evidence in the world, but your stakeholders have to understand the contextual connections and believe they can turn them into valuable, strategic business actions.
+This final step is so important, we're going to give it its own section...
 
-Now, a data scientist might not present results to clients or high-level managers, but you do need to be able to explain results to team members who are not expert data scientists. Success in this endeavor The process of communication requires honing a cohesive narrative that establishes a thesis and includes evidence to back up said statement. Backing up the statement relies mainly on visualizing results and highlighting meaningful key metrics.
+## Visualizations & Data Storytelling
+
+The single most important takeaway from this walk-through is this - *the value of your results depends directly on how well key stakeholders understand them!* Data science is valuable because of the insights we can discover using it. You can have all the mathematical evidence in the world for those insights, but your stakeholders have to understand their contextual significance and believe they can turn them into strategic, impactful business actions. Otherwise, what value do those insights have?
+
+Now, a data scientist might not present results to clients or high-level managers, but you *do* need to be able to explain results to team members who are not expert data scientists. 
+
+This where the ubiquitous buzz phrase **data storytelling** comes into play. The goal of data storytelling is to convey your message in a way that provokes thoughts and ideas, inspires questions, encourages conversation and brainstorming, and ultimately, ignites action. All this boils down to two core pillars:
+
+1. Honing a cohesive narrative that establishes a thesis
+2. Highlighting meaningful key metrics as evidence to support that thesis
+
+Data vizualization is key to this endeavor because it's the easiest way to simplify heaps and mounds of numerical data into a clear message. As the saying goes, a picture can say a thousand words!
+
+#### Tips for Quality Data Viz
+
+* Focus the message on a central theme. Ensure your visualizations aid the progression of that message appropriately.
+	* Display the visualization at the appropriate point in your story.
+	* If you have more than one visualization in view at a time, position each one contextually, according to natural reading eye movement.
+* Do not use color for decorative or non-informational purposes. It should be used to highlight key metrics or data points that help support your message.
+* Most importantly, *avoid visual clutter like the plague!*
+	* Eliminate the legend if it will not detract from understanding.
+	* Where you have long, vertical x-axis labels, try flipping the chart if possible.
+	* Remove excessive boxes or lines that separate data.
+	* Don't graph too many variables in one chart. For instance, ten lines on one chart will be too convoluted to follow!
+
+**HOWEVER, there's always one exception!** Generally, "less is more" surpasses everything else in importance *except for "consider your audience".* You always want to minimize the amount of text on your visualization, but "the minimum" differs based on how much context your audience has. Ultimately, you need to make sure every viewer has enough context to be grounded in the appropriate frame of reference.
+
+If you want, you can see browse through a lot more tips on [Data to Viz's "Caveats" page](https://www.data-to-viz.com/caveats.html).
 
 ## Python Tools for Data Science
 
