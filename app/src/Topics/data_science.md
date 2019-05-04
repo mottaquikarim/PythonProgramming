@@ -115,7 +115,7 @@ This step is where we transition from merely describing and summarizing the data
 
 * We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline. Here are two examples, where **the first visibly suggests a positive linear relationship** and **the second clearly shows no real correlation**.
 
-<img src="https://i1.wp.com/gforge.se/wp-content/uploads/2013/02/Cairo_PNG_72_dpi.png" style="margin: 0 auto; width: 45%;"/><img src="https://i.stack.imgur.com/93QUB.png" style="margin: 0 auto; width: 45%;"/>
+	<img src="https://python-graph-gallery.com/wp-content/uploads/40_Basic_Scatterplot_seaborn.png" style="margin: 0 auto; width: 45%;"/>	<img src="https://python-graph-gallery.com/wp-content/uploads/42_Scatterplot_custom_linear_fit_seaborn.png" style="margin: 0 auto; width: 45%;"/>
 
 * In more complex situations, we might conduct regression analysis to determine the potential for accurately predicting values for Years of Service based on Time-to-Fill values. We could use this to justify building machine learning model to generate a predictive algorithm.
 
@@ -164,6 +164,21 @@ Data vizualization is key to this endeavor because it's the easiest way to simpl
 **HOWEVER, there's always one exception!** Generally, "less is more" surpasses everything else in importance *except for "consider your audience".* You always want to minimize the amount of text on your visualization, but "the minimum" differs based on how much context your audience has. Ultimately, you need to make sure every viewer has enough context to be grounded in the appropriate frame of reference.
 
 If you want, you can see browse through a lot more tips on [Data to Viz's "Caveats" page](https://www.data-to-viz.com/caveats.html).
+
+## DISCUSSION: Extrapolating Population in the Past & Future
+
+[How Many People Have Ever Lived on Earth?](https://www.prb.org/howmanypeoplehaveeverlivedonearth/), a study from the U.S. Population Reference Bureau (PRB).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JCm_1dGsYgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
+
+>>How Many People Have Ever Lived on Earth? Table 2. Snapshot of Population History
+>>* Number of people ever born -- **108,470,690,115**
+>>* World population in mid-2017 -- **7,536,000,000**
+>>* Percent of those ever born who are living in 2017 -- **6.9%**
+
+[Population Pyramid](https://www.populationpyramid.net/)
+
+This project focuses on predicting future population growth. It's compiled from various sources - primarily the United Nations, Department of Economic and Social Affairs, Population Division. Their interactive population pyramid tool is a great example of an informative and compelling and data visualization.
 
 ## Python Tools for Data Science
 

@@ -1,14 +1,16 @@
 <!---
-{"next": "Topics/course_review.md","title": "Pandas"}
+{"next": "Topics/data_viz.md","title": "Pandas Data Manipulation"}
 -->
 
-# Pandas
+# Pandas Data Manipulation
 
 <img src="https://media.giphy.com/media/EatwJZRUIv41G/giphy.gif" style="margin: 0 auto; display: block;"/><br>
 
+## Our Wine Reviews Dataset
+
 Let's start our interactive lesson on data manipulation with Pandas by first reacquainting ourselves with our practice dataset: [Wine Reviews | Kaggle](https://www.kaggle.com/zynicide/wine-reviews/).
 
-*This dataset holds 130k wine reviews with variety, location, winery, price, & description* Here's the `data dictionary` provided by the dataset's creator.
+*This dataset holds 130k wine reviews with variety, location, winery, price, & description.* Here's the `data dictionary` provided by the dataset's creator.
 
 * `country`: The country that the wine is from
 * `description`: Brief qualitative description by taster.
@@ -25,3 +27,7 @@ Let's start our interactive lesson on data manipulation with Pandas by first rea
 * `winery`: The winery that made the wine
 
 *More Coming Soon...*
+
+
+
+
