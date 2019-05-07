@@ -1,19 +1,35 @@
 <!---
-{"next": "Topics/data_viz.md","title": "Pandas Data Manipulation"}
+{"next": "Topics/data_viz.md","title": "Data Manipulation"}
 -->
 
-# Pandas Data Manipulation
+# Data Manipulation with Pandas
+
+*More Coming Soon...*
 
 <img src="https://media.giphy.com/media/EatwJZRUIv41G/giphy.gif" style="margin: 0 auto; display: block;"/><br>
 
-## Our Wine Reviews Dataset
+In this section, our core focus will be using our wine review dataset to learn how to manipulate Pandas data structures objects. At a high-level, this lesson will cover:
 
-Let's start our interactive lesson on data manipulation with Pandas by first reacquainting ourselves with our practice dataset: [Wine Reviews | Kaggle](https://www.kaggle.com/zynicide/wine-reviews/).
+>>* DataFrame Objects
+* Viewing & Inspecting Data
+	* summary func
+	* describe/head etc.
+	* selection
+* Data Cleaning & Organization
+	* !!!!! join, groupby, sort, map, apply, pivot
+* Data Exploration
+	* Statistics
+	* Visualization (*maybe*)
 
-*This dataset holds 130k wine reviews with variety, location, winery, price, & description.* Here's the `data dictionary` provided by the dataset's creator.
+## Wine Review Data Dictionary
+
+To frame us for jumping into Pandas, let's review the details of our wine review dataset.
+
+[Wine Reviews | Kaggle](https://www.kaggle.com/zynicide/wine-reviews/)
+*130k wine reviews with variety, location, winery, price, and description* 
 
 * `country`: The country that the wine is from
-* `description`: Brief qualitative description by taster.
+* `description`:
 * `designation`: The vineyard within the winery where the grapes that made the wine are from
 * `points`: The number of points WineEnthusiast rated the wine on a scale of 1-100 (though they say they only post reviews for wines that score >=80)
 * `price`: The cost for a bottle of the wine
@@ -26,7 +42,7 @@ Let's start our interactive lesson on data manipulation with Pandas by first rea
 * `variety`: The type of grapes used to make the wine (ie Pinot Noir)
 * `winery`: The winery that made the wine
 
-*More Coming Soon...*
+
 
 
 

@@ -1,10 +1,17 @@
 <!---
-{"next": "Topics/pandas.md","title": "Pandas Basics"}
+{"next": "Topics/pandas.md","title": "Intro to Pandas"}
 -->
 
-# Pandas Basics
+# Intro to Pandas
+
 <img src="https://media.giphy.com/media/EatwJZRUIv41G/giphy.gif" style="margin: 0 auto; float: right;"/>
+
 **Pandas** is an open-source Python library of data structures and tools for exploratory data analysis (EDA). Pandas primarily facilitates acquisition, cleaning, formatting, and manipulating. Used in tandem with NumPy, Matplotlib, SciPy, and other Python libraries, Pandas is an integral part of practicing data science.
+
+To gain some baseline familiarity with Pandas features, uses, 
+
+ the  ourselves with  us to the , we'll cover:
+*
 
 ## Capabilities of Pandas
 * Robust IO tools to reading from flat files (CSV and TXT), JSON, XML, Excel files, SQL tables, and other databases.
@@ -18,6 +25,112 @@
 * Automatic and explicit aligning and manipulating of high-dimensional data structures via hierarchical labeling and axis indexing
 * Subsetting, fancy indexing, and label-based slicing large data sets
 * Time-series functionality such as date range generation, date shifting, lagging, frequency conversions, moving window statistics, and moving window linear regressions.
+
+## Basic Data Structures: NumPy ndarrays
+
+Because Pandas is built on top of NumPy, new users should first understand one NumPy data object that often appears within Pandas objects - the ndarray. An **ndarray, or N-dimensional array,** is a data type from the NumPy library. Ndarrays are deceptively similar to the more general Python `list` type we've been working with. An `ndarray` type is a group of elements, which can be accessed and updated using a zero-based index. Sounds exactly like a `list`, right? You can create and print an ndarray exactly like a list. You can even create an ndarray *from* a list like this:
+
+```python
+import numpy as np
+
+listA = [1, 2, 3]
+arrayA = np.array([1, 2, 3])
+print(listA) # [1, 2, 3]
+print(arrayA) # [1 2 3]
+
+listB = ['a', 'b', 'c']
+arrayB = np.array(listB)
+print(listB) # ['a', 'b', 'c']
+print(arrayB) # ['a' 'b' 'c']
+```
+
+However, there are several important differences to remember:
+
+First, all ndarrays are homogenous.* All elements in an ndarray must be the same data type (e.g. integers, floats, strings, booleans, etc.). If you try to enter data that is not homogenous, the `.array()` function will force unity of data type. Side note - notice that ndarrays get printed out without commas.
+
+```python
+import numpy as np
+
+arrayC = np.array([1, 'b', True])
+print(arrayC) # ['1', 'b', 'True']
+
+arrayD = np.array([1, False])
+print(arrayD) # [1 0]
+```
+
+Second, ndarrays have a parameter called `ndmin`, which allows you to specify the number of dimensions you want for your array when you create it. Here are the three key takeaways from the examples of this below.
+* Notice how each dimension prints on its own line, so the ndarray looks more like a *grid* than a single list.
+* `arrayE1` and `arrayE2` above are identical. This illustrates that the `nddim` parameter is optional. In other words, you can directly pass in multi-dimensional data without having to enter an argument for it.
+* `arrayF` throws an error because it's missing one vital piece of syntax that `arrayC1` has. Do you see it? The first parameter in the `.array()` method is the object (i.e. the values you want contained in the array). When you pass values for multiple dimensions of the array object into the `.array()` method, you separate them with commas. *You have to make sure you group the dimensions and their values into a single group by adding `()` around them.* If you don't, the `.array()` method might mistake the second dimension and its values for the second *parameter* of the `.array()` method.
+
+```python
+import numpy as np
+
+arrayE1 = np.array(([1, 2, 3], [4, 5, 6]))
+print(arrayC1)
+"""
+[[1 2 3]
+ [4 5 6]]
+"""
+
+arrayE2 = np.array(([1, 2, 3], [4, 5, 6]), ndmin = 2)
+print(arrayC2)
+"""
+[[1 2 3]
+ [4 5 6]]
+"""
+
+arrayF = np.array([1, 2, 3], [4, 5, 6])
+print(arrayF) # Error
+```
+
+The third, and most important, difference between an array and a list is, *ndarrays are designed to handle **vectorized** operations* while a python list is not. In other words, if you apply a function to an ndarray object, the program will perform said function on each item in the array individually. If you apply a function to a list, the function to be performed on the list object as a whole.As a bonus, these vectorization capabilities also allow ndarrays take up less memory space and run faster.
+
+```python
+import numpy as np
+
+listG = [1, 2, 3]
+arrayG = np.array(listA)
+
+print(arrayG + 2) # [3 4 5]
+print(listG + 2) # Error
+```
+
+#### Creating Random & Range ndarrays
+
+There are a handful of other ways to create ndarrays, including random generation...
+
+```python
+import numpy as np
+import random
+
+# Create an array of 5 random integers between 50 and 100. They will form a uniform distribution.
+rand_array1 = np.random.randint(50,  100,  5)
+print(rand_array1) # [54 86 91 61 90]
+
+# Create a matrix of 2 rows and 3 columns, with all values between -1 and 1.
+rand_array2 = np.random.rand(2, 3)
+print(rand_array2)
+"""
+[[0.11298458 0.49065597 0.14219546]
+ [0.27545168 0.87526704 0.93213146]]
+"""
+
+# Create a matrix of 2 rows and 3 columns, with all values between 0 and 1. They will form a normal distribution.
+rand_array3 = np.random.randn(2, 3)
+print(rand_array3)
+"""
+[[-0.24525306  1.9082735   0.55667231]
+ [-1.17418436  0.12749887 -1.47157527]]
+"""
+```
+
+...and via the `.arange()` method. This method takes the start point of the array, the end point, and (optionally) the step size. Remember that the final value will actually be one less than the specified end point.
+
+```python
+range_array = np.arange(2, 8, 2)
+print(range_array) # [2, 4, 6]
+```
 
 ## Setting Up Our First Data Science Project
 

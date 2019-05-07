@@ -1,8 +1,8 @@
 <!---
-{"next": "Topics/course_review.md","title": "Data Visualization with Pandas"}
+{"next": "Topics/course_review.md","title": "Data Visualization"}
 -->
 
-# Data Visualization with Pandas
+# Data Visualization with Pandas & Matplotlib
 
 In this section, we'll go over example code for different types of common visualizations.
 

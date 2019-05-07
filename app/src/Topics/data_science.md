@@ -1,5 +1,5 @@
 <!---
-{"next":"Topics/pandas_basics.md","title":"Data Science"}
+{"next":"Topics/intro_pandas.md","title":"Data Science"}
 -->
 
 # Data Science
