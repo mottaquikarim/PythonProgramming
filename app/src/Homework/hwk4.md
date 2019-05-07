@@ -1,12 +1,12 @@
 <!---
-{"next":"Homework/hwk4.md","title":"Homework 3"}
+{"next":"Resources/README.md","title":"Homework 4"}
 -->
 
-# Homework 3
+# Homework 4
 
 From the **[Class PSETs](https://github.com/mottaquikarim/pydev-psets)**, solve:
 
-1. [Functions & Modules](https://github.com/mottaquikarim/pydev-psets#functions--modules)
+1. [Classes](https://github.com/mottaquikarim/pydev-psets#classes)
 
 ## How to Submit
 
