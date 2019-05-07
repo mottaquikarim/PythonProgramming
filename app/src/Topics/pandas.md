@@ -10,16 +10,10 @@
 
 In this section, our core focus will be using our wine review dataset to learn how to manipulate Pandas data structures objects. At a high-level, this lesson will cover:
 
->>* DataFrame Objects
+* Pandas DataFrames
 * Viewing & Inspecting Data
-	* summary func
-	* describe/head etc.
-	* selection
 * Data Cleaning & Organization
-	* !!!!! join, groupby, sort, map, apply, pivot
 * Data Exploration
-	* Statistics
-	* Visualization (*maybe*)
 
 ## Wine Review Data Dictionary
 

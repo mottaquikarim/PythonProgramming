@@ -32,7 +32,7 @@
 	- [List Comprehensions](Topics/list_comprehensions.md)
 	- [Classes](Topics/classes.md)
 	- [Data Science](Topics/data_science.md)
-	- [Pandas Basics](Topics/pandas_basics.md)
+	- [Intro to Pandas](Topics/intro_pandas.md)
 	- [Data Manipulation](Topics/pandas.md)
 	- [Data Visualization](Topics/data_viz.md)
 	- [Course Review](Topics/course_review.md)

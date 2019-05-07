@@ -2,16 +2,17 @@
 {"next": "Topics/pandas.md","title": "Intro to Pandas"}
 -->
 
-# Intro to Pandas
+# Intro to Pandas & NumPy
 
 <img src="https://media.giphy.com/media/EatwJZRUIv41G/giphy.gif" style="margin: 0 auto; float: right;"/>
 
 **Pandas** is an open-source Python library of data structures and tools for exploratory data analysis (EDA). Pandas primarily facilitates acquisition, cleaning, formatting, and manipulating. Used in tandem with NumPy, Matplotlib, SciPy, and other Python libraries, Pandas is an integral part of practicing data science.
 
-To gain some baseline familiarity with Pandas features, uses, 
+To gain some baseline familiarity with Pandas features and pre-requisites, in this lesson, you'll learn about:
 
- the  ourselves with  us to the , we'll cover:
-*
+* Capabilities of Pandas
+* NumPy `ndarray` Objects
+* Setting Up Your First Data Science Project
 
 ## Capabilities of Pandas
 * Robust IO tools to reading from flat files (CSV and TXT), JSON, XML, Excel files, SQL tables, and other databases.
@@ -132,7 +133,7 @@ range_array = np.arange(2, 8, 2)
 print(range_array) # [2, 4, 6]
 ```
 
-## Setting Up Our First Data Science Project
+## Setting Up Your First Data Science Project
 
 Before we dive into analysis, we have to make sure we set up a stable, organized environment. For our lesson on Pandas we'll be using this dataset:
 
