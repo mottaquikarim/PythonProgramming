@@ -113,7 +113,7 @@ This step is where we transition from merely describing and summarizing the data
 
 * We previously assumed the relationship between Time-to-Fill and Years of Service is negative. Is this true? How strong is this negative correlation? If it's significantly and consistently strong, we might choose to use this as hiring criteria going forward. To determine this, we would conduct a statistical correlation analysis.
 
-* We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline. Here are two examples, where **the first visibly suggests a positive linear relationship** and **the second clearly shows no real correlation**.
+* We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline.
 
 	<img src="https://python-graph-gallery.com/wp-content/uploads/40_Basic_Scatterplot_seaborn.png" style="margin: 0 auto; width: 45%;"/>	<img src="https://python-graph-gallery.com/wp-content/uploads/42_Scatterplot_custom_linear_fit_seaborn.png" style="margin: 0 auto; width: 45%;"/>
 
@@ -175,6 +175,8 @@ If you want, you can see browse through a lot more tips on [Data to Viz's "Cavea
 >>* Number of people ever born -- **108,470,690,115**
 >>* World population in mid-2017 -- **7,536,000,000**
 >>* Percent of those ever born who are living in 2017 -- **6.9%**
+
+* "Any estimate of the total number of people who have ever lived depends essentially on two factors: the length of time humans are thought to have been on Earth and the average size of the human population at different periods...Guesstimating the number of people ever born, then, requires selecting population sizes for different points from antiquity to the present and applying assumed birth rates to each period."
 
 [Population Pyramid](https://www.populationpyramid.net/)
 
