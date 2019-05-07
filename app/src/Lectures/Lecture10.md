@@ -1,8 +1,8 @@
 <!---
-{"next":"Topics/README.md","title":"Classes"}
+{"next":"Lectures/Lecture11.md","title":"✅ Classes"}
 -->
 
-# Lecture 10: Classes
+# ✅ Lecture 10: Classes
 
 ## 🍕 Mid Course Survey 🍕
 **[What this means](https://docs.google.com/presentation/d/1r5KrB7bf0rCJpm5MCTy8eQT_5TrUy7AtimURDI-QbpQ/edit#slide=id.g3dd4fa9b7e_0_239)**
