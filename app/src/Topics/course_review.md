@@ -248,18 +248,79 @@ while a:
 print('Done.', a) # Done. ['foo', 'bar']
 ```
 
-*More coming soon...*
-
 ## OOP (Object-Oriented Programming)
 
 ### Functions
 
+```python
+def function_name(parameters):
+	"""docstring"""
+	# statement(s)
+
+def num_squared(num):
+	"""Find the square of some number passed in"""
+	square = num*num # code to find the square
+	return square
+
+sq12 = num_squared(12)
+print(sq12) # 144
+```
 
 ### Classes
 
+Parent class:
+
+```python
+class Animal:
+    def __init__(self, species = '', diet= ''):
+        self.species = species
+        self.diet = diet
+
+    kingdom = 'Animalia'
+
+    def my_kingdom(self):
+        print(self.kingdom)
+
+    def feed_me(self):
+        if self.diet == 'omnivore':
+            food = 'plants and meat'
+        elif self.diet == 'carnivore':
+            food = 'meat'
+        elif self.diet == 'herbivore':
+            food = 'plants'
+        print(f'{self.species} eat {food}!')
+        return None
+```
+
+Child class w. inheritance:
+
+```python
+class Elephant(Animal):
+    def __init__(self, name, genus = '', species = '', habitat = '', age = None):
+        self.name = name
+        self.genus = genus
+        self.species = species
+        self.habitat = habitat
+        self.age = age
+        self.taxonomy = {'Kingdom': Animal.kingdom, 'Class': self.common_taxonomy['Class'], 'Family': self.common_taxonomy['Family'], 'Genus': self.genus, 'Species': self.species} # C.
+
+    diet = 'Herbivore'
+
+    common_taxonomy = {
+    'Class': 'Mammalia',
+    'Family': 'Elephantidae',
+    }
+
+    def summary(self):
+      print(f'All about {self.name} -')
+      print(f'Elephant, age {self.age}\nHabitat: {self.habitat}\nDiet: {self.diet}\n\nTaxonomy:')
+      for k,v in self.taxonomy.items():
+        print(f'{k}: {v}')
+```
 
 ## Data Science Strategy
 
+*More coming soon...*
 
 ## Pandas
 

@@ -40,7 +40,7 @@ Let's say we want to create a function to get the square of a number. At the mos
 Let's implement this in a function called `NumSquared()`.
 
 ```python
-def NumSquared(num):
+def num_squared(num):
 	"""Find the square of some number passed in"""
 	square = num*num # code to find the square
 	return square
@@ -56,8 +56,8 @@ def NumSquared(num):
 Once we've written this logic, we can call `NumSquared()` every time we want to use it. Let's say we want to find the value of 12 squared...
 
 ```python
-sq12 = NumSquared(12)
-print(sq12)
+sq12 = num_squared(12)
+print(sq12) # 144
 ```
 
 **NOTE!** You should store the function call within a var so that the return value gets stored in the var. If you don't, how will you access the output you wanted??
