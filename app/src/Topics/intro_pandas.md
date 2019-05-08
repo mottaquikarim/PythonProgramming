@@ -35,7 +35,7 @@ To gain some baseline familiarity with Pandas features and pre-requisites, in th
 
 Because Pandas is built on top of NumPy, new users should first understand one NumPy data object that often appears within Pandas objects - the `ndarray`.
 
-![ndarray](../../../assets/numpy_ndarrays.png)
+<img src="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/assets/numpy_ndarrays.png" style="margin: 0 auto; display: block;"/>
 
 An **ndarray, or N-dimensional array,** is a data type from the NumPy library. Ndarrays are deceptively similar to the more general Python `list` type we've been working with. An `ndarray` type is a group of elements, which can be accessed and updated using a zero-based index. Sounds exactly like a `list`, right? You can create and print an ndarray exactly like a list. You can even create an ndarray *from* a list like this:
 
@@ -147,7 +147,7 @@ We know about the concept of an `index` from basic Python `lists`. Well, Pandas 
 
 ## Basic Pandas Objects: Series
 
-<img src="../../../assets/pd_series.png" style="margin: 0 auto; display: block;"/>
+<img src="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/assets/pd_series.png" style="margin: 0 auto; display: block;"/>
 
 A **Series** is a 1-D array of data just like the Python `list` datatype we've been working with, but it's a bit more flexible. Some notable characteristics include:
 
@@ -222,7 +222,7 @@ c    2
 
 ## Basic Pandas Objects: DataFrames
 
-<img src="../../../assets/pd_dataframe.png" style="margin: 0 auto; display: block;"/>
+<img src="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/assets/pd_dataframe.png" style="margin: 0 auto; display: block;"/>
 
 
 A **DataFrame** is a two-dimensional data matrix that stores data much like a spreadsheet does. It has labeled columns and rows with values for each column. Basically, it's virtual spreatsheet. It accepts many different data types as values, including strings, arrays (lists), dicts, Series, and even other DataFrames. The general syntax for creating a DataFrame is identical to that of a Series except it includes a second index parameter called `columns` parameter for adding the index values to the second dimension:
