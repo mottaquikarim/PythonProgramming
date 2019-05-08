@@ -81,20 +81,20 @@ If you want to add an item to a specific point in your list, you can pass the de
 ```python
 # your_list.insert(index, item)
 
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
-my_class.insert(1, "Sanju")
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+my_class.insert(1, 'Sanju')
 print(my_class)
-# => ["Brandi", "Sanju", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
+# => ['Brandi', 'Sanju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
 ```
 
 `l[index:index]=`:
 To *replace* items in a list by their index position, you can use the same syntax for adding a single new value. You simply reference which indeces you want to replace and specify the new values.
 
 ```python
-x = ['a', 'b', 'c', 'd']
-x[1] = 'r'
-x[2:] = ['s', 't']
-print(x) # ['a', 'r', 's', 't']
+x = ['Brandi', 'Sanju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+x[1] = 'Raju'
+x[6:] = ['Chloe', 'Phoebe']
+print(x) # ['Brandi', 'Raju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Chloe', 'Phoebe']
 ```
 
 `.join()`:
@@ -110,12 +110,12 @@ sentence = ' '.join(words)
 print(f'{sentence}.') # 'this is fun.'
 ```
 
-`.split('split_char')`:
+`.split('by_char')`:
 You can also do the opposite - split values out of a string and turn each value into a list item. This one doesn't work for single words you might want to split into individual characters. That said, you *can* specify what character should convey to the method when to split out a new item. By default, `.split()` will use a space character to split the string.
 
 ```python
 x = 'this is fun'
-sentence = x.split() # note - using default split char
+sentence = x.split() # note - using default split char at space
 print(sentence) # ['this', 'is', 'fun']
 
 y = 'Sandra,hi@email.com,646-212-1234,8 Cherry Lane,Splitsville,FL,58028'
@@ -132,12 +132,12 @@ Likewise, you can use `.pop()` or `.pop(index)` to remove any type of element fr
 ```python
 # your_list.pop()
 
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
 student_that_left = my_class.pop()
 print("The student", student_that_left, "has left the class.")
-# => "Sonyl"
+# Sonyl
 print(my_class)
-# => ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
+# => ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
 ```
 
 `.pop(index)`:
@@ -147,12 +147,12 @@ print(my_class)
 ```python
 # your_list.pop(index)
 
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha", "Sonyl"]
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
 student_that_left = my_class.pop(2) # Remember to count from 0!
 print("The student", student_that_left, "has left the class.")
 # => "Steve"
 print(my_class)
-# => ["Brandi", "Zoe", "Aleksander", "Dasha", "Sonyl"]
+# => ['Brandi', 'Zoe', 'Aleksander', 'Dasha']
 ```
 
 ## Built-in Operators for Analyzing Lists
@@ -165,7 +165,7 @@ This tells you how many items are in the list; can be used for lists composed of
 ```python
 # length_variable = len(your_list)
 
-my_class = ["Brandi", "Zoe", "Steve", "Aleksander", "Dasha"]
+my_class = ['Brandi', 'Zoe', 'Aleksander', 'Dasha']
 num_students = len(my_class)
 print("There are", num_students, "students in the class")
 # => 5

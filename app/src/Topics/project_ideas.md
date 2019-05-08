@@ -4,5 +4,4 @@
 
 # Python Project Ideas
 
-*Coming soon...*
-
+*More coming soon...*

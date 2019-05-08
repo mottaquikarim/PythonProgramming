@@ -71,11 +71,6 @@ for color in visible_colors:
   print(color)
 ```
 
-## Nested Loops
-
-tbd
-
-
 ## Loops with Ranges
 
 #### `range()` vs. the `enumerate()` Object

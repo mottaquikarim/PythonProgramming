@@ -42,11 +42,11 @@ Let's now explore the *boolean operators* available in python.
 ## Greater Than / Greater Than or Equal To
 
 ```python
-my_moneys = 37.00
+my_money = 37.00
 total = 35.00
 
-enough_money = my_moneys > total # True
-just_enough_money = my_moneys >= total # also True
+enough_money = my_money > total # True
+just_enough_money = my_money >= total # also True
 ```
 
 ## Less Than / Less Than or Equal To
@@ -64,11 +64,11 @@ at_or_under_speed_limit = my_speed <= speed_limit # also True
 Because we use the `=` symbol for identity (ie: to set a variable), it is not available for comparison operations. Instead, we must use the `==` and `!=` symbols. 
 
 ```python
-you = 68
-me = 73
+speed_limit = 65
+my_speed = 32
 
-are_we_equal = (you == me) # will be False
-are_we_not_equal = (you != me) # will be True
+are_they_equal = (speed_limit == my_speed) # False
+are_they_not_equal = (speed_limit != my_speed) # True
 ```
 
 Note that the parens are unnecessary here, but we add them anyways for the sake of clarity.
@@ -205,7 +205,7 @@ temp = 43
 is_it_raining = True
 
 if is_it_raining and temp < 65:
-	print('wear a raincoat!')
+	print('wear a jacket and bring an umbrella!')
 ```
 
 In the example above, we make use of comparison operators *and* logical operators in a compound statement.

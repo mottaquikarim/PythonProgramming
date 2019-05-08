@@ -55,10 +55,21 @@ These are the main topics that we will explore in this course. These topics will
 	* [Real Applications](data_science.md#real-data-science-applications)
 	* [The Data Science Lifecycle](data_science.md#the-data-science-lifecycle)
 	* [Python Tools for Data Science](data_science.md#python-tools-for-data-science)
-* **[Pandas Basics](pandas_basics.md)**
-	* [Capabilities of Pandas](pandas_basics.md#capabilities-of-pandas)
-	* [Setting Up Our First Data Science Project](pandas_basics.md#setting-up-our-first-data-science-project)
-	* [Reading Files Summary](pandas_basics.md#reading-files-summary)
+* **[Pandas Basics](intro_pandas.md)**
+	* [Capabilities of Pandas](intro_pandas.md#capabilities-of-pandas)
+	* [NumPy ndarrays](intro_pandas.md#basic-data-structures-numpy-ndarrays)
+	* [Index](intro_pandas.md#basic-pandas-objects-index)
+	* [Series](intro_pandas.md#basic-pandas-objects-series)
+	* [DataFrames](intro_pandas.md#basic-pandas-objects-dataframes)
+	* [Setting Up Our First Data Science Project](intro_pandas.md#setting-up-our-first-data-science-project)
 * **[Pandas](pandas.md)**
+	* [Wine Review Data Dictionary](pandas.md#wine-review-data-dictionary)
+	* [Importing Data](pandas.md#importing-data)
+	* [Wrangling & Selecting Data](pandas.md#wrangling--selecting-data)
 * **[Course Review](course_review.md)**
+	* [Data Structures](course_review.md#data-structures)
+	* [Control Flow](course_review.md#control-flow)
+	* [OOP (Object-Oriented Programming)](course_review.md#oop-object-oriented-programming)
+	* [Data Science Strategy](course_review.md#data-science-strategy)
+	* [Pandas](course_review.md#pandas)
 * **[Python Project Ideas](project_ideas.md)**

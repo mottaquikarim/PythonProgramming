@@ -175,7 +175,8 @@ state_capitals = {
 	'GA': 'Atlanta'
 }
 ```
-**Notice something?** It's easy to accidentally override items when you're merging datasets. Oops, we just changed the capital of NJ to Hoboken! Don't worry though - we'll learn an easy way to check for duplicate keys in the next section.
+
+**Notice something?** It's easy to accidentally override items when you're merging datasets. *Oops, we just changed the capital of NJ to Hoboken!* Don't worry though - we'll learn an easy way to check for duplicate keys in the next section.
 
 #### Remove Items from a Dict
 
