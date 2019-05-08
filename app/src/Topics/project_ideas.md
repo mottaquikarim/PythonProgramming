@@ -8,9 +8,7 @@
 
 Your final project should address a data-related problem in a professional field that interests you. Pick any subject that you're passionate about! Your project should reflect significant original work inn applying data science techniques to an interesting problem. Although final projects are individual assignments, peer code review is strongly encouraged.
 
-To help spark ideas, we put together a smorgasbord of cool [public data sources](../Resources/datasets.md#open-source-data-sets). Using public data is the most common choice. If you have access to private data, that's also an option, though you'll have to be careful about what results you can release. 
-
-You can also sift through [past projects](https://github.com/justmarkham/DAT-project-examples) from other GA Data Science students in order to get a sense of the variety and scope of projects.
+To help spark ideas, we put together a smorgasbord of cool [public data sources](../Resources/datasets.md). Using public data is the most common choice. If you have access to private data, that's also an option, though you'll have to be careful about what results you can release.
 
 ## Project Deliverables
 
