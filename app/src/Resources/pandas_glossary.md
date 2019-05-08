@@ -1,5 +1,5 @@
 <!---
-{"next":"About/README.md","title":"Pandas Glossary"}
+{"next":"Resources/genref.md","title":"Pandas Glossary"}
 -->
 
 # Pandas Glossary
