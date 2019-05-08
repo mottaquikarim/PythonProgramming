@@ -190,5 +190,5 @@ Now that we understand the process we'll follow, we can jump into applying it wi
 * **Pandas** for data structuring, manipulation, and analysis
 * **Matplotlib** & **Seaborn** for data visualization
 * **Scikit-learn** for machine learning
-* **Scrapy** for data wrangling via web scaping
+* **Scrapy** for data wrangling via web scraping
 * **Jupyter Notebooks** & **Jupyter Lab** for data science integrated development environments (IDEs)

@@ -29,7 +29,11 @@ To gain some baseline familiarity with Pandas features and pre-requisites, in th
 
 ## Basic Data Structures: NumPy ndarrays
 
-Because Pandas is built on top of NumPy, new users should first understand one NumPy data object that often appears within Pandas objects - the ndarray. An **ndarray, or N-dimensional array,** is a data type from the NumPy library. Ndarrays are deceptively similar to the more general Python `list` type we've been working with. An `ndarray` type is a group of elements, which can be accessed and updated using a zero-based index. Sounds exactly like a `list`, right? You can create and print an ndarray exactly like a list. You can even create an ndarray *from* a list like this:
+Because Pandas is built on top of NumPy, new users should first understand one NumPy data object that often appears within Pandas objects - the `ndarray`.
+
+![ndarray](../../../assets/numpy_ndarrays.png)
+
+An **ndarray, or N-dimensional array,** is a data type from the NumPy library. Ndarrays are deceptively similar to the more general Python `list` type we've been working with. An `ndarray` type is a group of elements, which can be accessed and updated using a zero-based index. Sounds exactly like a `list`, right? You can create and print an ndarray exactly like a list. You can even create an ndarray *from* a list like this:
 
 ```python
 import numpy as np
