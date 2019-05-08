@@ -21,6 +21,8 @@ We know about the concept of an `index` from basic Python `lists`. Well, Pandas 
 
 ## Basic Pandas Objects: Series
 
+<img src="../../../assets/pd_series.png" style="margin: 0 auto; display: block;"/>
+
 A **Series** is a 1-D array of data just like the Python `list` datatype we've been working with, but it's a bit more flexible. Some notable characteristics include:
 
 * A Series is like a dict in that you can get and set values by index label.
@@ -29,8 +31,6 @@ A **Series** is a 1-D array of data just like the Python `list` datatype we've b
 * The Pandas Series does have some distinct differences from an ndarray:
 	* A Series can only have one dimension.
 	* Operations between Series automatically align the data based on index label.
-
-#### Creating a Series
 
 Here's the general syntax for creating a Series:
 
@@ -96,16 +96,50 @@ c    2
 
 ## Basic Pandas Objects: DataFrames
 
-A **DataFrame** is a two-dimensional data matrix that stores data much like a spreadsheet does. It has labeled columns and rows with values for each column. Basically, it's virtual spreatsheet. It accepts many different data types as values, including strings, arrays (lists), dicts, Series, and even other DataFrames.
+<img src="../../../assets/pd_dataframe.png" style="margin: 0 auto; display: block;"/>
+
+
+A **DataFrame** is a two-dimensional data matrix that stores data much like a spreadsheet does. It has labeled columns and rows with values for each column. Basically, it's virtual spreatsheet. It accepts many different data types as values, including strings, arrays (lists), dicts, Series, and even other DataFrames. The general syntax for creating a DataFrame is identical to that of a Series except it includes a second index parameter called `columns` parameter for adding the index values to the second dimension:
 
 ```python
 import numpy as np
 import pandas as pd
 
-df = pd.DataFrame (data, index, columns, dtype)
+df = pd.DataFrame (data, index, columns)
 ```
 
-*More Coming Soon...*
+Creating a DataFrame is a little more complex than creating a Series because you have to consider both `rows` and `columns`. Aside from creating a dataframe indirectly by importing an existing data structure, you can create a DataFrame by:
+
+* Specifying column names (i.e. column index values) directly within the `data` parameter
+* Specifying column names separately in the `columns` parameter
+
+```python
+import numpy as np
+import pandas as pd
+
+# Specify values for each column.
+df = pd.DataFrame(
+{"a" : [4 ,5, 6],
+"b" : [7, 8, 9],
+"c" : [10, 11, 12]},
+index = [1, 2, 3])
+
+# Specify values for each row.
+df = pd.DataFrame(
+[[4, 7, 10],
+[5, 8, 11],
+[6, 9, 12]],
+index=[1, 2, 3],
+columns=['a', 'b', 'c'])
+```
+
+Both of these methods create a DataFrame with these values:
+
+|    | a | b | c  |
+|----|---|---|----|
+|  1 | 4 | 7 | 10 |
+|  2 | 5 | 8 | 11 |
+|  3 | 6 | 9 | 12 |
 
 ## Wine Review Data Dictionary
 
@@ -127,3 +161,7 @@ To frame us for jumping into Pandas, let's review the details of our wine review
 * `title`: The title of the wine review, which often contains the vintage if you're interested in extracting that feature
 * `variety`: The type of grapes used to make the wine (ie Pinot Noir)
 * `winery`: The winery that made the wine
+
+*More Coming Soon...*
+
+
