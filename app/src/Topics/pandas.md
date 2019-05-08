@@ -131,15 +131,53 @@ df = pd.DataFrame(
 [6, 9, 12]],
 index=[1, 2, 3],
 columns=['a', 'b', 'c'])
+
+
+# Both of these methods create a DataFrame with these values:
+"""
+   a   b   c
+1  4   7   10
+2  5   8   11
+3  6   9   12
+"""
 ```
 
-Both of these methods create a DataFrame with these values:
+Here are a few other examples:
 
-|    | a | b | c  |
-|----|---|---|----|
-|  1 | 4 | 7 | 10 |
-|  2 | 5 | 8 | 11 |
-|  3 | 6 | 9 | 12 |
+```python
+import numpy as np
+import pandas as pd
+
+# From dict of Series or dicts
+data1 = {'one': pd.Series([1., 2., 3.], index=['a', 'b', 'c']), 'two': pd.Series([1., 2., 3., 4.], index=['a', 'b', 'c', 'd'])}
+df1 = pd.DataFrame(data1, index=['d', 'b', 'a'], columns=['two', 'three'])
+"""
+   two three
+d  4.0   NaN
+b  2.0   NaN
+a  1.0   NaN
+"""
+
+# From dict of ndarrays / lists
+data2 = {'one': [1., 2., 3., 4.],'two': [4., 3., 2., 1.]}
+df2 = pd.DataFrame(data2, index=['a', 'b', 'c', 'd'])
+"""
+   one  two
+a  1.0  4.0
+b  2.0  3.0
+c  3.0  2.0
+d  4.0  1.0
+"""
+
+# From a list of dicts
+data3 = [{'a': 1, 'b': 2}, {'a': 5, 'b': 10, 'c': 20}]
+df3 = pd.DataFrame(data3, index=['first', 'second'], columns=['a', 'b', 'c'])
+"""
+        a   b     c
+first   1   2   NaN
+second  5  10  20.0
+"""
+```
 
 ## Wine Review Data Dictionary
 
