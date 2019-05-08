@@ -6,28 +6,6 @@
 
 <img src="https://news.nationalgeographic.com/content/dam/news/2015/12/15/pandas/01pandainsemination.ngsversion.1450209600474.adapt.1900.1.jpg" style="margin: 0 auto; width: 50%; display: block;"/>
 
-## Attributes
-
-* `T` -- Transpose index and columns.
-* `at` -- Access a single value for a row/column label pair
-* `axes` -- Return a list representing the axes of the DataFrame.
-* `blocks` -- (DEPRECATED) Internal property, property synonym for as_blocks().
-* `columns` -- The column labels of the DataFrame.
-* `dtypes` -- Return the dtypes in the DataFrame.
-* `empty` -- Indicator whether DataFrame is empty.
-* `ftypes` -- Return the ftypes (indication of sparse/dense and dtype) in DataFrame.
-* `iat` -- Access a single value for a row/column pair by integer position.
-* `iloc` -- Purely integer-location based indexing for selection by position.
-* `index` -- The index (row labels) of the DataFrame.
-* `is_copy` -- Return the copy.
-* `ix` -- A primarily label-location based indexer, with integer position fallback.
-`loc` -- Access a group of rows and columns by label(s) or a boolean array.
-* `ndim` -- Return an int representing the number of axes / array dimensions.
-* `shape` -- Return a tuple representing the dimensionality of the DataFrame.
-* `size` -- Return an int representing the number of elements in this object.
-* `style` -- Property returning a Styler object containing methods for building a styled HTML representation fo the DataFrame.
-* `values` -- Return a Numpy representation of the DataFrame.
-
 ## Reading & Writing Data
 
 * `pd.read_csv(filename)` -- From a CSV file
@@ -51,8 +29,8 @@
 * `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
 * `s.iloc[0]` -- select an item by its position
 * `s.loc['index_one']` -- select an item by its index position
-* df.iloc[0,:] # First row
-* df.iloc[0,0] # First element of first column
+* `df.iloc[0,:]` -- First row
+* `df.iloc[0,0]` -- First element of first column
 * `pd.isnull()` -- checks for null values in the data and returns an array of booleans, where "True" means missing and "False" means present
 * `pd.notnull()` -- returns all values that are NOT null
 * `df.dropna()` -- remove all missing values

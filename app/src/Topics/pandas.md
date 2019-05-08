@@ -11,9 +11,8 @@ In this section, our core focus will be using our wine review dataset to learn h
 	* Series
 	* DataFrames
 * Wine Review Data Dictionary
-* Viewing & Inspecting Data
-* Data Cleaning & Organization
-* Data Exploration
+* Wrangling, Cleaning, & Organizing Data
+* Explorational Data Analysis
 
 ## Basic Pandas Objects: Index
 
@@ -199,6 +198,170 @@ To frame us for jumping into Pandas, let's review the details of our wine review
 * `title`: The title of the wine review, which often contains the vintage if you're interested in extracting that feature
 * `variety`: The type of grapes used to make the wine (ie Pinot Noir)
 * `winery`: The winery that made the wine
+
+## First Steps with Wine Review Data
+
+```python
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+```
+
+* `df.info()` -- returns index, datatype and memory information
+* `df.shape` -- returns the number of rows and columns in a data frame
+* `len(df)` -- returns # of rows in the data
+* `.size` -- returns # of elements in the object (*S & df)
+* `.index` -- returns index of the rows specifically (*S & df)
+* `df.columns` -- returns the column labels of the DataFrame.
+* `df.head(n)` -- returns last n rows of a data frame
+* `df.tail(n)` -- returns last n rows of a data frame
+
+```python
+import numpy as np
+import pandas as pd
+
+print(wine_reviews.info())
+"""
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 129971 entries, 0 to 129970
+Data columns (total 13 columns):
+country                  129908 non-null object
+description              129971 non-null object
+designation              92506 non-null object
+points                   129971 non-null int64
+price                    120975 non-null float64
+province                 129908 non-null object
+region_1                 108724 non-null object
+region_2                 50511 non-null object
+taster_name              103727 non-null object
+taster_twitter_handle    98758 non-null object
+title                    129971 non-null object
+variety                  129970 non-null object
+winery                   129971 non-null object
+dtypes: float64(1), int64(1), object(11)
+"""
+
+print(wine_reviews.shape) # (rows, columns) --> (129971, 13)
+print(len(wine_reviews)) # 129971
+print(wine_reviews.size) # 1689623
+```
+
+```python
+import numpy as np
+import pandas as pd
+
+# Row labels
+print(wine_reviews.index) # RangeIndex(start=0, stop=129971, step=1)
+
+# Column labels
+print(wine_reviews.columns) # Index(['country', 'description', 'designation', 'points', 'price', 'province', 'region_1', 'region_2', 'taster_name', 'taster_twitter_handle', 'title', 'variety', 'winery'], dtype='object')
+
+# Row & Column labels
+print(wine_reviews.axes)
+"""
+[RangeIndex(start=0, stop=129971, step=1), Index(['country', 'description', 'designation', 'points', 'price', 'province', 'region_1', 'region_2', 'taster_name', 'taster_twitter_handle', 'title', 'variety', 'winery'], dtype='object')
+"""
+```
+
+```python
+import numpy as np
+import pandas as pd
+
+print(wine_reviews.head())
+"""
+    country  ...               winery
+0     Italy  ...              Nicosia
+1  Portugal  ...  Quinta dos Avidagos
+2        US  ...            Rainstorm
+3        US  ...           St. Julian
+4        US  ...         Sweet Cheeks
+"""
+print(wine_reviews.tail(3))
+"""
+        country  ...                winery
+129968   France  ...       Domaine Gresser
+129969   France  ...  Domaine Marcel Deiss
+129970   France  ...      Domaine Schoffit
+
+[3 rows x 13 columns]
+"""
+```
+
+## Wrangling & Selecting Data
+
+* `df[col]` -- select and name a column and return it as a Series
+ `df.iloc[0,:]` -- First row
+* `df.iloc[0,0]` -- First element of first column
+* `s.iloc[0]` -- select an item by its position (*S)
+* `s.loc[0]` -- select an item by its index position (*S)
+* `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
+
+
+```python
+import numpy as np
+import pandas as pd
+
+# Print values in first row
+print(wine_reviews.iloc[0,:])
+"""
+country                                                              Italy
+description              Aromas include tropical fruit, broom, brimston...
+designation                                                   Vulkà Bianco
+points                                                                  87
+price                                                                  NaN
+province                                                 Sicily & Sardinia
+region_1                                                              Etna
+region_2                                                               NaN
+taster_name                                                  Kerin O’Keefe
+taster_twitter_handle                                         @kerinokeefe
+title                                    Nicosia 2013 Vulkà Bianco  (Etna)
+variety                                                        White Blend
+winery                                                             Nicosia
+"""
+
+# Print values in row at index 5 in first col
+print(wine_reviews.iloc[0,5]) # Sicily & Sardinia
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+
+# A) Print first 3 values in 'country' col
+print(wine_reviews['country'][:3])
+
+# B) Print first 3 values in 'countries' Series
+countries = wine_reviews['country']
+print(countries.iloc[:3])
+
+"""
+A & B both output:
+
+0       Italy
+1    Portugal
+2          US
+"""
+
+# Print item at index 5 in 'countries' Series
+print(countries.iloc[5]) # Spain
+
+# Print item at index 6 in 'countries' Series
+print(countries.loc[6]) # Italy
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+
+points_per_title = wine_reviews[['title', 'points']] # [129971 rows x 2 columns]
+print(points_per_title.head(3))
+"""
+                                           title  points
+0              Nicosia 2013 Vulkà Bianco  (Etna)      87
+1  Quinta dos Avidagos 2011 Avidagos Red (Douro)      87
+2  Rainstorm 2013 Pinot Gris (Willamette Valley)      87
+"""
+```
 
 *More Coming Soon...*
 
