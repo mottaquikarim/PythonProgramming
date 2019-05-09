@@ -134,6 +134,22 @@ print(wine_reviews.tail(3))
 * `s.iloc[0]` -- select an item by its position (*S)
 * `s.loc[0]` -- select an item by its index position (*S)
 * `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
+* `df[df.Length > 7]` -- Extract rows that meet logical criteria.
+
+>>ROWS
+* `df[df.Length > 7]` -- Extract rows that meet logical criteria.
+`df.nlargest(n, 'value')` -- Select and order top n entries.
+`df.nsmallest(n, 'value')` -- Select and order bottom n entries
+
+>>
+where[blah blah]
+df.sample(frac=0.5)
+Randomly select fraction of rows.
+df.sample(n=10)
+Randomly select n rows.
+filtering
+* `df[df.Length > 7]` -- Extract rows that meet logical criteria.
+
 
 ```python
 import numpy as np
@@ -209,7 +225,7 @@ print(wine_ratings.head(3))
 
 ## Cleaning & Organizing Data
 
-#### Null Values
+#### Null & Duplicate Values
 
 * `pd.isnull()` -- checks for null (NaN values in the data and returns an array of booleans, where "True" means missing and "False" means present
 * `pd.notnull()` -- returns all values that are NOT null
@@ -219,6 +235,7 @@ print(wine_ratings.head(3))
 * `df.dropna(subset=[col1)` -- Drops all rows that contain null values in one or more specific columns and returns a new df
 * `df.fillna(x)` —- replace all missing values with some value `x`
 * `s.fillna(s.mean())` -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)
+* `df.drop_duplicates()` -- remove duplicate rows (only considers columns).
 
 ```python
 import numpy as np
@@ -286,6 +303,7 @@ print(len(wine_ratings)) # 129908
 * `df.rename(columns={'old_name': 'new_ name'})` -- rename specific columns
 * `df.set_index('column_one')` -- change the index of the data frame
 
+
 ```python
 import numpy as np
 import pandas as pd
@@ -295,6 +313,238 @@ wine_reviews.rename(columns={'designation': 'vineyard'}, inplace=True)
 wine_reviews.rename(columns={'points': 'rating'}, inplace=True)
 ```
 
-*More coming soon...*
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+
+#### Sorting
+
+* `df.sort_values(col1)` -- sort values in a certain column in *ascending* order
+* `df.sort_index(axis=1)` -- sort axis values by index in *ascending* order
+* `df.sort_values(col2,ascending=False)` -- sort values in a certain column in *descending* order
+* `df.sort_index(axis=1, ascending=False)` -- sort axis values by index in *descending* order
+* `df.sort_values([col1,col2],ascending=[True,False])` -- sort values in a col1 in *asscending* order, then sort values in col2 in *descending* order
+* `df.rank()` -- rank every variable according to its value
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+#### Reshaping
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+#### Groupby
+
+* `df.groupby(col)` -- returns groupby object for values from a single, specific column
+* `df.groupby([col1,col2])` -- returns a groupby object for values from multiple columns, which you can specify
+
+>>
+filtering --- https://towardsdatascience.com/how-to-filter-rows-of-a-pandas-dataframe-by-column-value-51996ea621f8
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+
+#### `Apply` Functions
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+## Joining & Concatenating Data
+
+>>https://www.datacamp.com/community/tutorials/joining-dataframes-pandas
+https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
+
+* `df1.append(df2)` -- add the rows in df1 to the end of df2 (columns should be identical)
+* `df.concat([df1, df2],axis=1)` —- add the columns in df1 to the end of df2 (rows should be identical)
+* `df1.join(df2,on=col1,how='inner')` —- SQL-style join the columns in df1 with the columns on df2 where the rows for colhave identical values. how can be equal to one of: 'left', 'right', 'outer', 'inner'
+
+>> https://www.tutorialspoint.com/python_pandas/python_pandas_merging_joining.htm
+* `df.merge()` -- 
+* `df.merge_ordered()` -- 
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+pd.merge(left, right, how='inner', on=None, left_on=None, right_on=None,left_index=False, right_index=False, sort=True)
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+
+```
+
+
+## Exploring Data
+
+* `df[col1].unique()` -- returns an ndarray of the distinct values within a given series
+* `df[col1].nunique()` -- return # of unique values within a column
+* `.value_counts()` -- returns count of each unique value
+* `mean()` -- mean
+* `median()` -- median
+* `min()` -- minimum
+* `max()` -- maximum
+* `quantile(x)` -- quantile
+* `var()` -- variance
+* `std()` -- standard deviation
+* `mad()` -- mean absolute variation
+* `skew()` -- skewness of distribution
+* `kurt()` -- kurtosis
+* `cov()` -- covariance
+* `corr()` -- Pearson Correlation coefficent
+* `autocorr()` -- autocorelation
+* `diff()` -- first discrete difference
+* `cumsum()` -- cummulative sum
+* `comprod()` -- cumulative product
+* `cummin()` -- cumulative minimum
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+countries = wine_reviews['country']
+unique_countries = countries.unique()
+print(f'There are {countries.nunique()} unique countries: \n', unique_countries) 
+"""
+There are 43 unique countries:
+['Italy' 'Portugal' 'US' 'Spain' 'France' 'Germany' 'Argentina' 'Chile' 'Australia' 'Austria' 'South Africa' 'New Zealand' 'Israel' 'Hungary' 'Greece' 'Romania' 'Mexico' 'Canada' nan 'Turkey' 'Czech Republic' 'Slovenia' 'Luxembourg' 'Croatia' 'Georgia' 'Uruguay' 'England' 'Lebanon' 'Serbia' 'Brazil' 'Moldova' 'Morocco' 'Peru' 'India' 'Bulgaria' 'Cyprus' 'Armenia' 'Switzerland' 'Bosnia and Herzegovina' 'Ukraine' 'Slovakia' 'Macedonia' 'China' 'Egypt']
+"""
+
+country_counts = countries.value_counts(dropna=False)
+print(country_counts.head(3))
+"""
+US        54504
+France    22093
+Italy     19540
+"""
+```
+
+
+
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+wine_ratings = wine_reviews[['title', 'country', 'rating', 'price']] # [129971 rows x 4 columns]
+print(wine_ratings.describe())
+"""
+              rating          price
+count  120916.000000  120916.000000
+mean       88.421723      35.368644
+std         3.044942      41.031052
+min        80.000000       4.000000
+25%        86.000000      17.000000
+50%        88.000000      25.000000
+75%        91.000000      42.000000
+max       100.000000    3300.000000
+"""
+```
+
+```python
+import numpy as np
+import pandas as pd
+
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+
+
+```
+
+
+```python
+import numpy as np
+import pandas as pd
+
+```
+
+
 
 
