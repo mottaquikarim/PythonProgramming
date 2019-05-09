@@ -23,14 +23,27 @@
 * `df.to_html(filename)` -- Saves as an HTML table
 * `df.to_clipboard()` -- Writes to the clipboard
 
-## Data Wrangling & Cleaning
+## Data Wrangling (Selecting)
 
+* `obj.get(key)` -- returns an item from an object (e.g. a column from a DataFrame, a value from a Series, etc.)
 * `df[col]` -- select and name a column and return it as a Series
+* `df.loc[label1, label2, ...]` -- select one or more rows or columns in a DataFrame by its label
+* `df.loc[row_label, col_label]` -- select a single item in a DataFrame by its row and column labels
+* `df.loc[start_row_label : end_row_label, start_col_label : end_col_label]` -- select a slice of a DataFrame by starting and ending row/column labels
+* `df.iloc[row_index,:]` -- select a row in a DataFrame by index position
+* `df.iloc[row_index, col_index]` -- select a single item in a DataFrame by the index position of its row and col
+* `df.iloc[start_index : end_index, start_index : end_index]` -- select a slice of a DataFrame by starting and ending index row/column positions; (ending index stop at index before it)
+* `s.iloc[index]` -- select a single item by its position
+* `s.loc[index]` -- select a slice of items from a Series
 * `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
-* `s.iloc[0]` -- select an item by its position
-* `s.loc['index_one']` -- select an item by its index position
-* `df.iloc[0,:]` -- First row
-* `df.iloc[0,0]` -- First element of first column
+* `df.nlargest(n, 'value')` -- Select and order top n entries.
+* `df.nsmallest(n, 'value')` -- Select and order bottom n entries
+* `obj.truncate([before, after, axis)` -- Truncate an object before and after some index value (*S & df)
+* `obj.where(cond, other = NaN, inplace = False, axis = None)` -- replace values in the object where the condition is False
+
+
+## Data Cleaning
+
 * `pd.isnull()` -- checks for null values in the data and returns an array of booleans, where "True" means missing and "False" means present
 * `pd.notnull()` -- returns all values that are NOT null
 * `df.dropna()` -- remove all missing values
@@ -47,7 +60,8 @@
 * `df.dropna(axis=1,thresh=n)` -- Drops all rows have have less than n non null values
 * `df.fillna(x)` -- Replaces all null values with x
 * `s.fillna(s.mean())` -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)
-* `s.astype(float)` -- Converts the datatype of the series to float
+* `df.duplicated([subset, keep])` -- Rrturn boolean Series denoting duplicate rows; can choose to consider a subset of columns
+* `drop_duplicates([subset, keep, inplace])` -- returns DataFrame with duplicate rows removed, optionally only considering certain columns.
 * `s.replace(1,'one')` -- Replaces all values equal to 1 with 'one'
 * `s.replace([1,3],['one','three'])` -- Replaces all 1 with 'one' and 3 with 'three'
 * `df.rename(columns=lambda x: x + 1)` -- Mass renaming of columns
@@ -58,12 +72,18 @@
 ## Exploring Data
 
 * `df.info()` -- returns index, datatype and memory information
-* `df.shape()` -- returns the number of rows and columns in a data frame
+* `df.shape` -- returns the number of rows and columns in a data frame
+* `len(obj)` -- returns # of rows in the object data (*S & df)
+* `obj.size` -- returns # of elements in the object (*S & df)
+* `df.index` -- returns index of the rows specifically (*S & df)
+* `df.columns` -- returns the column labels of the DataFrame.
 * `df.head(n)` -- returns last n rows of a data frame
 * `df.tail(n)` -- returns last n rows of a data frame
+* `copy(obj)` -- create a deep copy of the object (*S & df)
+* `obj.empty` -- returns booleans for whether object is empty or not
+* `describe()` -- returns basic summary statistics (e.g. count, mean, std, min, quartiles, & max)
 * `df.count()` -- returns number of non-null values in each data frame column
 * `value_counts()` -- returns count of each category in a categorical attributed series of values
-* `describe()` -- returns basic summary statistics (e.g. count, mean, std, min, quartiles, & max)
 * `df.mean()` -- returns mean of all columns
 * `df.median()` -- returns median of each column
 * `df.min()` -- returns lowest value in each column
@@ -77,6 +97,7 @@
 * `cov()` -- covariance
 * `mad()` -- mean absolute variation
 * `skew()` -- skewness of distribution
+* `sem()` -- unbiased standard error of the mean
 * `kurt()` -- kurtosis
 * `corr()` -- returns the Pearson correlation coefficent between columns in a data frame
 * `autocorr()` -- auto-correlation
