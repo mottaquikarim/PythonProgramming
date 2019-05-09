@@ -8,9 +8,9 @@ In this section, our core focus will be using our wine review dataset to learn h
 
 * Wine Review Data Dictionary
 * Importing Data
-* Wrangling, Cleaning, & Organizing Data
-* Explorational Data Analysis
-* *More coming soon*
+* Wrangling & Selecting Data
+* Cleaning, & Organizing Data
+* *coming soon...*
 
 ## Wine Review Data Dictionary
 
@@ -46,8 +46,8 @@ After your initial import of some dataset, you'll want to do a gut check to make
 * `df.info()` -- returns index, datatype and memory information
 * `df.shape` -- returns the number of rows and columns in a data frame
 * `len(df)` -- returns # of rows in the data
-* `.size` -- returns # of elements in the object (*S & df)
-* `.index` -- returns index of the rows specifically (*S & df)
+* `df.size` -- returns # of elements in the object (*S & df)
+* `df.index` -- returns index of the rows specifically (*S & df)
 * `df.columns` -- returns the column labels of the DataFrame.
 * `df.head(n)` -- returns last n rows of a data frame
 * `df.tail(n)` -- returns last n rows of a data frame
@@ -55,6 +55,7 @@ After your initial import of some dataset, you'll want to do a gut check to make
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
 print(wine_reviews.info())
 """
@@ -85,6 +86,7 @@ print(wine_reviews.size) # 1689623
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
 # Row labels
 print(wine_reviews.index) # RangeIndex(start=0, stop=129971, step=1)
@@ -102,6 +104,7 @@ print(wine_reviews.axes)
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
 print(wine_reviews.head())
 """
@@ -132,10 +135,10 @@ print(wine_reviews.tail(3))
 * `s.loc[0]` -- select an item by its index position (*S)
 * `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
 
-
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
 # Print values in first row
 print(wine_reviews.iloc[0,:])
@@ -163,6 +166,7 @@ print(wine_reviews.iloc[0,5]) # Sicily & Sardinia
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
 # A) Print first 3 values in 'country' col
 print(wine_reviews['country'][:3])
@@ -190,17 +194,107 @@ print(countries.loc[6]) # Italy
 ```python
 import numpy as np
 import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 
-points_per_title = wine_reviews[['title', 'points']] # [129971 rows x 2 columns]
-print(points_per_title.head(3))
+wine_ratings = wine_reviews[['title', 'country', 'rating', 'price']] # [129971 rows x 4 columns]
+print(wine_ratings.head(3))
 """
-                                           title  points
-0              Nicosia 2013 Vulkà Bianco  (Etna)      87
-1  Quinta dos Avidagos 2011 Avidagos Red (Douro)      87
-2  Rainstorm 2013 Pinot Gris (Willamette Valley)      87
+                                           title   country  rating  price
+0              Nicosia 2013 Vulkà Bianco  (Etna)     Italy      87    NaN
+1  Quinta dos Avidagos 2011 Avidagos Red (Douro)  Portugal      87   15.0
+2  Rainstorm 2013 Pinot Gris (Willamette Valley)        US      87   14.0
 """
 ```
 
-*More Coming Soon...*
+
+## Cleaning & Organizing Data
+
+#### Null Values
+
+* `pd.isnull()` -- checks for null (NaN values in the data and returns an array of booleans, where "True" means missing and "False" means present
+* `pd.notnull()` -- returns all values that are NOT null
+* `pd.isnull().sum()` -- returns a count of null (NaN)
+* `df.dropna()` -- Drops all rows that contain null values and returns a new df
+* `df.dropna(axis=1)` -- Drops all columns that contain null values and returns a new df
+* `df.dropna(subset=[col1)` -- Drops all rows that contain null values in one or more specific columns and returns a new df
+* `df.fillna(x)` —- replace all missing values with some value `x`
+* `s.fillna(s.mean())` -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+wine_ratings = wine_reviews[['title', 'country', 'rating', 'price']] # [129971 rows x 4 columns]
+
+print(wine_ratings.isnull().sum())
+"""
+title         0
+country      63
+rating        0
+price      8996
+"""
+print(len(wine_ratings)) # 129971
+
+wine_ratings = wine_ratings.dropna(subset=['country', 'price'])
+
+print(wine_ratings.isnull().sum())
+"""
+title       0
+country     0
+rating      0
+price       0
+"""
+print(len(wine_ratings)) # 120916
+```
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+wine_ratings = wine_reviews[['title', 'country', 'rating', 'price']] # [129971 rows x 4 columns]
+
+m = prices.mean()
+replace_value = {'price': prices.mean()}
+wine_ratings = wine_ratings.fillna(value=replace_value)
+
+print(wine_ratings.isnull().sum())
+"""
+title       0
+country    63
+rating      0
+price       0
+"""
+print(len(wine_ratings)) # 129971
+
+wine_ratings = wine_ratings.dropna(subset=['country'])
+print(wine_ratings.isnull().sum())
+"""
+title       0
+country     0
+rating      0
+price       0
+"""
+print(len(wine_ratings)) # 129908
+```
+
+#### Editing
+
+* `s.replace(1,'one')` -- replace all values equal to 1 with 'one'
+* `s.replace([1,3],['one','three'])` -- replace all values equal to 1 with 'one' and all values equal to 3 with 'three'
+* `df.rename(columns={'old_name': 'new_ name'})` -- rename specific columns
+* `df.set_index('column_one')` -- change the index of the data frame
+
+```python
+import numpy as np
+import pandas as pd
+wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+
+wine_reviews.rename(columns={'designation': 'vineyard'}, inplace=True)
+wine_reviews.rename(columns={'points': 'rating'}, inplace=True)
+```
+
+*More coming soon...*
 
 

@@ -90,14 +90,11 @@
 * `df.sort_values(col1)` -- sort values in a certain column in *ascending* order
 * `df.sort_values(col2,ascending=False)` -- sort values in a certain column in *descending* order
 * `df.sort_values([col1,col2],ascending=[True,False])` -- sort values in a col1 in *asscending* order, then sort values in col2 in *descending* order
-
 * `df[df[col] > 0.5]` # Rows where the col column is greater than 0.5
 * `df[(df[col] > 0.5) & (df[col] < 0.7)]` # Rows where 0.5 < col < 0.7
-
 * `df.groupby(col)` -- returns groupby object for values from a single, specific column
 * `df.groupby([col1,col2])` -- returns a `groupby` object for values from multiple columns, which you can specify
 * `df.groupby(col1)[col2].mean()` # Returns the mean of the values in col2, grouped by the values in col1 (mean can be replaced with almost any function from the statistics section)
-
 * `df.pivot_table(index=col1, values= col2,col3], aggfunc=mean)` # Creates a pivot table that groups by col1 and calculates the mean of col2 and col3
 * `df.groupby(col1).agg(np.mean)` # Finds the average across all columns for every unique column 1 group
 * `df.apply(np.<function>)` # Applies a function across each column
