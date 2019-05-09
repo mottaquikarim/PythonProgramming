@@ -71,10 +71,9 @@ After your initial import of some dataset, you'll want to do a gut check to make
 * `pd.isnull().sum()` -- returns a count of null (NaN)
 * `df.dropna()` -- Drops all rows that contain null values and returns a new df
 * `df.dropna(axis=1)` -- Drops all columns that contain null values and returns a new df
-* `df.dropna(subset=[col1)` -- Drops all rows that contain null values in one or more specific columns and returns a new df
-* `df.fillna(x)` —- replace all missing values with some value `x`
+* `df.dropna(subset=[col1])` -- Drops all rows that contain null values in one or more specific columns and returns a new df
+* `df.fillna(value=x)` —- replace all missing values with some value `x` (*S & df)
 * `s.fillna(s.mean())` -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)
-* `df.drop_duplicates()` -- remove duplicate rows (only considers columns).
 
 #### Editing Existing Data
 
