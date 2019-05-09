@@ -54,11 +54,13 @@ After your initial import of some dataset, you'll want to do a gut check to make
 ## Wrangling & Selecting Data
 
 * `df[col]` -- select and name a column and return it as a Series
- `df.iloc[0,:]` -- First row
+* `df.iloc[0,:]` -- First row
 * `df.iloc[0,0]` -- First element of first column
 * `s.iloc[0]` -- select an item by its position (*S)
 * `s.loc[0]` -- select an item by its index position (*S)
 * `df[[col1, col2]]` -- select and name multiple columns and return them as a new data frame
+* `df.nlargest(n, 'value')` -- Select and order top n entries.
+* `df.nsmallest(n, 'value')` -- Select and order bottom n entries
 
 ## Cleaning & Organizing Data
 
@@ -72,5 +74,60 @@ After your initial import of some dataset, you'll want to do a gut check to make
 * `df.dropna(subset=[col1)` -- Drops all rows that contain null values in one or more specific columns and returns a new df
 * `df.fillna(x)` —- replace all missing values with some value `x`
 * `s.fillna(s.mean())` -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)
+* `df.drop_duplicates()` -- remove duplicate rows (only considers columns).
 
+#### Editing Existing Data
 
+* `df.drop(columns=[col1, col2, ...])` -- drops specified columns from the dataframe
+* `s.replace(1,'one')` -- replace all values equal to 1 with 'one'
+* `s.replace([1,3],['one','three'])` -- replace all values equal to 1 with 'one' and all values equal to 3 with 'three'
+* `df.rename(columns={'old_name': 'new_ name'})` -- rename specific columns
+* `df.set_index('column_one')` -- change the index of the data frame
+* `df.reset_index()` -- Reset index of DataFrame to row numbers, moving
+index to columns.
+
+#### Sorting & Reshaping
+
+* `df.sort_values(col1)` -- sort values in a certain column in *ascending* order
+* `df.sort_index(axis=1)` -- sort axis values by index in *ascending* order
+* `df.sort_values(col2,ascending=False)` -- sort values in a certain column in *descending* order
+* `df.sort_index(axis=1, ascending=False)` -- sort axis values by index in *descending* order
+* `df.sort_values([col1,col2],ascending=[True,False])` -- sort values in a col1 in *asscending* order, then sort values in col2 in *descending* order
+* `df.rank()` -- rank every variable according to its value
+* `pd.melt(df)` -- gathers columns into rows
+* `df.pivot(columns='var', values='val')` -- spreads rows into columns
+
+#### Grouping w. GroupBy Objects
+
+* `df.groupby(col)` -- returns groupby object for values from a single, specific column
+* `df.groupby([col1,col2])` -- returns a groupby object for values from multiple columns, which you can specify
+
+## Joining & Concatenating Data
+
+* `df1.append(df2)` -- add the rows in df1 to the end of df2 (columns should be identical)
+* `df.concat([df1, df2],axis=1)` —- add the columns in df1 to the end of df2 (rows should be identical)
+* `df1.join(df2,on=col1,how='inner')` —- SQL-style join the columns in df1 with the columns on df2 where the rows for col have identical values. how can be equal to one of: 'left', 'right', 'outer', 'inner'
+* `df.merge()` -- merge two datasets together into one by aligning the rows from each based on common attributes or columns. how can be equal to one of: 'left', 'right', 'outer', 'inner'
+
+## Exploring Data
+
+* `df[col1].unique()` -- returns an ndarray of the distinct values within a given series
+* `df[col1].nunique()` -- return # of unique values within a column
+* `.value_counts()` -- returns count of each unique value
+* `mean()` -- mean
+* `median()` -- median
+* `min()` -- minimum
+* `max()` -- maximum
+* `quantile(x)` -- quantile
+* `var()` -- variance
+* `std()` -- standard deviation
+* `mad()` -- mean absolute variation
+* `skew()` -- skewness of distribution
+* `kurt()` -- kurtosis
+* `cov()` -- covariance
+* `corr()` -- Pearson Correlation coefficent
+* `autocorr()` -- autocorelation
+* `diff()` -- first discrete difference
+* `cumsum()` -- cummulative sum
+* `comprod()` -- cumulative product
+* `cummin()` -- cumulative minimum
