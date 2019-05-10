@@ -15,6 +15,10 @@ At a high-level, this lesson will cover:
 * [Filtering](eda.md#filtering)
 * [Descriptive Statistics](eda.md#descriptive-statistics)
 
+## Categorical Data
+
+*coming soon...*
+
 ## Joining & Concatenating
 
 * `df1.append(df2)` -- add the rows in df1 to the end of df2 (columns should be identical)
