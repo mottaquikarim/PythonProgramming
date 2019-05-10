@@ -1,8 +1,8 @@
 <!---
-{"next": "Topics/pandas.md","title": "Intro to Pandas"}
+{"next": "Topics/preprocessing.md","title": "Intro to Pandas Objects"}
 -->
 
-# Intro to Pandas & NumPy
+# Intro to Pandas Objects
 
 <img src="https://media.giphy.com/media/EatwJZRUIv41G/giphy.gif" style="margin: 0 auto; float: right;"/>
 
@@ -10,13 +10,13 @@
 
 To gain some baseline familiarity with Pandas features and pre-requisites, in this lesson, you'll learn about:
 
-* Capabilities of Pandas
-* NumPy `ndarray` Objects
-* Basic Pandas Objects:
-	* Index
-	* Series
-	* DataFrames
-* Setting Up Your First Data Science Project
+* [Capabilities of Pandas](intro_pandas.md#capabilities-of-pandas)
+* [NumPy ndarray Objects](intro_pandas.md#numpy-ndarrays-objects)
+* [Basic Pandas Objects](intro_pandas.md#basic-pandas-objects)
+	* [Index](intro_pandas.md#basic-pandas-objects-index)
+	* [Series](intro_pandas.md#basic-pandas-objects-series)
+	* [DataFrames](intro_pandas.md#basic-pandas-objects-dataframes)
+* [Setting Up Your First Data Science Project](intro_pandas.md#setting-up-our-first-data-science-project)
 
 ## Capabilities of Pandas
 * Robust IO tools to reading from flat files (CSV and TXT), JSON, XML, Excel files, SQL tables, and other databases.
@@ -31,7 +31,7 @@ To gain some baseline familiarity with Pandas features and pre-requisites, in th
 * Subsetting, fancy indexing, and label-based slicing large data sets
 * Time-series functionality such as date range generation, date shifting, lagging, frequency conversions, moving window statistics, and moving window linear regressions.
 
-## Basic Data Structures: NumPy ndarrays
+## NumPy ndarray Objects
 
 Because Pandas is built on top of NumPy, new users should first understand one NumPy data object that often appears within Pandas objects - the `ndarray`.
 
