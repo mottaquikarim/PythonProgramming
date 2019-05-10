@@ -43,6 +43,8 @@ At a high-level, this lesson will cover:
 * `df[col1].unique()` -- returns an ndarray of the distinct values within a given series
 * `df[col1].nunique()` -- return # of unique values within a column
 * `.value_counts()` -- returns count of each unique value
+* `df.sample(frac = 0.5)` - randomly select a fraction of rows of a DataFrame
+* `df.sample(n=10)` - randomly select n rows of a DataFrame
 * `mean()` -- mean
 * `median()` -- median
 * `min()` -- minimum

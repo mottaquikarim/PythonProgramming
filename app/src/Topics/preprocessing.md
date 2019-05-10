@@ -45,6 +45,8 @@ Every good dataset has a **data dictionary**. Essentially, it lists each field i
 In the last lesson, we imported the wine review data from a csv file like this:
 
 ```python
+import numpy as np
+import pandas as pd
 wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
 ```
 
