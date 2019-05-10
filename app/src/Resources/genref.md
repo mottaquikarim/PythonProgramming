@@ -13,6 +13,8 @@
 * [DataCamp](https://www.datacamp.com/)
 * [Geeks for Geeks](https://www.geeksforgeeks.org/python-programming-language/)
 * [Python for Beginners](https://www.pythonforbeginners.com/)
+* [Intermediate Python](http://book.pythontips.com/en/latest/)
+* [Practical Business Python (PBP)](https://pbpython.com/)
 * [PythonProgramming.in](https://www.pythonprogramming.in/)
 * [Data Flair](https://data-flair.training/blogs)
 * [Towards Data Science](https://towardsdatascience.com/)
