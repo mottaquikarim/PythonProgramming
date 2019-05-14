@@ -306,7 +306,6 @@ On your local computer, create a `.py` file named `list_practice.py`. In it:
 7. Print `numbers`.
 
 
-
 ## Additional Resources
 
 - [Python Lists - Khan Academy Video](https://www.youtube.com/watch?v=zEyEC34MY1A)
