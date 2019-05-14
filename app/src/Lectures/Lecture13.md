@@ -1,8 +1,8 @@
 <!---
-{"next":"Lectures/Lecture14.md","title":"Intro to Data Science"}
+{"next":"Lectures/Lecture14.md","title":"✅ Intro to Data Science"}
 -->
 
-# Lecture 13: Intro to Data Science
+# ✅ Lecture 13: Intro to Data Science
 
 
 ## Objectives

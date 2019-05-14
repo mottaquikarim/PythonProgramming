@@ -4,20 +4,76 @@
 
 # Pandas Analysis II
 
-In this section, our core focus will be using our wine review dataset to learn how to manipulate and analyze data with Pandas. (Look back at the 
-[Wine Review Data Dictionary](pandas.md#wine-review-data-dictionary) for reference if needed.) 
+In this lesson, we'll continue exploring Pandas for EDA. Specifically: 
 
-At a high-level, this lesson will cover:
+- Identify and handle missing values with Pandas.
+- Implement groupby statements for specific segmented analysis.
+- Use apply functions to clean data with Pandas.
 
-* [Categorical Data](eda.md#categorical-data)
+## Data sets
+
+* **[Adventureworks Cycles | Local](https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/raw_data/production.product.tsv)**
+	* *You can download a version of the Adventureworks Cycles dataset directly from this Github Repo* 
+
+
+## Let's continue with the AdventureWorks Cycles Dataset
+
+Here's the Production.Product table [data dictionary](https://www.sqldatadictionary.com/AdventureWorks2014/Production.Product.html), which is a description of the fields (columns) in the table (the .csv file we will import below):<br>
+
+- **ProductID** - Primary key for Product records.
+- **Name** - Name of the product.
+- **ProductNumber** - Unique product identification number.
+- **MakeFlag** - 0 = Product is purchased, 1 = Product is manufactured in-house.
+- **FinishedGoodsFlag** - 0 = Product is not a salable item. 1 = Product is salable.
+- **Color** - Product color.
+- **SafetyStockLevel** - Minimum inventory quantity.
+- **ReorderPoint** - Inventory level that triggers a purchase order or work order.
+- **StandardCost** - Standard cost of the product.
+- **ListPrice** - Selling price.
+- **Size** - Product size.
+- **SizeUnitMeasureCode** - Unit of measure for the Size column.
+- **WeightUnitMeasureCode** - Unit of measure for the Weight column.
+- **DaysToManufacture** - Number of days required to manufacture the product.
+- **ProductLine** - R = Road, M = Mountain, T = Touring, S = Standard
+- **Class** - H = High, M = Medium, L = Low
+- **Style** - W = Womens, M = Mens, U = Universal
+- **ProductSubcategoryID** - Product is a member of this product subcategory. Foreign key to ProductSubCategory.ProductSubCategoryID.
+- **ProductModelID** - Product is a member of this product model. Foreign key to ProductModel.ProductModelID.
+- **SellStartDate** - Date the product was available for sale.
+- **SellEndDate** - Date the product was no longer available for sale.
+- **DiscontinuedDate** - Date the product was discontinued.
+- **rowguid** - ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
+- **ModifiedDate** - Date and time the record was last updated.
+
+### Loading the Data
+
+We can load our data as follows:
+
+```python
+import pandas as pd
+import numpy as np
+
+prod = pd.read_csv('/raw_data/production.product.tsv', sep='\t')
+
+```
+
+Note the `sep='\t'`; this is because we are pulling in a `tsv` file, which is basically a csv file but with `tabs` as delimiters vs commas.
+
+**YOU DO**: Download the `tsv` file into your local machine, create a python virtualenv and run the code above, but on your machine.
+
+
+
+
+## Pandas Reference
+
+
+At a high-level, this section will will cover:
+
 * [Joining & Concatenating](eda.md#joining--concatenating)
 * [Grouping](eda.md#grouping)
 * [Filtering](eda.md#filtering)
 * [Descriptive Statistics](eda.md#descriptive-statistics)
 
-## Categorical Data
-
-*coming soon...*
 
 ## Joining & Concatenating
 

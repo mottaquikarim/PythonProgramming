@@ -1,8 +1,8 @@
 <!---
-{"next":"Topics/README.md","title":"Pandas"}
+{"next":"Lectures/Lecture15.md","title":"✅ Pandas"}
 -->
 
-# Lecture 14: Pandas
+# ✅ Lecture 14: Pandas
 
 
 ## Objectives
