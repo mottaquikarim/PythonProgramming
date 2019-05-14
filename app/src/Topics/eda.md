@@ -45,7 +45,7 @@ Here's the Production.Product table [data dictionary](https://www.sqldatadiction
 - **rowguid** - ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.
 - **ModifiedDate** - Date and time the record was last updated.
 
-### Loading the Data
+## Loading the Data
 
 We can load our data as follows:
 
@@ -62,7 +62,88 @@ Note the `sep='\t'`; this is because we are pulling in a `tsv` file, which is ba
 **YOU DO**: Download the `tsv` file into your local machine, create a python virtualenv and run the code above, but on your machine.
 
 
+## Handling missing data
 
+Recall missing data is a systemic, challenging problem for data scientists. Imagine conducting a poll, but some of the data gets lost, or you run out of budget and can't complete it! 😮<br><br>
+
+"Handling missing data" itself is a broad topic. We'll focus on two components:
+
+- Using Pandas to identify we have missing data
+- Strategies to fill in missing data (known in the business as `imputing`)
+- Filling in missing data with Pandas
+
+### Identifying missing data
+
+Before *handling*, we must identify we're missing data at all!
+
+We have a few ways to explore missing data, and they are reminiscient of our Boolean filters.
+
+```python
+# True when data isn't missing
+prod.notnull().head(3)
+# True when data is missing
+prod.isnull().head(3)
+```
+
+**OUTPUT**: `notnull`
+
+```text
+   ProductID  Name  ProductNumber  MakeFlag  FinishedGoodsFlag  Color  ...  ProductModelID  SellStartDate  SellEndDate  DiscontinuedDate  rowguid  ModifiedDate
+0       True  True           True      True               True  False  ...           False           True        False             False     True          True
+1       True  True           True      True               True  False  ...           False           True        False             False     True          True
+2       True  True           True      True               True  False  ...           False           True        False             False     True          True
+
+[3 rows x 25 columns]
+```
+
+**OUTPUT**: `isnull`
+
+```text
+   ProductID   Name  ProductNumber  MakeFlag  FinishedGoodsFlag  Color  ...  ProductModelID  SellStartDate  SellEndDate  DiscontinuedDate  rowguid  ModifiedDate
+0      False  False          False     False              False   True  ...            True          False         True              True    False         False
+1      False  False          False     False              False   True  ...            True          False         True              True    False         False
+2      False  False          False     False              False   True  ...            True          False         True              True    False         False
+
+[3 rows x 25 columns]
+```
+
+* **YOU DO**: count the number of nulls in `Name` column
+* **YOU DO**: count the number of notnulls in `Name` column
+
+We can also access missing data in aggregate, as follows:
+
+```python
+# here is a quick and dirty way to do it
+prod.isnull().sum()
+```
+
+```text
+Name                       0
+ProductNumber              0
+MakeFlag                   0
+FinishedGoodsFlag          0
+Color                    248
+SafetyStockLevel           0
+ReorderPoint               0
+StandardCost               0
+ListPrice                  0
+Size                     293
+SizeUnitMeasureCode      328
+WeightUnitMeasureCode    299
+Weight                   299
+DaysToManufacture          0
+ProductLine              226
+Class                    257
+Style                    293
+ProductSubcategoryID     209
+ProductModelID           209
+SellStartDate              0
+SellEndDate              406
+DiscontinuedDate         504
+rowguid                    0
+ModifiedDate               0
+dtype: int64
+```
 
 ## Pandas Reference
 
