@@ -1,8 +1,8 @@
 <!---
-{"next": "Topics/data_viz.md","title": "Exploratory Data Analysis"}
+{"next": "Topics/data_viz.md","title": "Pandas Analysis II"}
 -->
 
-# Exploratory Data Analysis with Pandas
+# Pandas Analysis II
 
 In this section, our core focus will be using our wine review dataset to learn how to manipulate and analyze data with Pandas. (Look back at the 
 [Wine Review Data Dictionary](pandas.md#wine-review-data-dictionary) for reference if needed.) 
