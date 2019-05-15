@@ -1,5 +1,5 @@
 <!---
-{"next":"Lectures/README.md","title":"Running Python Locally"}
+{"next":"Intro/jupyter_notebooks.md","title":"Running Python Locally"}
 -->
 
 

@@ -1,8 +1,8 @@
 <!---
-{"next":"Lectures/Lecture16.md","title":"Data Analysis I"}
+{"next":"Lectures/Lecture16.md","title":"✅ Data Analysis I"}
 -->
 
-# Data Analysis I
+# ✅ Data Analysis I
 
 
 ## Objectives
