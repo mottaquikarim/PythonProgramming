@@ -206,13 +206,13 @@ In order of focus:
 
 
 <div style="overflow: auto; width: 100%;">
-	<iframe src="../../src/Notebooks/data_viz.html" style="min-height: 800px; width: 100%; border: none;"></iframe>
+	<iframe src="../Notebooks/data_viz.html" style="min-height: 800px; width: 100%; border: none;"></iframe>
 </div>
 
 ## Lab
 
 <div style="overflow: auto; width: 100%;">
-	<iframe src="../../src/Notebooks/omdb_viz_starter.html" style="min-height: 800px; width: 100%; border: none;"></iframe>
+	<iframe src="../Notebooks/omdb_viz_starter.html" style="min-height: 800px; width: 100%; border: none;"></iframe>
 </div>
 
 
