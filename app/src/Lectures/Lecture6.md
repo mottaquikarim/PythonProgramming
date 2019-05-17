@@ -10,13 +10,12 @@
 
 ## Objectives
 
-4. Perform common dictionary actions.
-5. Build more complex dictionaries.
-
+1. Perform common dictionary actions.
+2. Build more complex dictionaries.
 
 ## Agenda
 
-2. **[Dicts](../Topics/dicts.md)**
+1. **[Dicts](../Topics/dicts.md)**
 
 
 ## [Homework](../Homework/hwk2.md)

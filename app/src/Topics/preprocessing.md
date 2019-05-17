@@ -216,10 +216,12 @@ ModifiedDate              object
 **IMPORTANT**: depending on number of square brackets used, selection of a column may return a **Series** object or a **DataFrame** object. Depending on your usecase, you may *want* one or the other!
 
 Consider the following:
+
 ```python
 prod['Name'].head(3)
 type(prod['Name'].head(3))
 ```
+
 ```text
 0    Adjustable Race
 1       Bearing Ball

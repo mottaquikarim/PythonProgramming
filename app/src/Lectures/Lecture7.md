@@ -11,7 +11,7 @@
 
 1. Understand how to write code that repeats itself
 2. Understand the different ways to create loops in python
-3. Use loops to iterate dicts and loops
+3. Use loops to iterate through lists and dicts
 
 
 ## Agenda

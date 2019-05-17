@@ -10,4 +10,4 @@
 
 ## Agenda
 
-2. **[Conditionals](../Topics/basic_data_types.md)**
+2. **[Basic Data Types](../Topics/basic_data_types.md)**

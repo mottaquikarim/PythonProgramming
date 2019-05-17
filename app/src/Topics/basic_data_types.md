@@ -19,10 +19,10 @@ first_prime = 2
 ### Reading a Variable
 
 ```python
-
 print(first_prime) # expect to see 2
-
 ```
+
+#### [PRACTICE](https://mottaquikarim.github.io/pydev-psets/#pset_basic_data_types/basics/p2.ipynb)
 
 ### Naming Variables
 
