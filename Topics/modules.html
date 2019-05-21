@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Modules &amp; Packages - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html" class="active"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/functions.md","title":"Modules & Packages"}
+-->
+<a class="header" href="#modules--packages" id="modules--packages"><h1>Modules &amp; Packages</h1></a>
+<p>In Python, a <code>module</code> is Python source file that contains pre-defined objects like variables, functions, classes, and other items we'll talk about soon. A Python <code>package</code>, sometimes used synonymously with the term <code>library</code>, is simply a collection of Python modules. The diagram below can show you this hierarchy visually.</p>
+<p><img src="https://365datascience.com/wp-content/uploads/2018/07/image2-min-6-768x419.png" alt="package_def" /></p>
+<p>Essentially, packages and modules are a means of <code>modularizing</code> code by grouping functions and objects into specific areas of focus. For instance, the <code>statsmodels</code> module (<a href="https://www.statsmodels.org/">here</a>) contains code useful to a data scientist. The <code>Pyglet</code> library (<a href="http://www.pyglet.org/">here</a>) contains code useful to game developers needing shortcuts for 3D game animation. But vice versa?</p>
+<p><code>Modular programming</code> allows us to break out modules and packages dealing with specific topics in order make the standard library more efficient for the general public. It's sort of like &quot;a la carte&quot; code. This becomes especially valuable once you scale your programs. Who needs that extra baggage?</p>
+<a class="header" href="#global-vs-local-scope" id="global-vs-local-scope"><h2>Global vs. Local Scope</h2></a>
+<p>One of the reasons Python leverages modular programming is because it helps avoid conflicts between <code>local</code> and <code>global</code> variables by creating separate <code>namespaces</code>. <code>Namespaces</code> are the place where variables are stored, and they exist on several independent levels, including <strong>local, global, built-in, and nested namespaces</strong>. For instance, the functions <code>builtin.open()</code> and <code>os.open()</code> are distinguished by their namespaces. Namespaces also aid readability and maintainability by making it clear which module implements a function.</p>
+<p>At a high level, a variable declared outside a function has <code>global scope</code>, meaning you can access a it inside or outside functions. A variable declared within a function has <code>local scope</code>, which means you can only access it within the object you created it. If you try to access it outside that, you will get a <code>NameError</code> telling you that variable is not defined.</p>
+<p>We'll get more into how to use and interpret local and global scope as we dive into modules and functions...</p>
+<a class="header" href="#importing-modules--packages" id="importing-modules--packages"><h2>Importing Modules &amp; Packages</h2></a>
+<p>Importing modules and packages is very easy and saves you a lot of time you'd otherwise spend reinventing the wheel. Modules can even import other modules! The best practice is to place all import statements at the of your script file so you can easily see everything you've imported right at the top.</p>
+<a class="header" href="#importing-modules" id="importing-modules"><h4>Importing Modules</h4></a>
+<p>Let's look at a few different way to import modules and their contents. The simplest way to import a module is to simply write <code>import module_name</code>. This will allow you to access all the contents within that module.</p>
+<p>If you want to easily find out exactly what is in your newly imported module, you can call the built-in function <code>dir()</code> on it. This will list all types of names: variables, modules, functions, etc.</p>
+<pre><code class="language-python">import math
+dir(math)
+# prints ['__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', ... etc.]
+</code></pre>
+<p>You can also import one specific object from a module like this:</p>
+<pre><code class="language-python">from math import sqrt
+sqrt(25) # 5
+</code></pre>
+<p>Notice how we included <code>math.</code> when we called the <code>sqrt</code> function. Because of <em>variable scope</em>, you need to reference the <code>namespace</code> where <code>sqrt</code> is defined. Simply importing <code>sqrt</code> does not give it <code>global scope</code>. It still has <code>local scope</code> within the math module.</p>
+<p>However, you can help avoid verbose code by importing modules and their items like this:</p>
+<pre><code class="language-python">from math import sqrt as s
+s(25) # 5
+</code></pre>
+<p>By importing the <code>sqrt as s</code>, you can call the function as <code>s()</code> instead of <code>math.sqrt</code>. The same works for modules. Note the difference in how we reference the square root function though...</p>
+<pre><code class="language-python">import math as m
+m.sqrt(25) # 5.0
+</code></pre>
+<p>...we only renamed the module in this import and not the function. So we have to go back to the <code>module_name.function()</code> syntax. <em>However</em>, because we renamed the module on import, we can reference it in function calls by its shortened name, i.e. <code>m.sqrt</code>.</p>
+<a class="header" href="#managing-dependencies" id="managing-dependencies"><h2>Managing Dependencies</h2></a>
+<p>In addition to &quot;built-in&quot; modules, we have the ability in python to create, distribute and most importantly <em>consume</em> community defined python modules.</p>
+<p>This is powerful because anyone who builds something useful has the ability to share with the larger python community. Creating and distributing python modules is outside the scope of this class, but we can consume any module we'd like by running the:</p>
+<pre><code class="language-bash">pip install [module_name]
+</code></pre>
+<p>Modules can be found in <a href="https://pypi.org/"><strong>PyPI</strong></a>, or, the Python Package Index. Any registered module in pypi is installable via pip.</p>
+<p>However, in order to safely install modules across projects (ie: perhaps project A requires module 1 v1 but then project B, started a year later needs to use module 1 v2) we need to create what are called <strong>virtual environments</strong>, isolated python environments where we can safely install our pip modules and rest assured that they don't interfere with other projects / the system at lare.</p>
+<p>In order to create a virtual environment:</p>
+<pre><code class="language-bash">python3 -m venv .env
+source .env/bin/activate
+</code></pre>
+<p>The <code>.env</code> folder contains everything needed for this <strong>&quot;virtualenv&quot;</strong>. We go <em>inside</em> the env by running the <code>source ./env/bin/activate</code> command. To deactivate, (while in virtualenv):</p>
+<pre><code class="language-bash">deactivate
+</code></pre>
+<p>The best part about this is not only can we install our pip modules safely, we can also do this:</p>
+<pre><code class="language-bash">pip freeze &gt; requirements.txt
+</code></pre>
+<p>This will collect all the installed pip modules in the virtual env and store into a file (that we are calling <code>requirements.txt</code>). This is useful because if we ever wanted to run this software from a different computer, all we would have to do is pull down the python files, create a new virtualenv and then:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>and this would effectively &quot;copy&quot; our installed modules into the new virtualenv.</p>
+<a class="header" href="#common--featured-modules--packages" id="common--featured-modules--packages"><h2>Common &amp; Featured Modules &amp; Packages</h2></a>
+<ul>
+<li><a href="https://docs.python.org/3/library/itertools.html">Python's <code>itertools</code> library</a></li>
+<li><a href="http://pandas.pydata.org/">Pandas</a> / (<a href="https://github.com/pandas-dev/pandas">Pandas github repo</a>)</li>
+<li><a href="https://www.numpy.org/">NumPy</a> / (<a href="https://github.com/numpy/numpy">NumPy github repo</a>)</li>
+<li><a href="https://www.scipy.org/">SciPy</a> / (<a href="https://github.com/scipy/scipy">SciPy github repo</a>)</li>
+<li><a href="https://matplotlib.org/">Matplotlib</a> / (<a href="https://github.com/matplotlib/matplotlib">Matplotlib github repo</a>)</li>
+<li><a href="https://scikit-learn.org/">scikit-learn</a> / (<a href="https://github.com/scikit-learn/scikit-learn">scikit-learn github repo</a>)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/loops.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/loops.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Data Science - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html" class="active"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/intro_pandas.md","title":"Data Science"}
+-->
+<a class="header" href="#data-science" id="data-science"><h1>Data Science</h1></a>
+<a class="header" href="#the-what-why--who-of-data-science" id="the-what-why--who-of-data-science"><h2>The What, Why, &amp; Who of Data Science</h2></a>
+<p>Whether or not they realize, most people have come into contact with data science in their daily lives. We've seen trending articles on digital news outlets, personalized product recommendations from online stores, and advertisments that seemingly hear our every thought and conversation. But what exactly <em>is</em> data science?</p>
+<a class="header" href="#what" id="what"><h4>WHAT</h4></a>
+<ul>
+<li>Acquiring, organizing, and delivering complex data</li>
+<li>Building and deploying machine learning models</li>
+<li>Conducting statistical analyses, including ANOVA, linear models, regression analysis, and hypothesis tests</li>
+<li>Visualizing data distributions, hierarchical clustering, histograms, pie and bar charts, etc.</li>
+</ul>
+<a class="header" href="#why" id="why"><h4>WHY</h4></a>
+<ul>
+<li>Identify hidden patterns, correlations, and outliers to glean meaningful insights.</li>
+<li>Based on these insights, validate assumptions, make predictions, define optimizations, and most importantly make strategic decisions.</li>
+</ul>
+<a class="header" href="#who" id="who"><h4>WHO</h4></a>
+<p>Professionals who practice data science for businesses, government institutions, nonprofits, and other organizations might have one of these titles:</p>
+<ul>
+<li><strong>Machine Learning Engineer</strong>:
+<ul>
+<li>Work in production code.</li>
+<li>Identify machine learning applications.</li>
+<li>Manage infrastructure and data pipelines</li>
+</ul>
+</li>
+<li><strong>Data Engineer</strong>:
+<ul>
+<li>Create an architecture that facilitates data acquisition and machine learning problems at scale.</li>
+<li>Focus on the algorithm and the analysis rather than the software.</li>
+</ul>
+</li>
+<li><strong>Research Scienctist</strong>:
+<ul>
+<li>Specialized research scientist focused on driving scientific discovery rather than pursuing industrial applications.</li>
+<li>Backgrounds in both data science and computer science.</li>
+<li>Determines new algorithmic optimizations, especially in the realm of AI.</li>
+</ul>
+</li>
+<li><strong>Advanced Analyst</strong>:
+<ul>
+<li>Apply descriptive and inferential exploratory data analysis and modeling.</li>
+</ul>
+</li>
+</ul>
+<p>Effective data science lives at the intersection of...</p>
+<p><img src="https://4.bp.blogspot.com/-0cbXveb1J_0/V-FtjJZ4rqI/AAAAAAAAMHM/bS32Pio2a1IFOyp5T86S0jiyB-3KAN1iwCEw/s1600/download%2B%25281%2529.png" style="margin: 0 auto; width: 60%; display: block;"/></p>
+<p>That's pretty broad though. What skills in each of these areas are needed for data science specifically? A good data scientist:</p>
+<ul>
+<li><strong>MATHEMATICS</strong>: Understands statistical concepts and modeling; proficient in R and/or Python</li>
+<li><strong>COMPUTER SCIENCE</strong>: Has experience in data engineering (i.e. organizing data, running models, visualizing results, etc.); proficient in R and/or Python</li>
+<li><strong>DOMAIN EXPERTISE</strong>: Understands the business and social context of issue and can ask questions that lead to appropriate approaches and insights</li>
+</ul>
+<a class="header" href="#real-data-science-applications" id="real-data-science-applications"><h2>Real Data Science Applications</h2></a>
+<ol>
+<li>
+<p><strong>Safer, smarter self-driving cars</strong></p>
+<ul>
+<li>Data from sensors, including radars, cameras and lasers, to create a map of its surroundings.</li>
+<li>Create a map of its current surroundings such as proximity to other moving or stationary objects like other vehicles, traffic light signals, sirens, pedestrian crosswalk signals, etc.</li>
+<li>Decisions like when to speed up/down, stop, turn, signal, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Pre-emptive code alerts in the ER</strong></p>
+<ul>
+<li>Data from heart monitors, pulse oximeter, arterial lines, ventilators, etc. hooked to patients</li>
+<li>Find commonalities in biological health indicators preceding a code</li>
+<li>Identify patients at risk of imminently coding to give doctors an early warning and increase chances of patient revival</li>
+</ul>
+</li>
+<li>
+<p><strong>Natural disaster prediction</strong></p>
+<ul>
+<li>Data from ships, aircrafts, radars, satellites</li>
+<li>Predict occurrences of natural disasters, the areas to be affected, and (where applicable) the path of the storm</li>
+<li>Earlier predictions to maximize evacuation potential</li>
+</ul>
+</li>
+</ol>
+<a class="header" href="#the-data-science-lifecycle" id="the-data-science-lifecycle"><h2>The Data Science Lifecycle</h2></a>
+<p><img src="http://sudeep.co/images/post_images/2018-02-09-Understanding-the-Data-Science-Lifecycle/chart.png" style="margin: 0 auto; width: 100%; display: block;"/></p>
+<p><em>Image Source: http://sudeep.co/data-science/Understanding-the-Data-Science-Lifecycle/</em></p>
+<p>The image above delineates the general steps you would take when you start a data science project. Of course, they're really guidelines because you have to let your results guide you. Sometimes you might skip a step, repeat certain steps, or restart the entire cycle when trying to answer a question. Let's talk through each step using this contextual example:</p>
+<a class="header" href="#1-business-understanding" id="1-business-understanding"><h3>1) BUSINESS UNDERSTANDING</h3></a>
+<p>Data Science Wearables (DSW) is a retail store. DSW is interested in improving their human resource operations. Specifically, as a cost center in the business, this company wants to reduce their expenses associated with staffing the firm's in-store associates across the United States. You have a table of DSW current retail sales associates across department stores. These are some questions you have:</p>
+<ul>
+<li>What drives up costs of staffing?</li>
+<li>Is there an underlying reason for those costs?</li>
+<li>What factors affect HR costs? How could we minimize these?</li>
+<li>What hypothesis can we test to reduce costs?</li>
+</ul>
+<p>Let's presume the key cost driver for this HR function is twofold - employees turning over early (low total years of service) and a high time to fill (positions going unfilled, costing producitivity losses). Thus, we start by pursuing the goal of minimizing turnover.</p>
+<a class="header" href="#2-data-mining" id="2-data-mining"><h3>2) DATA MINING</h3></a>
+<p>The first three rows of data look like this. Note that &quot;time-to-fill&quot; indicates how long it took to fill this person's role. Typically minimizing time-to-fill is key to lower costs.</p>
+<table><thead><tr><th> Job Level </th><th> Current Employee </th><th> Reason for Termination </th><th> Years of Service </th><th> Candidate Source </th><th> Previous Employer      </th><th align="center">          School         </th><th align="right"> Time to Fill (Days) </th></tr></thead><tbody>
+<tr><td> Associate </td><td> N                </td><td> New offer            </td><td> 1.5              </td><td> Referral         </td><td> Jake's Hawaiian Shirts </td><td align="center"> NYU </td><td align="right">                  40 </td></tr>
+<tr><td> Associate </td><td> Y                </td><td> N/A                   </td><td> 2.0              </td><td> Internship       </td><td> N/A                     </td><td align="center"> UCLA      </td><td align="right">                  15 </td></tr>
+<tr><td> Associate </td><td> No               </td><td> Tardiness            </td><td> 0.5              </td><td> Online           </td><td> Hats and Caps          </td><td align="center">  Boston College </td><td align="right">                  25 </td></tr>
+</tbody></table>
+<a class="header" href="#3-data-cleaning" id="3-data-cleaning"><h3>3) DATA CLEANING</h3></a>
+<p>The inconsistencies and <code>N/A</code> missing values you see above are incredibly common. In fact, this dataset is comparatively clean and apt for the task at hand. When we start working with Pandas, we will discuss how to handle <code>N/A</code> missing values and other way to ensure data integrity.</p>
+<a class="header" href="#4-data-exploration" id="4-data-exploration"><h3>4) DATA EXPLORATION</h3></a>
+<p>We already looked at the columns in this dataset, but now we want to gain a deeper understanding and create some meaning to help determine our path forward. To do so, we will look at descriptive statistics, probably starting with summary statistics for the different categories in the dataset.</p>
+<ul>
+<li>Min &amp; max years of service and their corresp values</li>
+<li>Means of each var</li>
+<li>Frequency counts of each value in a var</li>
+<li>Plot the distribution of values as a histogram. A histogram uses the frequency counts for a single var, where the values themselves appear on the x-axis and the frequency of each one appears on the y-axis. This helps us gain a quick visual understanding of variance, spread, and skew.</li>
+</ul>
+<p><img src="http://www.mbaexcel.com/wp-content/uploads/2016/01/Histogram-Adjustable-Bins-Template-01.png" style="margin: 0 auto; max-width= 50%; display: block;"/></p>
+<p><strong>NOTE!</strong> <em>Based on this, our original goal of minimizing turnover might change!</em></p>
+<a class="header" href="#5-feature-engineering" id="5-feature-engineering"><h3>5) FEATURE ENGINEERING</h3></a>
+<p>This step is where we transition from merely describing and summarizing the data to manipulating and analyzing it. This step always starts with the same question - <em>What else do you want to know about the dataset?</em> The answers to this usually pertain to some pre-existing assumption, ostensible relationships (or lack thereof), unexpected values, or anomalies, which you want to investigate further. In our example with DSW employees, here are some pathways we might choose to follow:</p>
+<ul>
+<li>
+<p>We previously assumed the relationship between Time-to-Fill and Years of Service is negative. Is this true? How strong is this negative correlation? If it's significantly and consistently strong, we might choose to use this as hiring criteria going forward. To determine this, we would conduct a statistical correlation analysis.</p>
+</li>
+<li>
+<p>We could repeat the statistical correlation analysis with any pair of variables we think show potential for significant correlation (such as school and application source). But time is money, and we need to choose where to start intelligently! To do this, we might want to visualize the relationships between pairs of variables. In statistics, we often start by creating a scatterplot with a trendline because it allows us to immediately see the spread of data points and how far they are from the trendline.</p>
+<p><img src="https://python-graph-gallery.com/wp-content/uploads/40_Basic_Scatterplot_seaborn.png" style="margin: 0 auto; width: 45%;"/>   <img src="https://python-graph-gallery.com/wp-content/uploads/42_Scatterplot_custom_linear_fit_seaborn.png" style="margin: 0 auto; width: 45%;"/></p>
+</li>
+<li>
+<p>In more complex situations, we might conduct regression analysis to determine the potential for accurately predicting values for Years of Service based on Time-to-Fill values. We could use this to justify building machine learning model to generate a predictive algorithm.</p>
+</li>
+</ul>
+<p><strong>NOTE!</strong> It is common for this step to reinforce and revisit the prior step as we discover anomalies or intriguing relationships.</p>
+<a class="header" href="#6-predictive-modeling" id="6-predictive-modeling"><h3>6) PREDICTIVE MODELING</h3></a>
+<p>This is where the magic happens. We won't get into the details of machine learning here. However, the model you create for any data science project will be core source of insights and conclusions. Once you have results, it's time to dig in and think outside the box! Ask yourself questions like:</p>
+<ul>
+<li>How do our results compare to our initial hypothesis?</li>
+<li>How statistically significant (i.e. accurate) are our predictions?</li>
+<li>Do we have enough information to draw decisive conclusions? If so, what are they?</li>
+<li>Based on our conclusions, what concrete actions do we recommend?</li>
+</ul>
+<p>Remember that your results might not be sufficient after only one iteration. They might point you in the right direction, but they won't necessarily answer all your questions sufficiently. You'll probably have to repeat parts of the cycle several times before you can confidently draw conclusions and make recommendations.</p>
+<a class="header" href="#7-data-visualization" id="7-data-visualization"><h3>7) DATA VISUALIZATION</h3></a>
+<p>This final step is so important, we're going to give it its own section...</p>
+<a class="header" href="#visualizations--data-storytelling" id="visualizations--data-storytelling"><h2>Visualizations &amp; Data Storytelling</h2></a>
+<p>The single most important takeaway from this walk-through is this - <em>the value of your results depends directly on how well key stakeholders understand them!</em> Data science is valuable because of the insights we can discover using it. You can have all the mathematical evidence in the world for those insights, but your stakeholders have to understand their contextual significance and believe they can turn them into strategic, impactful business actions. Otherwise, what value do those insights have?</p>
+<p>Now, a data scientist might not present results to clients or high-level managers, but you <em>do</em> need to be able to explain results to team members who are not expert data scientists.</p>
+<p>This where the ubiquitous buzz phrase <strong>data storytelling</strong> comes into play. The goal of data storytelling is to convey your message in a way that provokes thoughts and ideas, inspires questions, encourages conversation and brainstorming, and ultimately, ignites action. All this boils down to two core pillars:</p>
+<ol>
+<li>Honing a cohesive narrative that establishes a thesis</li>
+<li>Highlighting meaningful key metrics as evidence to support that thesis</li>
+</ol>
+<p>Data vizualization is key to this endeavor because it's the easiest way to simplify heaps and mounds of numerical data into a clear message. As the saying goes, a picture can say a thousand words!</p>
+<a class="header" href="#tips-for-quality-data-viz" id="tips-for-quality-data-viz"><h4>Tips for Quality Data Viz</h4></a>
+<ul>
+<li>Focus the message on a central theme. Ensure your visualizations aid the progression of that message appropriately.
+<ul>
+<li>Display the visualization at the appropriate point in your story.</li>
+<li>If you have more than one visualization in view at a time, position each one contextually, according to natural reading eye movement.</li>
+</ul>
+</li>
+<li>Do not use color for decorative or non-informational purposes. It should be used to highlight key metrics or data points that help support your message.</li>
+<li>Most importantly, <em>avoid visual clutter like the plague!</em>
+<ul>
+<li>Eliminate the legend if it will not detract from understanding.</li>
+<li>Where you have long, vertical x-axis labels, try flipping the chart if possible.</li>
+<li>Remove excessive boxes or lines that separate data.</li>
+<li>Don't graph too many variables in one chart. For instance, ten lines on one chart will be too convoluted to follow!</li>
+</ul>
+</li>
+</ul>
+<p><strong>HOWEVER, there's always one exception!</strong> Generally, &quot;less is more&quot; surpasses everything else in importance <em>except for &quot;consider your audience&quot;.</em> You always want to minimize the amount of text on your visualization, but &quot;the minimum&quot; differs based on how much context your audience has. Ultimately, you need to make sure every viewer has enough context to be grounded in the appropriate frame of reference.</p>
+<p>If you want, you can see browse through a lot more tips on <a href="https://www.data-to-viz.com/caveats.html">Data to Viz's &quot;Caveats&quot; page</a>.</p>
+<a class="header" href="#discussion-extrapolating-population-in-the-past--future" id="discussion-extrapolating-population-in-the-past--future"><h2>DISCUSSION: Extrapolating Population in the Past &amp; Future</h2></a>
+<p><a href="https://www.prb.org/howmanypeoplehaveeverlivedonearth/">How Many People Have Ever Lived on Earth?</a>, a study from the U.S. Population Reference Bureau (PRB).</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JCm_1dGsYgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display: block; margin: 0 auto;"></iframe>
+<blockquote>
+<blockquote>
+<p>How Many People Have Ever Lived on Earth? Table 2. Snapshot of Population History</p>
+<ul>
+<li>Number of people ever born -- <strong>108,470,690,115</strong></li>
+<li>World population in mid-2017 -- <strong>7,536,000,000</strong></li>
+<li>Percent of those ever born who are living in 2017 -- <strong>6.9%</strong></li>
+</ul>
+</blockquote>
+</blockquote>
+<ul>
+<li>&quot;Any estimate of the total number of people who have ever lived depends essentially on two factors: the length of time humans are thought to have been on Earth and the average size of the human population at different periods...Guesstimating the number of people ever born, then, requires selecting population sizes for different points from antiquity to the present and applying assumed birth rates to each period.&quot;</li>
+</ul>
+<p><a href="https://www.populationpyramid.net/">Population Pyramid</a></p>
+<p>This project focuses on predicting future population growth. It's compiled from various sources - primarily the United Nations, Department of Economic and Social Affairs, Population Division. Their interactive population pyramid tool is a great example of an informative and compelling and data visualization.</p>
+<a class="header" href="#python-tools-for-data-science" id="python-tools-for-data-science"><h2>Python Tools for Data Science</h2></a>
+<p>Now that we understand the process we'll follow, we can jump into applying it with our Python skills. First, we have to set up our environments and ensure we have all the tools we need to conduct a thorough data science analysis. We won't use all of these in this introductory class, but these are the most common across the industry.</p>
+<ul>
+<li><strong>NumPy</strong> for computational operations on large multi-dimensional arrays and matrices</li>
+<li><strong>Pandas</strong> for data structuring, manipulation, and analysis</li>
+<li><strong>Matplotlib</strong> &amp; <strong>Seaborn</strong> for data visualization</li>
+<li><strong>Scikit-learn</strong> for machine learning</li>
+<li><strong>Scrapy</strong> for data wrangling via web scraping</li>
+<li><strong>Jupyter Notebooks</strong> &amp; <strong>Jupyter Lab</strong> for data science integrated development environments (IDEs)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/classes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/intro_pandas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/classes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/intro_pandas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

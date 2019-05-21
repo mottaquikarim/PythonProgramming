@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Functions - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html" class="active"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/list_comprehensions.md","title":"Functions"}
+-->
+<a class="header" href="#functions" id="functions"><h1>Functions</h1></a>
+<p>In Python, <code>functions</code> are your best friends! Let's say you need to perform some action or calculation multiple times for multiple values. For example, you might want to convert temperatures in Celsius to Fahrenheit like you did in the last chapter's exercises. It would be inefficient and messy to copy that code every time you need it. Instead, you can define a <code>function</code> to contain that code. Every time you call that function, it runs the whole block of code inside and saves you lots of time. Sweet!</p>
+<p>Python includes lots of built-in functions in its main library. We've seen lots of these already like <code>len()</code>, <code>sum()</code>, <code>.append()</code>, <code>.popitem</code>, etc. You can extend the range of built-in functions available to you by importing <code>modules</code>. We'll talk about those next!</p>
+<a class="header" href="#elements-of-a-function" id="elements-of-a-function"><h2>Elements of a Function</h2></a>
+<p>For now, let's start with the basics. Here's the skeleton of a function and a breakdown of each part.</p>
+<pre><code class="language-python">def function_name(parameters):
+    &quot;&quot;&quot;docstring&quot;&quot;&quot;
+    # statement(s)
+</code></pre>
+<ul>
+<li><code>def</code> shows you are &quot;defining&quot; a new function</li>
+<li>A unique function name; same naming rules as  variables)</li>
+<li><em>Optional</em> parameters, or arguments, to be passed into the function when it is called.</li>
+<li><code>:</code> ends the function header</li>
+<li>An <em>optional</em> <code>docstring</code>, i.e. a comment with documentation describing the function.</li>
+<li>At least one statement make up the &quot;function body&quot;; this code achieves the purpose for calling the function.</li>
+<li>An <em>optional</em> return statement, which exits the function and passes out some value from the body code.</li>
+</ul>
+<p><strong>NOTE!</strong> <em>It is a best practice to always create notes and documentation. Other potential users of your functions - and maybe future YOU - will thank you for the extra info.</em></p>
+<a class="header" href="#inputoutput-function-arguments--the-return-statement" id="inputoutput-function-arguments--the-return-statement"><h2>Input/Output: Function Arguments &amp; The <code>return</code> Statement</h2></a>
+<p>When you create a function, you might need to feed it some input and have it give back some output. We call function input <code>arguments</code> and function output <code>return</code> values. Remember - both <code>arguments</code> and <code>return</code> values are <em>optional</em> depending on the purpose of your function.</p>
+<p>Let's say we want to create a function to get the square of a number. At the most basic level, there are three parts:</p>
+<ol>
+<li>Input the number we want to square</li>
+<li>Calculate the square of that number</li>
+<li>Output the square of that number</li>
+</ol>
+<p>Let's implement this in a function called <code>NumSquared()</code>.</p>
+<pre><code class="language-python">def num_squared(num):
+    &quot;&quot;&quot;Find the square of some number passed in&quot;&quot;&quot;
+    square = num*num # code to find the square
+    return square
+</code></pre>
+<ol>
+<li>Input the number we want to square
+We create an <em>parameter</em> called <code>num</code> to represent the number we will past into our function as an argument. (p.s. Parameters are the names used when defining a function.) Remember that arguments should always be passed in the correct format and positional order, or the function will not be able to recognize them.</li>
+<li>Calculate the square of that number
+Using the value of <code>num</code>, we write the formula for calculating a square and assign it to the variable <code>square</code>.</li>
+<li>Output the square of that number
+We return <code>square</code> to pass out the numeric value we calculated. The return statement exits the function so the program can move on to the next block of code you've written. If you don't need to specify a value to return, the function will default to <code>return None</code> in order to exit the function.</li>
+</ol>
+<p>Once we've written this logic, we can call <code>NumSquared()</code> every time we want to use it. Let's say we want to find the value of 12 squared...</p>
+<pre><code class="language-python">sq12 = num_squared(12)
+print(sq12) # 144
+</code></pre>
+<p><strong>NOTE!</strong> You should store the function call within a var so that the return value gets stored in the var. If you don't, how will you access the output you wanted??</p>
+<p>One last thing - you should know that the <code>return</code> statement can return multiple values <em>by using tuples</em>. Once you return the tuple from the function, you can <em>unpack</em> its values by simultaneously assigning each one to a new var as follows...</p>
+<pre><code class="language-python">    # some function...
+    return 3,'a',True
+
+x, y, z = (3,'a',True)
+print(x, type(x)) # 3 &lt;class 'int'&gt;
+print(y, type(y)) # a  &lt;class 'str'&gt;
+print(z, type(z)) # True &lt;class 'bool'&gt;
+</code></pre>
+<a class="header" href="#argument-types" id="argument-types"><h2>Argument Types</h2></a>
+<a class="header" href="#required-arguments" id="required-arguments"><h4>Required Arguments</h4></a>
+<p>If your function won't work without specific arguments, you can define the function with <strong>required arguments</strong>. In order for anyone to call the function, that user <em>must</em> always pass values for the required arguments in the correct positional order with the correct syntax you defined in advance. For example...</p>
+<pre><code class="language-python">def plus(a,b):
+  return a + b
+
+c = plus(8,12)
+print(c) # 20
+</code></pre>
+<a class="header" href="#keyword-arguments" id="keyword-arguments"><h4>Keyword Arguments</h4></a>
+<p>Now switch perspectives. You're using a function that your colleague defined. If you want to make sure that you call all the required arguments in the right order, you can use the <strong>keyword arguments</strong> in your function call. Essentially, this means that you mention each argument's parameter name when you assign it a value during the function call. It works like this...</p>
+<pre><code class="language-python">def plus(a,b):
+  return a + b
+
+c = plus(a=8,b=12)
+print(c) # 20
+</code></pre>
+<a class="header" href="#default-arguments" id="default-arguments"><h4>Default Arguments</h4></a>
+<p>Back to writing our own functions! If you want, you can give your function a <strong>default argument</strong>. Functions with default arguments take some pre-defined default value if no argument value is passed when you call the function. When defining your own function, you can assign this default value like this:</p>
+<pre><code class="language-python">def plus(a,b = 12):
+  return a + b
+  
+# Only passing a value for `a`...
+c = plus(a=8)
+print(c) # 20
+
+# ...vs. passing values for `a` and `b`
+c = plus(8, 17)
+print(c) # 25
+</code></pre>
+<a class="header" href="#variable-number-of-arguments" id="variable-number-of-arguments"><h4>Variable number of Arguments</h4></a>
+<p>Even if you're not sure how many arguments you will need to pass to your function, you can still define it. To do this, you use the parameter <code>*args</code> as a stand-in. This signals to the function that it should expect any variety of arguments. Let's take a look at a few different ways to implement this.</p>
+<p><strong>Using integers</strong> (as we did in the earlier examples)</p>
+<pre><code class="language-python">def plus(*args):
+  return sum(args)
+
+c = plus(8,12,17)
+print(c) # 37
+</code></pre>
+<p><strong>Using different data types</strong></p>
+<pre><code class="language-python">def length(*args):
+  list1 = [*args]
+  return len(list1)
+
+c = length(8,'a',True)
+print(c) # 3
+</code></pre>
+<p><strong>Using a variable</strong></p>
+<pre><code class="language-python">var1 = 'h' + 'i'
+def print_all(*args):
+  list1 = [*args]
+  return list1
+
+c = print_all(8,'a',True,var1)
+print(c) # [8, 'a', True, 'hi']
+</code></pre>
+<p><strong>NOTE!</strong> If you use <code>*args</code>, your function will be more flexible, <em>but only if you write it that way</em>. If you expect different types of arguments, you will have to write the function such that it can handle every use case you expect could occur.</p>
+<a class="header" href="#variable-scope-recap" id="variable-scope-recap"><h2>Variable Scope Recap</h2></a>
+<ul>
+<li><code>global variable</code>: a variable declared outside a function; any function in your script can access this</li>
+<li><code>local variable</code>: a variable declared within a function's code block; you can only access this variable within the function where it is declard, otherwise you will get a <code>NameError</code> telling you that variable is not defined.</li>
+</ul>
+<pre><code class="language-python">x = 'I\'m a global variable.'
+
+def foo():
+    x = 'I\'m a local variable.'
+    print(x) # I'm a local variable.
+    return x
+
+y = foo()
+
+print(x) # I'm a global variable.
+print(y) # I'm a local variable.
+</code></pre>
+<p>Notice that even though the function <code>foo()</code> above says <code>return x</code>, it <strong>only returns the value of the local variable <code>x</code></strong>. We assign this <em>value</em> to the variable <code>y</code> when we call foo().</p>
+<p>Look at the nuanced difference in this example though:</p>
+<pre><code class="language-python">def foo():
+    x = 'I\'m a local variable.'
+    print(x) # I'm a local variable.
+    return x
+
+foo()
+
+print(x) # NameError: name 'x' is not defined
+</code></pre>
+<p>Even though we called the function <code>foo()</code>, we did not assign its return value to a variable outside the function. Therefore, trying to print <code>x</code> will output <code>NameError: name 'x' is not defined</code>. This is because <code>x</code> only exists within the function.</p>
+<a class="header" href="#practice-problems" id="practice-problems"><h2>Practice Problems</h2></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/modules.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/list_comprehensions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/modules.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/list_comprehensions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

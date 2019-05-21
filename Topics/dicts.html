@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Dicts - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html" class="active"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/loops.md","title":"Dicts"}
+-->
+<a class="header" href="#dict" id="dict"><h1>Dict</h1></a>
+<p>In addition to lists, another more comprehensive method for storing complex data are <strong>dicts</strong>, or dictionaries. In the example below, we associate a <code>key</code> (e.g. 'taq')  to a <code>value</code> (e.g. 'karim').</p>
+<pre><code class="language-python">dict1 = {
+  'taq': 'karim',
+  'apple': 35,
+  False: 87.96,
+  35: 'dog',
+  'tree': True,
+  47: 92,
+  # etc.
+}
+
+print(dict1) # {'taq': 'karim', 'apple': 35, False: 87.96, 35: 'dog', 'tree': True, 47: 92}
+</code></pre>
+<p>The <code>values</code> in a dict can be any valid Python data type, but there are some restrictions on what you can use as <code>keys</code>. Keys CAN be strings, integers, floats, booleans, and tuples. Keys CANNOT be lists or dicts. Do you see the pattern here? The data in a dict key must be <em>immutable.</em> Since lists and dicts are mutable, they cannot be used as keys in a dict.</p>
+<p><strong>NOTE!</strong> The keys in a dict <em><strong>must be unique</strong></em> as well. Be careful not to add a key to a dict a second time. If you do, the second item will <em><strong>override</strong></em> the first item. For instance, if you upload data from a .csv file into a dict, it would be better to create a new dict first, then compare the two to check for identical keys and make any adjustments necessary.</p>
+<p>One last thing before we move past the nitty gritty -- the keys and values of a single dict don't have to be homogenous. In other words, you can mix and match different key, value, and key value pair data types within one dict as seen above.</p>
+<a class="header" href="#creating-dicts" id="creating-dicts"><h2>Creating Dicts</h2></a>
+<p>There are several ways you can create your <code>dict</code>, but we'll go through the most basic ones here.</p>
+<p><strong>1. The simplest is to create an empty list with the <code>dict()</code> method.</strong></p>
+<pre><code class="language-python">students = dict() # this creates a new, empty dict
+</code></pre>
+<p><strong>2. You can create a dict by passing in key value pairs directly using this syntax:</strong></p>
+<pre><code class="language-python">food_groups = {
+    'pomegranate': 'fruit',
+    'asparagus': 'vegetable',
+    'goat cheese': 'dairy',
+    'walnut': 'legume'
+}
+</code></pre>
+<p><strong>3. You can also convert a <em>list of tuples</em> into a dict using <code>dict()</code>...</strong></p>
+<pre><code class="language-python"># list of tuples   
+listofTuples = [(&quot;Hello&quot; , 7), (&quot;hi&quot; , 10), (&quot;there&quot; , 45),(&quot;at&quot; , 23),(&quot;this&quot; , 77)]
+
+wordFrequency = dict(listofTuples)
+print(wordFrequency) # {'this': 77, 'there': 45, 'hi': 10, 'at': 23, 'Hello': 7}
+</code></pre>
+<p><strong>4. ...and even combine two lists to create a dict by using the <code>zip()</code> method.</strong></p>
+<p>The <code>zip()</code> method takes the name of each list as parameters - the first list will become the dict's keys, and the second list will become the dict's values. <strong>NOTE!</strong> This only works if you're sure the key value pairs have the same index position in their original lists (so they will match in the dict).</p>
+<pre><code class="language-python">names = ['Taq', 'Zola', 'Valerie', 'Valerie']
+scores = [[98, 89, 92, 94], [86, 45, 98, 100], [100, 100, 100, 100], [76, 79, 80, 82]]
+
+grades = dict(zip(names,scores))
+print(grades) # {'Taq': [98, 89, 92, 94], 'Zola': [86, 45, 98, 100], 'Valerie': [76, 79, 80, 82]}
+</code></pre>
+<a class="header" href="#accessing-dict-data" id="accessing-dict-data"><h2>Accessing Dict Data</h2></a>
+<p>Once you've stored data in your dict, you'll need to be able to get back in and access it! Take a look at this dict holding state capitals.</p>
+<pre><code class="language-python">state_capitals = {
+    'NY': 'Albany',
+    'NJ': 'Trenton',
+    'CT': 'Hartford',
+    'MA': 'Boston'
+}
+</code></pre>
+<p>We can access each value in the list by referencing its key like so:</p>
+<pre><code class="language-python">MAcap = state_capitals['MA']
+print('The capital of MA is {}.'.format(MAcap)) # 'The capital of MA is Boston.'
+</code></pre>
+<p>Attempting to find a key that does not exist leads to error. <em>You also can't access dict items with index numbers like you do with lists!</em> If you try, you will get a <code>KeyError</code> - because an index number does not function like a dict key.</p>
+<pre><code class="language-python">print(state_capitals['PA']) # KeyError from missing key
+print(state_capitals[2]) # KeyError from index reference
+</code></pre>
+<p>Instead, it's better to look up a key in a dict using <code>.get(key, [])</code>. The <code>.get()</code> method takes the key argument just as above EXCEPT it allows you to enter some default value it should return if the key you enter does not exist. Usually, we use <code>[]</code> as that value.</p>
+<pre><code class="language-python">print(state_capitals.get('PA', []))
+# PA is not in our dict, so .get() returns []
+</code></pre>
+<p>Now, this dict has 4 keys, but what if it had <em>hundreds?</em> We can  retrieve data from large dicts using <code>.keys()</code>, <code>.values()</code>, or <code>.items()</code>.</p>
+<pre><code class="language-python">pets_owned = {
+  'Taq': ['teacup pig','cat','cat'],
+  'Francesca': ['llama','horse','dog'],
+  'Walter': ['ferret','iguana'],
+  'Caleb': ['dog','rabbit','parakeet']
+}
+
+pets.keys() # ['Taq', 'Francesca', 'Walter', 'Caleb']
+
+pets.values() # [['teacup pig','cat','cat'], ['dog','rabbit','parakeet'], etc ]
+
+pets.items() # [('Taq', ['teacup pig','cat','cat']), ('Francesca', [['llama','horse','dog']), etc]
+</code></pre>
+<a class="header" href="#built-in-operators-for-manipulating-dicts" id="built-in-operators-for-manipulating-dicts"><h2>Built-in Operators for Manipulating Dicts</h2></a>
+<p>Just like lists, you can edit, analyze, and format your dicts. Some work the same for dicts and lists such as <code>len()</code>. However, adding, deleting, and updating data requires a little more detail for dicts than for lists.</p>
+<a class="header" href="#add-or-edit-dict-items" id="add-or-edit-dict-items"><h4>Add or Edit Dict Items</h4></a>
+<p>We can add a single item to a dict...</p>
+<pre><code class="language-python">state_capitals = {
+    'NY': 'Albany',
+    'NJ': 'Trenton',
+    'CT': 'Hartford',
+    'MA': 'Boston'
+}
+
+state_capitals['CA'] = 'Sacramento'
+
+print(state_capitals) # {'NY': 'Albany', 'NJ': 'Trenton', 'CT': 'Hartford', 'MA': 'Boston', 'CA': 'Sacramento'}
+</code></pre>
+<p>...but more likely you'll want to make bulk updates to save yourself time. To do so, you can use the <code>.update()</code> method to add one or more items to the dict. <strong>NOTE!</strong>: It's easy to accidentally override items when you're merging datasets. Don't worry though - we'll learn an easy way to check for duplicate keys in the next section.</p>
+<pre><code class="language-python">state_capitals = {
+    'NY': 'Albany',
+    'NJ': 'Trenton',
+    'CT': 'Hartford',
+    'MA': 'Boston',
+    'CA': 'Sacramento'
+}
+more_states = {
+    'WA': 'Olympia',
+    'OR': 'Salem',
+    'TX': 'Austin',
+    'NJ': 'Hoboken',
+    'AZ': 'Phoenix',
+    'GA': 'Atlanta'
+}
+
+state_capitals.update(more_states)
+
+state_capitals = {
+    'NY': 'Albany',
+    'NJ': 'Hoboken',
+    'CT': 'Hartford',
+    'MA': 'Boston',
+    'CA': 'Sacramento',
+    'WA': 'Olympia',
+    'OR': 'Salem',
+    'TX': 'Austin',
+    'AZ': 'Phoenix',
+    'GA': 'Atlanta'
+}
+</code></pre>
+<p><strong>Notice something?</strong> It's easy to accidentally override items when you're merging datasets. <em>Oops, we just changed the capital of NJ to Hoboken!</em> Don't worry though - we'll learn an easy way to check for duplicate keys in the next section.</p>
+<a class="header" href="#remove-items-from-a-dict" id="remove-items-from-a-dict"><h4>Remove Items from a Dict</h4></a>
+<p><code>.clear()</code> simply empties the dict of all items.</p>
+<p><code>.pop()</code>:
+This removes an item, which you must specify by key. There are two things to note here -</p>
+<p>First, you <strong>cannot delete a dict item by specifying a value</strong>. Since values do not have to be unique the way keys are, trying to delete items by referencing values could cause issues.</p>
+<p>Second, just like we saw earlier with <code>.get(key, value)</code>, <code>.pop(key, value)</code> will raise a <code>KeyError</code> if you try to remove a key that does not exist in the dict. We avoid this in the same way, by setting a default value - typically <code>[]</code> - for the program to return in case of a missing key.</p>
+<p>Unfortunately, you <em>can't</em> use the same method as we did for <code>.update()</code> to delete larger portions of data. We'll learn a way to do that in the next section.</p>
+<pre><code class="language-python">state_capitals.pop('AZ', [])
+# removes 'AZ': 'Phoenix' from our dict
+</code></pre>
+<p><code>popitem()</code>:
+This one just removes an arbitrary key value pair from dict and returns it as a tuple.</p>
+<pre><code class="language-python">seceded1 = state_capitals.popitem()
+# ^ removes a random item and returns it as a tuple
+print(seceded1) # ('GA': 'Atlanta') for example
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/lists.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/loops.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/lists.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/loops.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

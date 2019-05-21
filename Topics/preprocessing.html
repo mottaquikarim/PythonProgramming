@@ -1,0 +1,714 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Exploratory Data Analysis w. 🐼 - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html" class="active"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next": "Topics/eda.md","title": "Exploratory Data Analysis w. 🐼"}
+-->
+<a class="header" href="#exploratory-data-analysis-w" id="exploratory-data-analysis-w"><h1>Exploratory Data Analysis w/🐼🐼</h1></a>
+<p>For today's lesson, we will leverage Pandas for exploratory data analysis (EDA).
+We will use Pandas to investigate, wrangle, munge, and clean our data.</p>
+<p>In particular, we will examine how Pandas can be used to:</p>
+<ul>
+<li><strong>Investigate a dataset's integrity</strong></li>
+<li><strong>Filter, sort, and manipulate a DataFrame's series</strong></li>
+</ul>
+<p>Additionally, the end portion of this section contains a glossary of methods and attributes provided by Pandas to handle data wrangling, selection, cleaning and organizing.</p>
+<ul>
+<li><strong><a href="preprocessing.html#wrangling-data">Wrangling Data</a></strong></li>
+<li><strong><a href="preprocessing.html#selecting-data">Selecting Data</a></strong>
+<ul>
+<li><strong><a href="preprocessing.html#single-values">Single Values</a></strong></li>
+<li><strong><a href="preprocessing.html#subsetting--slicing">Subsetting &amp; Slicing</a></strong></li>
+</ul>
+</li>
+<li><strong><a href="preprocessing.html#cleaning--organizing-data">Cleaning &amp; Organizing Data</a></strong>
+<ul>
+<li><strong><a href="preprocessing.html#editing">Editing</a></strong></li>
+<li><strong><a href="preprocessing.html#null-values">Null Values</a></strong></li>
+<li><strong><a href="preprocessing.html#duplicates">Duplicates</a></strong></li>
+<li><strong><a href="preprocessing.html#sorting">Sorting</a></strong></li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#data-sets" id="data-sets"><h2>Data sets</h2></a>
+<ul>
+<li><strong><a href="https://www.kaggle.com/zynicide/wine-reviews/">Wine Reviews | Kaggle</a></strong>
+<ul>
+<li><em>130k wine reviews with variety, location, winery, price, and description</em></li>
+</ul>
+</li>
+<li><strong><a href="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/raw_data/winemag-data-130k-v2.csv">Wine Reviews | Local</a></strong>
+<ul>
+<li><em>You can download a version of the kaggle dataset directly from this Github Repo</em></li>
+</ul>
+</li>
+<li><strong><a href="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/raw_data/production.product.tsv">Adventureworks Cycles | Local</a></strong>
+<ul>
+<li><em>You can download a version of the Adventureworks Cycles dataset directly from this Github Repo</em></li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#adventureworks-cycles" id="adventureworks-cycles"><h2>Adventureworks Cycles</h2></a>
+<p>Our core focus will be using a dataset developed by Microsoft for training purposes in SQL server, known the Adventureworks Cycles 2014OLTP Database.</p>
+<ul>
+<li>It is based on a fictitious company called Adventure Works Cycles (AWC), a multinational manufacturer and seller of bicycles and accessories.</li>
+<li>The company is based in Bothell, Washington, USA and has regional sales offices in several countries.</li>
+<li>We will be looking at a single table from this database, the Production.Product table, which outlines some of the products this company sells.</li>
+</ul>
+<a class="header" href="#loading-the-data" id="loading-the-data"><h3>Loading the Data</h3></a>
+<p>We can load our data as follows:</p>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+prod = pd.read_csv('/raw_data/production.product.tsv', sep='\t')
+
+</code></pre>
+<p>Note the <code>sep='\t'</code>; this is because we are pulling in a <code>tsv</code> file, which is basically a csv file but with <code>tabs</code> as delimiters vs commas.</p>
+<p><strong>YOU DO</strong>: Download the <code>tsv</code> file into your local machine, create a python virtualenv and run the code above, but on your machine.</p>
+<a class="header" href="#data-dictionary" id="data-dictionary"><h3>Data dictionary</h3></a>
+<p>Every good dataset has a <strong>data dictionary</strong>. Essentially, it lists each field in the data and provides a contextual description. It serves as a good frame of reference for anyone not diving directly into the data.</p>
+<pre><code class="language-python">cols = prod.columns
+for idx, col in enumerate(cols):
+  print(idx+1, col)
+</code></pre>
+<pre><code class="language-text">    1 ProductID
+    2 Name
+    3 ProductNumber
+    4 MakeFlag
+    5 FinishedGoodsFlag
+    6 Color
+    7 SafetyStockLevel
+    8 ReorderPoint
+    9 StandardCost
+    10 ListPrice
+    11 Size
+    12 SizeUnitMeasureCode
+    13 WeightUnitMeasureCode
+    14 Weight
+    15 DaysToManufacture
+    16 ProductLine
+    17 Class
+    18 Style
+    19 ProductSubcategoryID
+    20 ProductModelID
+    21 SellStartDate
+    22 SellEndDate
+    23 DiscontinuedDate
+    24 rowguid
+    25 ModifiedDate
+</code></pre>
+<a class="header" href="#reading-data" id="reading-data"><h3>Reading data</h3></a>
+<pre><code class="language-python">prod.head(1)
+</code></pre>
+<p>The <code>head</code> method lets us read in the <strong>first n rows</strong> of a dataset. Run this in your machine, you should expect to see:</p>
+<pre><code class="language-text">   ProductID             Name ProductNumber  MakeFlag  ...  SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+0          1  Adjustable Race       AR-5381         0  ...          NaN              NaN  {694215B7-08F7-4C0D-ACB1-D734BA44C0C8}  2014-02-08 10:01:36.827000000
+
+[1 rows x 25 columns]
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Run the above code in <em>your</em> machine, but with <strong>n=5</strong>. What do you see?</li>
+<li><strong>YOU DO</strong>: What kind of object is <code>prod</code>? Run <code>type(prod)</code> and report back your findings.</li>
+<li><strong>YOU DO</strong>: What is the shape of this dataframe? Run <code>prod.shape</code> to find out.</li>
+</ul>
+<a class="header" href="#dataframe-subsets" id="dataframe-subsets"><h2>DataFrame subsets</h2></a>
+<p>This dataset is comprehensive! Let's see how we might be able to select a <em>subset</em> of this data for easier analysis.</p>
+<p>Let's start with only 3 rows for now:</p>
+<pre><code class="language-python">prod_subset = prod.head(3)
+</code></pre>
+<pre><code class="language-text">   ProductID             Name ProductNumber  MakeFlag  ...  SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+0          1  Adjustable Race       AR-5381         0  ...          NaN              NaN  {694215B7-08F7-4C0D-ACB1-D734BA44C0C8}  2014-02-08 10:01:36.827000000
+1          2     Bearing Ball       BA-8327         0  ...          NaN              NaN  {58AE3C20-4F3A-4749-A7D4-D568806CC537}  2014-02-08 10:01:36.827000000
+2          3  BB Ball Bearing       BE-2349         1  ...          NaN              NaN  {9C21AED2-5BFA-4F18-BCB8-F11638DC2E4E}  2014-02-08 10:01:36.827000000
+
+[3 rows x 25 columns]
+</code></pre>
+<p>If we wanted to only pull in a few <strong>columns</strong>, we could do something like:</p>
+<pre><code class="language-python">two_cols = prod_subset[['ProductID', 'Name']]
+print(two_cols)
+</code></pre>
+<pre><code class="language-text">   ProductID             Name
+0          1  Adjustable Race
+1          2     Bearing Ball
+2          3  BB Ball Bearing
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Grab the first <strong>5</strong> rows of the dataset and save a subset df with the following columns: <strong>ProductID</strong>, <strong>Name</strong>, <strong>Color</strong>, and <strong>ListPrice</strong>.</li>
+</ul>
+<a class="header" href="#column-headers-and-datatypes" id="column-headers-and-datatypes"><h2>Column headers and datatypes</h2></a>
+<p>We can leverage pandas to explore the column header names and associated datatypes of the headers as well.</p>
+<pre><code class="language-python">print(prod.columns)
+</code></pre>
+<pre><code class="language-text">Index(['ProductID', 'Name', 'ProductNumber', 'MakeFlag', 'FinishedGoodsFlag',
+       'Color', 'SafetyStockLevel', 'ReorderPoint', 'StandardCost',
+       'ListPrice', 'Size', 'SizeUnitMeasureCode', 'WeightUnitMeasureCode',
+       'Weight', 'DaysToManufacture', 'ProductLine', 'Class', 'Style',
+       'ProductSubcategoryID', 'ProductModelID', 'SellStartDate',
+       'SellEndDate', 'DiscontinuedDate', 'rowguid', 'ModifiedDate'],
+      dtype='object')
+</code></pre>
+<p>If we wanted to view the columns and their types, we can do:</p>
+<pre><code class="language-python">prod.dtypes
+</code></pre>
+<pre><code class="language-text">ProductID                  int64
+Name                      object
+ProductNumber             object
+MakeFlag                   int64
+FinishedGoodsFlag          int64
+Color                     object
+SafetyStockLevel           int64
+ReorderPoint               int64
+StandardCost             float64
+ListPrice                float64
+Size                      object
+SizeUnitMeasureCode       object
+WeightUnitMeasureCode     object
+Weight                   float64
+DaysToManufacture          int64
+ProductLine               object
+Class                     object
+Style                     object
+ProductSubcategoryID     float64
+ProductModelID           float64
+SellStartDate             object
+SellEndDate               object
+DiscontinuedDate         float64
+rowguid                   object
+ModifiedDate              object
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: What kind of python object is the <code>prod.dtypes</code>? How do you know?</li>
+<li><strong>YOU DO</strong>: How does pandas know the col datatypes? Don't code this, but how might you implement this feature in pure python?</li>
+</ul>
+<a class="header" href="#column-selection" id="column-selection"><h2>Column Selection</h2></a>
+<p><strong>IMPORTANT</strong>: depending on number of square brackets used, selection of a column may return a <strong>Series</strong> object or a <strong>DataFrame</strong> object. Depending on your usecase, you may <em>want</em> one or the other!</p>
+<p>Consider the following:</p>
+<pre><code class="language-python">prod['Name'].head(3)
+type(prod['Name'].head(3))
+</code></pre>
+<pre><code class="language-text">0    Adjustable Race
+1       Bearing Ball
+2    BB Ball Bearing
+Name: Name, dtype: object
+&lt;class 'pandas.core.series.Series'&gt;
+</code></pre>
+<p>vs</p>
+<pre><code class="language-python">prod[[&quot;Name&quot;]].head(3)
+type(prod[['Name']].head(3))
+</code></pre>
+<pre><code class="language-text">              Name
+0  Adjustable Race
+1     Bearing Ball
+2  BB Ball Bearing
+&lt;class 'pandas.core.frame.DataFrame'&gt;
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Select <strong>Name</strong> and <strong>ProductID</strong> columns from our Dataframe. Is this possible to do as a <strong>Series</strong>? Why or why not?</li>
+</ul>
+<a class="header" href="#renaming-columns" id="renaming-columns"><h2>Renaming Columns</h2></a>
+<p>We can rename columns as needed, like so:</p>
+<pre><code class="language-python">new_prod = prod.rename(columns={'Name': 'ProductName', 'ProductNumber':'Number'}, inplace=False).head(3)
+</code></pre>
+<p>A few things to note here:</p>
+<ul>
+<li><code>inplace</code>: this is a boolean that will update the <strong>original</strong> dataframe OR create us a new one</li>
+<li><code>{'Name': 'ProductName'}</code>: we may use this as a way to map a new col name to an existing one</li>
+</ul>
+<p><strong>REMEMBER</strong>: we can view all the columns of a dataframe with:</p>
+<pre><code class="language-python">prod.columns
+</code></pre>
+<p>What is the datatype of this attribute?</p>
+<pre><code class="language-python">type(prod.columns)
+</code></pre>
+<pre><code class="language-text">&lt;class 'pandas.core.indexes.base.Index'&gt;
+</code></pre>
+<p>The <strong>Index</strong> is an immutable ndarray implementing an ordered, sliceable set. It is the basic object storing axis labels for all pandas objects. Think of it as a 'row address' for your data frame (table). We can cast this <code>Index</code> to be something like, like say...a list.</p>
+<pre><code class="language-python">list(prod.columns)
+</code></pre>
+<p>Now, we can do something like:</p>
+<pre><code class="language-python">cols_list = list(prod.columns)
+cols_list[0] = 'New Col'
+prod.columns = cols_list
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: What will the code above do? Run it and report back.</li>
+<li><strong>YOU DO</strong>: Select the first three rows under <code>New Col</code> and return it as a <strong>dataframe</strong>.</li>
+<li><strong>YOU DO</strong>: First, copy <code>prod</code> to <code>prod_cpy</code> (look at references below to see how to copy a dataframe). Then, rename the columns above, but <strong>inplace</strong> meaning <code>prod_cpy</code> itself must be mutated.</li>
+</ul>
+<a class="header" href="#basic-stats-on-columns" id="basic-stats-on-columns"><h2>Basic Stats on Columns</h2></a>
+<p>Five Number Summary (all assumes numeric data):</p>
+<ul>
+<li><strong>Min:</strong> The smallest value in the column</li>
+<li><strong>Max:</strong> The largest value in the column</li>
+<li><strong>Quartile:</strong> A quartile is one fourth of our data
+<ul>
+<li><strong>First quartile:</strong> This is the bottom most 25 percent</li>
+<li><strong>Median:</strong> The middle value. (Line all values biggest to smallest - median is the middle!) Also the 50th percentile</li>
+<li><strong>Third quartile:</strong> This the the top 75 percentile of our data</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://www.mathsisfun.com/data/images/quartiles-a.svg" alt="" /></p>
+<p>The <code>describe</code> method allows us to achieve this with pandas:</p>
+<pre><code class="language-python"># note - describe *default* only checks numeric datatypes
+prod[['MakeFlag', 'SafetyStockLevel', 'StandardCost']].describe()
+</code></pre>
+<p>If we were to select cols as series, we could run additional <strong>Series</strong> object methods:</p>
+<pre><code class="language-python"># show the most popular product colors (aggregated by count, descending by default)
+prod['Color'].value_counts()
+</code></pre>
+<pre><code class="language-text">Black           93
+Silver          43
+Red             38
+Yellow          36
+Blue            26
+Multi            8
+Silver/Black     7
+White            4
+Grey             1
+Name: Color, dtype: int64
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Leveraging the <code>unique</code> <strong>Series</strong> method, print out the unique colors for this product.</li>
+<li><strong>YOU DO</strong>: Leveraging the <code>nunique</code> <strong>Series</strong> method, print out how many distinct colors are available.</li>
+<li><strong>YOU DO</strong>: Leveraging the <code>dropna</code> keyword arg of the <code>nunique</code> <strong>Series</strong> method, print out how many distinct colors are available <em>including</em> <strong>NULL</strong> values.</li>
+</ul>
+<a class="header" href="#filtering" id="filtering"><h2>Filtering</h2></a>
+<p>Filtering and sorting are key processes that allow us to drill into the 'nitty gritty' and cross sections of our dataset.</p>
+<p>To filter, we use a process called <strong>Boolean Filtering</strong>, wherein we define a Boolean condition, and use that Boolean condition to filer on our DataFrame.</p>
+<p>Recall: our given dataset has a column <code>Color</code>. Let's see if we can find all products that are <code>Black</code>. Let's take a look at the first 10 rows of the dataframe to see how it looks as-is:</p>
+<pre><code class="language-python">colors = prod['Color'].head(10)
+</code></pre>
+<pre><code class="language-text">ProductID
+1         NaN
+2         NaN
+3         NaN
+4         NaN
+316       NaN
+317     Black
+318     Black
+319     Black
+320    Silver
+321    Silver
+Name: Color, dtype: object
+</code></pre>
+<p>To find only the &quot;Black&quot; colored items, we can:</p>
+<pre><code class="language-python">prod['Color'].head(10) == 'Black'
+</code></pre>
+<pre><code class="language-text">ProductID
+1      False
+2      False
+3      False
+4      False
+316    False
+317     True
+318     True
+319     True
+320    False
+321    False
+Name: Color, dtype: bool
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Without using the <code>unique</code>/<code>nunique</code> methods from above, can you apply an additional filter to the series above to determine how many <code>Black</code> colored products exist?</li>
+</ul>
+<p>We can apply this filtering to our Dataframes as well, in a more interesting manner:</p>
+<pre><code class="language-python">prod[prod['Color'] == 'Black'].head(3)
+</code></pre>
+<pre><code class="language-text">   ProductID         Name ProductNumber  MakeFlag  ...  SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+5        317  LL Crankarm       CA-5965         0  ...          NaN              NaN  {3C9D10B7-A6B2-4774-9963-C19DCEE72FEA}  2014-02-08 10:01:36.827000000
+6        318  ML Crankarm       CA-6738         0  ...          NaN              NaN  {EABB9A92-FA07-4EAB-8955-F0517B4A4CA7}  2014-02-08 10:01:36.827000000
+7        319  HL Crankarm       CA-7457         0  ...          NaN              NaN  {7D3FD384-4F29-484B-86FA-4206E276FE58}  2014-02-08 10:01:36.827000000
+
+[3 rows x 25 columns]
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Slice the dataframe above and select only the <code>Color</code> column - is there any non <code>black</code> color items?</li>
+<li><strong>YOU DO</strong>: calculate the average <strong>ListPrice</strong> for the salable products (<strong>hint</strong>: use the <code>FinishedGoodsFlag</code> column to determine &quot;salability&quot;) using the <strong>Series</strong>.<code>mean()</code> method</li>
+<li><strong>YOU DO</strong>: calculate the above again, but this time use <code>describe</code> and pull the <code>mean</code> from there.</li>
+</ul>
+<a class="header" href="#compound-filtering" id="compound-filtering"><h2>Compound Filtering</h2></a>
+<p>Let's filter on <em>multiple conditions</em>. Before, we filtered on rows where <code>Color</code> was <code>Black</code>. We also filtered where <code>FinishedGoodsFlag</code> was equal to <code>1</code>. Let's see what happens when we filter on <em>both</em> simultaneously.</p>
+<p>The format for multiple conditions is:</p>
+<p><code>df[ (df['col1'] == value1) &amp; (df['col2'] == value2) ]</code></p>
+<p>Or, more simply:</p>
+<p><code>df[ (CONDITION 1) &amp; (CONDITION 2) ]</code></p>
+<p>Which eventually may evaluate to something like:</p>
+<p><code>df[ True &amp; False ]</code></p>
+<p>...on a row-by-row basis. If the end result is <code>False</code>, the row is omitted.</p>
+<p><strong>Don't forget parentheses in your conditions!!</strong> This is a common mistake.</p>
+<pre><code class="language-python">prod[ (prod['Color'] == 'Black') &amp; (prod['FinishedGoodsFlag'] == 1) ].head(3)
+</code></pre>
+<pre><code class="language-text">     ProductID                       Name ProductNumber  MakeFlag  ...  SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+209        680  HL Road Frame - Black, 58    FR-R92B-58         1  ...          NaN              NaN  {43DD68D6-14A4-461F-9069-55309D90EA7E}  2014-02-08 10:01:36.827000000
+212        708    Sport-100 Helmet, Black       HL-U509         0  ...          NaN              NaN  {A25A44FB-C2DE-4268-958F-110B8D7621E2}  2014-02-08 10:01:36.827000000
+226        722  LL Road Frame - Black, 58    FR-R38B-58         1  ...          NaN              NaN  {2140F256-F705-4D67-975D-32DE03265838}  2014-02-08 10:01:36.827000000
+
+[3 rows x 25 columns]
+</code></pre>
+<p>Another example:</p>
+<pre><code class="language-python"># Here we have an example of a list price of greater than 50, 
+# OR a product size that is not equal to 'XL'
+
+prod[ (prod['ListPrice'] &gt; 50) | (prod['Size'] != 'XL') ].head(3)
+</code></pre>
+<pre><code class="language-text">   ProductID             Name ProductNumber  MakeFlag  ...  SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+0          1  Adjustable Race       AR-5381         0  ...          NaN              NaN  {694215B7-08F7-4C0D-ACB1-D734BA44C0C8}  2014-02-08 10:01:36.827000000
+1          2     Bearing Ball       BA-8327         0  ...          NaN              NaN  {58AE3C20-4F3A-4749-A7D4-D568806CC537}  2014-02-08 10:01:36.827000000
+2          3  BB Ball Bearing       BE-2349         1  ...          NaN              NaN  {9C21AED2-5BFA-4F18-BCB8-F11638DC2E4E}  2014-02-08 10:01:36.827000000
+
+[3 rows x 25 columns]
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Find all rows that have a <strong>NULL</strong> dataframe and is <strong>NOT</strong> finished. <strong>HINT</strong>: use <code>pd.isna</code></li>
+</ul>
+<a class="header" href="#sorting" id="sorting"><h2>Sorting</h2></a>
+<p>Here's how we can sort a dataframe</p>
+<pre><code class="language-python">prod.sort_values(by='StandardCost', ascending=False).head(3)
+</code></pre>
+<pre><code class="language-text">     ProductID              Name ProductNumber  MakeFlag  ...          SellEndDate DiscontinuedDate                                 rowguid                   ModifiedDate
+253        749  Road-150 Red, 62    BK-R93R-62         1  ...  2012-05-29 00:00:00              NaN  {BC621E1F-2553-4FDC-B22E-5E44A9003569}  2014-02-08 10:01:36.827000000
+254        750  Road-150 Red, 44    BK-R93R-44         1  ...  2012-05-29 00:00:00              NaN  {C19E1136-5DA4-4B40-8758-54A85D7EA494}  2014-02-08 10:01:36.827000000
+255        751  Road-150 Red, 48    BK-R93R-48         1  ...  2012-05-29 00:00:00              NaN  {D10B7CC1-455E-435B-A08F-EC5B1C5776E9}  2014-02-08 10:01:36.827000000
+
+[3 rows x 25 columns]
+</code></pre>
+<p>This one is a little more advanced, but it demonstrates a few things:</p>
+<ul>
+<li>Conversion of a <code>numpy.ndarray</code> object (return type of <code>pd.Series.unique()</code>) into a <code>pd.Series</code> object</li>
+<li><code>pd.Series.sort_values</code> with the <code>by=</code> kwarg omitted (if only one column is the operand, <code>by=</code> doesn't need specified</li>
+<li>Alphabetical sort of a string field, <code>ascending=True</code> means A-&gt;Z</li>
+<li>Inclusion of nulls, <code>NaN</code> in a string field (versus omission with a float/int as prior example)</li>
+</ul>
+<pre><code class="language-python">pd.Series(prod['Color'].unique()).sort_values(ascending=True)
+</code></pre>
+<pre><code class="language-text">1           Black
+5            Blue
+8            Grey
+6           Multi
+3             Red
+2          Silver
+9    Silver/Black
+4           White
+7          Yellow
+0             NaN
+dtype: object
+</code></pre>
+<a class="header" href="#a-few-final-you-dos" id="a-few-final-you-dos"><h2>A few final YOU DOs</h2></a>
+<ul>
+<li><strong>YOU DO</strong>: Create a variable called <code>rows</code> and a variable called <code>cols</code>. Store the num rows and cols in dataframe into these variables, respectively</li>
+<li><strong>YOU DO</strong>: Print out the number of unique product lines that exist in this data set</li>
+<li><strong>YOU DO</strong>: Print out the values of these product lines, <strong>DROP NULLS</strong></li>
+<li><strong>YOU DO</strong>: Using <code>shape</code> and a dataframe filter, print out how many <code>R</code> productlines exist.</li>
+<li><strong>Challenge</strong>: What are the top 3 most expensive list price product that are either in the Women's Mountain category, OR Silver in Color? Return your answer as a DataFrame object, with NewName relabeled as Name, and ListPrice columns. Perform the statement in one execution, and do not mutate the source DataFrame.</li>
+</ul>
+<a class="header" href="#recap" id="recap"><h2>Recap</h2></a>
+<pre><code class="language-python">
+# basic DataFrame operations
+df.head()
+df.tail()
+df.shape
+df.columns
+df.Index
+
+# selecting columns
+df.column_name
+df['column_name']
+
+# renaming columns
+df.rename({'old_name':'new_name'}, inplace=True)
+df.columns = ['new_column_a', 'new_column_b']
+
+# notable columns operations
+df.describe() # five number summary
+df['col1'].nunique() # number of unique values
+df['col1'].value_counts() # number of occurrences of each value in column
+
+# filtering
+df[ df['col1'] &lt; 50 ] # filter column to be less than 50
+df[ (df['col1'] == value1) &amp; (df['col2'] &gt; value2) ] # filter column where col1 is equal to value1 AND col2 is greater to value 2
+
+# sorting
+df.sort_values(by='column_name', ascending = False) # sort biggest to smallest
+
+</code></pre>
+<p>🐼 🐼 🐼</p>
+<a class="header" href="#dataframe-reference" id="dataframe-reference"><h2>DataFrame Reference</h2></a>
+<p>Please find below a list of useful dataframe properties and methods for use in your exploratory data analysis practice.</p>
+<a class="header" href="#wrangling-data" id="wrangling-data"><h2>Wrangling Data</h2></a>
+<p>Given the following dataset:</p>
+<pre><code class="language-python">wine_reviews = pd.read_csv('raw_data/winemag-data-130k.csv')
+</code></pre>
+<p>After your initial import of some dataset, you'll want to do a gut check to make sure everything is in place. Here are the kind of very basic properties you might want to check:</p>
+<ul>
+<li><code>df.info()</code> -- returns index, datatype and memory information</li>
+<li><code>df.shape</code> -- returns the number of rows and columns in a data frame</li>
+<li><code>len(obj)</code> -- returns # of rows in the object data (*S &amp; df)</li>
+<li><code>obj.size</code> -- returns # of elements in the object (*S &amp; df)</li>
+<li><code>df.index</code> -- returns index of the rows specifically (*S &amp; df)</li>
+<li><code>df.columns</code> -- returns the column labels of the DataFrame.</li>
+<li><code>df.head(n)</code> -- returns last n rows of a data frame</li>
+<li><code>df.tail(n)</code> -- returns last n rows of a data frame</li>
+<li><code>copy(obj)</code> -- create a deep copy of the object (*S &amp; df)</li>
+<li><code>obj.empty</code> -- returns booleans for whether object is empty or not</li>
+</ul>
+<a class="header" href="#selecting-data" id="selecting-data"><h2>Selecting Data</h2></a>
+<a class="header" href="#single-values" id="single-values"><h4>Single Values</h4></a>
+<ul>
+<li><code>df.loc[row_label, col_label]</code> -- select a single item in a DataFrame by its row and column labels</li>
+<li><code>df.loc[start_row_label : end_row_label, start_col_label : end_col_label]</code> -- select a slice of a DataFrame by starting and ending row/column labels</li>
+<li><code>df.iloc[row_index,:]</code> -- select a row in a DataFrame by index position</li>
+<li><code>s.iloc[index]</code> -- select a single item by its position</li>
+<li><code>s.loc[index]</code> -- select a slice of items from a Series</li>
+</ul>
+<a class="header" href="#subsetting--slicing" id="subsetting--slicing"><h4>Subsetting &amp; Slicing</h4></a>
+<ul>
+<li><code>obj.get(key)</code> -- returns an item from an object (e.g. a column from a DataFrame, a value from a Series, etc.)</li>
+<li><code>df[col]</code> -- select and name a column and return it as a Series</li>
+<li><code>df.loc[label1, label2, ...]</code> -- select one or more rows or columns in a DataFrame by its label</li>
+<li><code>df[[col1, col2]]</code> -- select and name multiple columns and return them as a new data frame</li>
+<li><code>df.nlargest(n, key)</code> -- Select and order top n entries.</li>
+<li><code>df.nsmallest(n, key)</code> -- Select and order bottom n entries</li>
+<li><code>obj.where(cond, other = NaN, inplace = False, axis = None)</code> -- replace values in the object where the condition is False (<em>S or df</em>)</li>
+<li><code>df.iloc[row_index, col_index]</code> -- select a single item in a DataFrame by the index position of its row and col</li>
+<li><code>df.iloc[start_index : end_index, start_index : end_index]</code> -- select a slice of a DataFrame by starting and ending index row/column positions; (ending index stop at index before it)</li>
+</ul>
+<a class="header" href="#cleaning--organizing-data" id="cleaning--organizing-data"><h2>Cleaning &amp; Organizing Data</h2></a>
+<a class="header" href="#editing-existing-data" id="editing-existing-data"><h4>Editing Existing Data</h4></a>
+<ul>
+<li><code>obj.truncate([before, after, axis)</code> -- truncate an object before and after some index value (<em>S &amp; df</em>)</li>
+<li><code>df.drop(columns=[col1, col2, ...])</code> -- drops specified columns from the dataframe</li>
+<li><code>s.replace(1,'one')</code> -- replace all values equal to 1 with 'one'</li>
+<li><code>s.replace([1,3],['one','three'])</code> -- replace all values equal to 1 with 'one' and all values equal to 3 with 'three'</li>
+<li><code>df.rename(columns={'old_name': 'new_ name'})</code> -- rename specific columns</li>
+<li><code>df.set_index(keys)</code> -- change the index of the data frame</li>
+<li><code>df.reset_index(keys)</code> -- Reset index of DataFrame to row numbers, moving
+index to columns.</li>
+<li><code>shift([periods, freq, axis, fill_value])</code> -- Shift index by desired number of periods with an optional time freq.</li>
+<li><code>df.set_axis(labels)</code></li>
+</ul>
+<a class="header" href="#null-values" id="null-values"><h4>Null Values</h4></a>
+<ul>
+<li><code>pd.isnull()</code> -- checks for null (NaN values in the data and returns an array of booleans, where &quot;True&quot; means missing and &quot;False&quot; means present</li>
+<li><code>pd.notnull()</code> -- returns all values that are NOT null</li>
+<li><code>pd.isnull().sum()</code> -- returns a count of null (NaN)</li>
+<li><code>df.dropna()</code> -- Drops all rows that contain null values and returns a new df</li>
+<li><code>df.dropna(axis=1)</code> -- Drops all columns that contain null values and returns a new df</li>
+<li><code>df.dropna(subset=[col1])</code> -- Drops all rows that contain null values in one or more specific columns and returns a new df</li>
+<li><code>df.fillna(value=x)</code> —- replace all missing values with some value <code>x</code> (<em>S &amp; df</em>)</li>
+<li><code>s.fillna(s.mean())</code> -- Replaces all null values with the mean (mean can be replaced with almost any function from the statistics section)</li>
+</ul>
+<a class="header" href="#duplicate-values" id="duplicate-values"><h4>Duplicate Values</h4></a>
+<ul>
+<li><code>df.duplicated([subset, keep])</code> -- Rrturn boolean Series denoting duplicate rows; can choose to consider a subset of columns</li>
+<li><code>drop_duplicates([subset, keep, inplace])</code> -- returns DataFrame with duplicate rows removed, optionally only considering certain columns.</li>
+</ul>
+<a class="header" href="#sorting-1" id="sorting-1"><h4>Sorting</h4></a>
+<ul>
+<li><code>df.transform(func[, axis])</code> -- return DataFrame with transformed values</li>
+<li><code>df.transpose(*args, **kwargs)</code> -- transpose rows and columns</li>
+<li><code>df.sort_values(col1)</code> -- sort values in a certain column in <em>ascending</em> order</li>
+<li><code>df.sort_index(axis=1)</code> -- sort axis values by index in <em>ascending</em> order</li>
+<li><code>df.sort_values(col2,ascending=False)</code> -- sort values in a certain column in <em>descending</em> order</li>
+<li><code>df.sort_index(axis=1, ascending=False)</code> -- sort axis values by index in <em>descending</em> order</li>
+<li><code>df.sort_values([col1,col2],ascending=[True,False])</code> -- sort values in a col1 in <em>ascending</em> order, then sort values in col2 in <em>descending</em> order</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/intro_pandas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/eda.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/intro_pandas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/eda.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

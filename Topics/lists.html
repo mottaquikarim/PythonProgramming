@@ -1,0 +1,439 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Lists - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html" class="active"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/dicts.md","title":"Lists"}
+-->
+<a class="header" href="#lists" id="lists"><h1>Lists</h1></a>
+<p>In order to begin to truly write dynamic programs, we need to be able to work with <em>dynamic</em> data where we do not know how much of a certain type of variable we have.</p>
+<p>The problem, essentially is, <strong>variables hold only one item</strong>.</p>
+<pre><code class="language-python">my_color = &quot;red&quot;
+my_peer = &quot;Brandi&quot;
+</code></pre>
+<p>Lists hold multiple items - and lists can hold any datatype.</p>
+<a class="header" href="#creating-lists" id="creating-lists"><h2>Creating lists</h2></a>
+<p>Here are some different ways to declare a list variable:</p>
+<pre><code class="language-python">colors = ['red', 'yellow', 'green'] #strings
+grades = [100, 99, 65, 54, 19] #numbers
+bools = [True, False, True, True] #booleans
+</code></pre>
+<p>To create a new <strong>blank</strong> list, simply use <code>python blank_list = list()</code>.</p>
+<a class="header" href="#accessing-elements-in-the-list" id="accessing-elements-in-the-list"><h2>Accessing Elements in the List</h2></a>
+<p>The <strong>list index</strong> means the location of something (an <em>element</em>) in the list.</p>
+<p>List indexes start counting at 0!</p>
+<table><thead><tr><th align="center">  List </th><th align="center"> &quot;Brandi&quot; </th><th align="center"> &quot;Zoe&quot; </th><th align="center"> &quot;Steve&quot; </th><th align="center"> &quot;Aleksander&quot; </th><th align="center"> &quot;Dasha&quot; </th></tr></thead><tbody>
+<tr><td align="center"> Index </td><td align="center">     0    </td><td align="center">   1   </td><td align="center">    2    </td><td align="center">    3   </td><td align="center">    4   </td></tr>
+</tbody></table>
+<pre><code class="language-python">my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
+print(my_class[0]) # Prints &quot;Brandi&quot;
+print(my_class[1]) # Prints &quot;Zoe&quot;
+print(my_class[4]) # Prints &quot;Dasha&quot;
+</code></pre>
+<a class="header" href="#built-in-operations-for-manipulating-lists" id="built-in-operations-for-manipulating-lists"><h2>Built-In Operations for Manipulating Lists</h2></a>
+<a class="header" href="#add-or-edit-items-to-a-list" id="add-or-edit-items-to-a-list"><h4>Add or Edit Items to a List</h4></a>
+<p>If you want to extend the content of a single list, you can use <code>.append()</code>, <code>.extend()</code> <code>.insert()</code> to add elements of any data type.</p>
+<p><code>.append()</code> &amp; <code>.extend()</code>:
+These methods both add items to the end of the list. The difference here is that <code>.append()</code> will add whatever value or group of values you pass it <em>in one chunk</em>. In contrast, if you pass a group of values into <code>.extend()</code>, it will add each element of the group <em>individually</em>. Here are a few examples to show you the difference in outcomes.</p>
+<pre><code class="language-python"># passing direct argument
+x = ['a', 'b', 'c', 'd']
+x.append(['e', 'f', 'g'])
+print(x) # ['a', 'b', 'c', 'd', ['e', 'f', 'g']]
+
+x = ['a', 'b', 'c', 'd']
+x.extend(['e', 'f', 'g'])
+print(x) # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+
+# passing argument within a var
+x = ['a', 'b', 'c', 'd']
+y = ['e', ('f', 'g'), ['h', 'i'], 'j']
+x.append(y)
+print(y) # ['a', 'b', 'c', 'd', ['e', ('f', 'g'), ['h', 'i'], 'j']]
+
+x = ['a', 'b', 'c', 'd']
+y = ['e', ('f', 'g'), ['h', 'i'], 'j']
+x.extend(y)
+print(x) # ['a', 'b', 'c', 'd', 'e', ('f', 'g'), ['h', 'i'], 'j']
+</code></pre>
+<p>Notice that <code>.extend()</code> only considers individual values of the parent list. It still added the tuple and list - <code>('f', 'g')</code> and <code>['h', 'i']</code> - to our list <code>x</code> as their own items.</p>
+<p><code>.insert(index, value)</code>:
+If you want to add an item to a specific point in your list, you can pass the desired index and value into <code>.insert()</code> as follows.</p>
+<pre><code class="language-python"># your_list.insert(index, item)
+
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+my_class.insert(1, 'Sanju')
+print(my_class)
+# =&gt; ['Brandi', 'Sanju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+</code></pre>
+<p><code>l[index:index]=</code>:
+To <em>replace</em> items in a list by their index position, you can use the same syntax for adding a single new value. You simply reference which indeces you want to replace and specify the new values.</p>
+<pre><code class="language-python">x = ['Brandi', 'Sanju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+x[1] = 'Raju'
+x[6:] = ['Chloe', 'Phoebe']
+print(x) # ['Brandi', 'Raju', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Chloe', 'Phoebe']
+</code></pre>
+<p><code>.join()</code>:
+If you need to, you can compile your list items into a single string.</p>
+<pre><code class="language-python">letters = ['j', 'u', 'l', 'i', 'a', 'n', 'n', 'a']
+name = ''.join(letters)
+print(name) # 'julianna'
+
+words = ['this', 'is', 'fun']
+sentence = ' '.join(words)
+print(f'{sentence}.') # 'this is fun.'
+</code></pre>
+<p><code>.split('by_char')</code>:
+You can also do the opposite - split values out of a string and turn each value into a list item. This one doesn't work for single words you might want to split into individual characters. That said, you <em>can</em> specify what character should convey to the method when to split out a new item. By default, <code>.split()</code> will use a space character to split the string.</p>
+<pre><code class="language-python">x = 'this is fun'
+sentence = x.split() # note - using default split char at space
+print(sentence) # ['this', 'is', 'fun']
+
+y = 'Sandra,hi@email.com,646-212-1234,8 Cherry Lane,Splitsville,FL,58028'
+data = y.split(',')
+print(data) # ['Sandra', 'hi@email.com', '646-212-1234', '8 Cherry Lane', 'Splitsville', 'FL', '58028']
+</code></pre>
+<a class="header" href="#remove-items-from-a-list" id="remove-items-from-a-list"><h4>Remove Items from a List</h4></a>
+<p>Likewise, you can use <code>.pop()</code> or <code>.pop(index)</code> to remove any type of element from a list.</p>
+<p><code>.pop()</code>:</p>
+<ul>
+<li>Removes an item from the end of the list.</li>
+</ul>
+<pre><code class="language-python"># your_list.pop()
+
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+student_that_left = my_class.pop()
+print(&quot;The student&quot;, student_that_left, &quot;has left the class.&quot;)
+# Sonyl
+print(my_class)
+# =&gt; ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
+</code></pre>
+<p><code>.pop(index)</code>:</p>
+<ul>
+<li>Removes an item from the list.</li>
+<li>Can take an index.</li>
+</ul>
+<pre><code class="language-python"># your_list.pop(index)
+
+my_class = ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha']
+student_that_left = my_class.pop(2) # Remember to count from 0!
+print(&quot;The student&quot;, student_that_left, &quot;has left the class.&quot;)
+# =&gt; &quot;Steve&quot;
+print(my_class)
+# =&gt; ['Brandi', 'Zoe', 'Aleksander', 'Dasha']
+</code></pre>
+<a class="header" href="#built-in-operators-for-analyzing-lists" id="built-in-operators-for-analyzing-lists"><h2>Built-in Operators for Analyzing Lists</h2></a>
+<p>Python has some built-in operations that allow you to analyze the content of a list. Some basic ones include:</p>
+<p><code>len()</code>:
+This tells you how many items are in the list; can be used for lists composed of any data type (i.e. strings, numbers, booleans)</p>
+<pre><code class="language-python"># length_variable = len(your_list)
+
+my_class = ['Brandi', 'Zoe', 'Aleksander', 'Dasha']
+num_students = len(my_class)
+print(&quot;There are&quot;, num_students, &quot;students in the class&quot;)
+# =&gt; 5
+</code></pre>
+<p><code>sum()</code>:
+This returns the sum of all items in <em>numerical lists</em>.</p>
+<pre><code class="language-python">
+# sum_variable = sum(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+sum_avgs = sum(team_batting_avgs)
+print(f&quot;The total of all the batting averages is {sum_avgs}&quot;)
+# =&gt; 2.409
+</code></pre>
+<p><code>min()</code> &amp; <code>max()</code>:</p>
+<p>These return the smallest and largest numbers <em>in a numerical list</em> respectively.</p>
+<pre><code class="language-python"># max(your_numeric_list)
+# min(your_numeric_list)
+
+team_batting_avgs = [.328, .299, .208, .301, .275, .226, .253, .232, .287]
+print(f&quot;The highest batting average is {max(team_batting_avgs}&quot;)
+# =&gt; 0.328
+print(&quot;The lowest batting average is&quot;, min(team_batting_avgs))
+# =&gt; 0.208
+</code></pre>
+<a class="header" href="#sorting-lists" id="sorting-lists"><h4>Sorting Lists</h4></a>
+<p>If you want to organize your lists better, you can sort them with the <code>sorted()</code> operator. At the some basic level, you can sort both numerically and alphabetically.</p>
+<p><strong>Numbers</strong> - Ascending &amp; Descending</p>
+<pre><code class="language-python">numbers = [1, 3, 7, 5, 6, 4, 2]
+
+ascending = sorted(numbers)
+print(ascending) # [1, 2, 3, 4, 5, 6, 7]
+</code></pre>
+<p>To do this in descending order, simply add <code>reverse=True</code> as an argument in <code>sorted()</code> like this:</p>
+<pre><code class="language-python">descending = sorted(numbers, reverse=True)
+print(descending) # [7, 6, 5, 4, 3, 2, 1]
+</code></pre>
+<p><strong>Letters</strong> - Alphabetically &amp; Reverse</p>
+<pre><code class="language-python">letters = ['b', 'e', 'c', 'a', 'd']
+
+ascending = sorted(letters)
+print(ascending) # ['a', 'b', 'c', 'd', 'e']
+
+descending = sorted(letters, reverse=True)
+print(descending) # ['e', 'd', 'c', 'b', 'a']
+</code></pre>
+<p><strong>NOTE!</strong> You cannot sort a list that includes different data types.</p>
+<a class="header" href="#tuples" id="tuples"><h2>Tuples</h2></a>
+<p>Tuples are a special subset of lists - they are <em>immutable</em> - in that they cannot be changed after creation.</p>
+<p>We write tuples as:</p>
+<pre><code class="language-python">score_1 = ('Taq', 100)
+
+# OR
+
+score_2 = 'Sue', 101
+</code></pre>
+<p>Tuples are denoted with the <code>()</code>.</p>
+<p>We read tuples just like we would read a list:</p>
+<pre><code class="language-python">print(score_1[0]) # 'Taq'
+</code></pre>
+<a class="header" href="#sets" id="sets"><h2>Sets</h2></a>
+<p>Sets are special lists in that they can only have <strong>unique</strong> elements</p>
+<pre><code class="language-python">set_1 = {1,2,3,4,5} # this is a set, notice the {}
+set_2 = {1,1,1,2,2,3,4,5,5,5} # this is still a set
+print(set_2) # {1,2,3,4,5}
+
+print(set_1 == set_2) # True
+</code></pre>
+<p>Sets are not indexed, so you cannot access say the 3rd element in a set. Instead, you can:</p>
+<pre><code class="language-python">print(2 in set_1) # True
+print(9 in set_1) # False
+</code></pre>
+<p>Here's a <strong><a href="https://snakify.org/en/lessons/sets/#section_4">helpful list</a></strong> of set operations.</p>
+<a class="header" href="#-1-simple-list-operations" id="-1-simple-list-operations"><h2>🚗 1. Simple List operations</h2></a>
+<ol>
+<li>Create a <strong>list</strong> with the names <code>&quot;Holly&quot;</code>, <code>&quot;Juan&quot;</code>, and <code>&quot;Ming&quot;</code>.</li>
+<li>Print the third name.</li>
+<li>Create a <strong>list</strong> with the numbers <code>2</code>,<code>4</code>, <code>6</code>, and <code>8</code>.</li>
+<li>Print the first number.</li>
+</ol>
+<a class="header" href="#-2-editing--manipulating-lists" id="-2-editing--manipulating-lists"><h2>🚗 2. Editing &amp; Manipulating Lists</h2></a>
+<ol>
+<li>Declare a list with the names of your classmates</li>
+<li>Print out the length of that list</li>
+<li>Print the 3rd name on the list</li>
+<li>Delete the first name on the list</li>
+<li>Re-add the name you deleted to the end of the list</li>
+<li>You work for Spotify and are creating a feature for users to alphabetize their playlists by song title. Below are is a list of titles from one user's playlist. Alphabetize these songs.
+<code>playlist_titles = [&quot;Rollin' Stone&quot;, &quot;At Last&quot;, &quot;Tiny Dancer&quot;, &quot;Hey Jude&quot;, &quot;Movin' Out&quot;]</code></li>
+<li>Create a list with 6 numbers and sort it in descending order.</li>
+</ol>
+<a class="header" href="#-3-math-operations" id="-3-math-operations"><h2>🚗 3. Math Operations</h2></a>
+<p>On your local computer, create a <code>.py</code> file named <code>list_practice.py</code>. In it:</p>
+<ol>
+<li>Save a list with the numbers <code>2</code>, <code>4</code>, <code>6</code>, and <code>8</code> into a variable called <code>numbers</code>.</li>
+<li>Print the max of <code>numbers</code>.</li>
+<li>Pop the last element in <code>numbers</code> off; re-insert it at index <code>2</code>.</li>
+<li>Pop the second number in <code>numbers</code> off.</li>
+<li>Append <code>3</code> to <code>numbers</code>.</li>
+<li>Print out the average number.</li>
+<li>Print <code>numbers</code>.</li>
+</ol>
+<a class="header" href="#additional-resources" id="additional-resources"><h2>Additional Resources</h2></a>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=zEyEC34MY1A">Python Lists - Khan Academy Video</a></li>
+<li><a href="https://developers.google.com/edu/python/lists">Google For Education: Python Lists</a></li>
+<li><a href="https://www.tutorialspoint.com/python/python_lists.htm">Python-Lists</a></li>
+<li><a href="https://www.programiz.com/python-programming/methods/list/">Python List Methods</a></li>
+<li><a href="https://www.youtube.com/watch?v=R-HLU9Fl5ug">Python Data Structures: Lists, Tuples, Sets, and Dictionaries Video</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/conditionals.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/dicts.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/conditionals.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/dicts.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

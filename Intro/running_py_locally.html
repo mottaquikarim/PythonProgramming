@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Running Python Locally - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html" class="active"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Intro/jupyter_notebooks.md","title":"Running Python Locally"}
+-->
+<a class="header" href="#running-python-locally" id="running-python-locally"><h1>Running Python Locally</h1></a>
+<p>Before we get into writing our code, we will have to install a few programs and tools. It may take about a half hr to pull off but ultimately a properly established development environment will pay off in spades as we navigate the rest of our day.</p>
+<a class="header" href="#installing-python-3" id="installing-python-3"><h2>Installing Python 3</h2></a>
+<p>Instructions vary slightly depending on what kind of machine you're using. Click the link below that applies to you:</p>
+<p><a href="#installation-instructions-mac">Installation Instructions: Mac</a></p>
+<p><a href="#installation-instructions-linux">Installation Instructions: Linux</a></p>
+<p><a href="#installation-instructions-windows">Installation Instructions: Windows</a></p>
+<a class="header" href="#installation-instructions-mac" id="installation-instructions-mac"><h2>Installation Instructions: Mac</h2></a>
+<p>Macs usually come with Python 2 already installed. We're going to run through some installation steps to make sure you've got the latest and greatest that Python has to offer.</p>
+<a class="header" href="#1-open-up-your-terminal" id="1-open-up-your-terminal"><h3>1. Open up your terminal.</h3></a>
+<p>You can do this by pressing command+space bar and typing &quot;terminal,&quot; or by locating the application and clicking on the icon.</p>
+<a class="header" href="#2-install-xcode-with-the-following-command" id="2-install-xcode-with-the-following-command"><h3>2. Install XCode with the following command.</h3></a>
+<pre><code class="language-bash">xcode-select --install
+</code></pre>
+<p>This may take a few minutes. Once it's done, you can run the following command to make sure it's installed properly.</p>
+<pre><code class="language-bash">xcode-select -p
+</code></pre>
+<p>Your output should look something like this:</p>
+<blockquote>
+<p>/Applications/Xcode.app/Contents/Developer</p>
+</blockquote>
+<a class="header" href="#3-install-homebrew-by-running-the-following-command" id="3-install-homebrew-by-running-the-following-command"><h3>3. Install <code>Homebrew</code> by running the following command.</h3></a>
+<blockquote>
+<p><strong>Pro tip:</strong> Do not try to type this in. Copy and paste to make sure everything is correct. Do this by selecting the text with your cursor and pressing command+C. Then, go to your terminal and press command+V.</p>
+</blockquote>
+<pre><code class="language-bash">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+<p>Once this command runs, type <code>brew doctor</code> on your terminal prompt. If you get the output <code>Your system is ready to brew</code>, you are ready to move on to the next step.</p>
+<a class="header" href="#4-add-path-environment-variable" id="4-add-path-environment-variable"><h3>4. Add PATH environment variable.</h3></a>
+<p>This is a bit confusing, but basically we're setting the path up so Homebrew knows where to install something.</p>
+<pre><code class="language-bash">open ~/.profile
+</code></pre>
+<p>The file should open up. Ask your instructor for help if it didn't. Copy and paste the following line at the bottom of this file:</p>
+<blockquote>
+<p>export PATH=/usr/local/bin:/usr/local/sbin:$PATH</p>
+</blockquote>
+<p>Save the changes and close the file.</p>
+<a class="header" href="#5-install-python-3-finally" id="5-install-python-3-finally"><h3>5. Install Python 3 (finally!).</h3></a>
+<p>Homebrew, by default, gets the latest stable version of whatever you're trying to install.</p>
+<pre><code class="language-bash">brew install python
+</code></pre>
+<a class="header" href="#6-create-an-alias-for-python3" id="6-create-an-alias-for-python3"><h3>6. Create an alias for <code>python3</code>.</h3></a>
+<pre><code class="language-bash">open ~/.bashrc
+</code></pre>
+<p>At the bottom of that file, copy and paste the following lines:</p>
+<pre><code class="language-bash">alias python=python3
+alias pip=pip3
+</code></pre>
+<p>Learn more about aliases <a href="https://askubuntu.com/questions/320996/how-to-make-python-program-command-execute-python-3">here</a>.</p>
+<a class="header" href="#7-restart-your-terminal" id="7-restart-your-terminal"><h3>7. Restart your Terminal.</h3></a>
+<p>Right click (control+click on most Macs) on the Terminal icon in your application tray. Select <code>Quit</code> from the menu to make sure Terminal is fully stopped. Then, open it again (see Step 1).</p>
+<blockquote>
+<p><strong>Pro tip:</strong> Your settings won't be updated until Terminal is fully stopped and restarted. If you simply minimize the program, you will not see any updates!</p>
+</blockquote>
+<a class="header" href="#8-check-version" id="8-check-version"><h3>8. Check version.</h3></a>
+<pre><code class="language-bash">python --version
+</code></pre>
+<p>You will get something like this. As long as it starts with a 3, you're good to go!</p>
+<blockquote>
+<p>Python 3.6.5</p>
+</blockquote>
+<p>Now let's check <code>pip</code>, the package installer.</p>
+<pre><code class="language-bash">pip --version
+</code></pre>
+<blockquote>
+<p>pip 10.0.1 from /usr/local/lib/python3.6/site-packages/pip (python 3.6)</p>
+</blockquote>
+<p>You want <code>pip</code> to be pointing to the Python 3.x version. If either <code>python</code> or <code>pip</code> are still pointing to version 2, please alert your instructor.</p>
+<p>You are now in a development environment!</p>
+<a class="header" href="#installation-instructions-linux" id="installation-instructions-linux"><h2>Installation Instructions: Linux</h2></a>
+<blockquote>
+<p><strong>Pro tip:</strong> The instructions are for Ubuntu. If you have another version of Linux, please follow these <a href="http://docs.python-guide.org/en/latest/starting/install3/linux/">suggested directions</a>.</p>
+</blockquote>
+<a class="header" href="#1-open-your-terminal" id="1-open-your-terminal"><h3>1. Open your terminal.</h3></a>
+<p>Either:</p>
+<ul>
+<li>Click Ubuntu icon (upper-left corner) to open Dash. Then, type &quot;terminal&quot; and select Terminal from the results.</li>
+</ul>
+<p>Or:</p>
+<ul>
+<li>Hit the keyboard shortcut <code>Ctrl - Alt + T</code>.</li>
+</ul>
+<a class="header" href="#2-check-to-see-if-python-3-exists" id="2-check-to-see-if-python-3-exists"><h3>2. Check to see if Python 3 exists.</h3></a>
+<p>Some distributions of Linux come with Python 3 already installed. How nice! To check if you have Python 3 already, run the following command:</p>
+<pre><code class="language-bash">python3 --version
+</code></pre>
+<p>If it gives you a version, you're good to go! Otherwise, move to Step 3.</p>
+<a class="header" href="#3-install-python-36" id="3-install-python-36"><h3>3. Install Python 3.6.</h3></a>
+<pre><code class="language-bash">sudo apt-get update
+sudo apt-get install python3.6
+</code></pre>
+<p>Check again for the Python 3 version.</p>
+<pre><code class="language-bash">python3 --version
+</code></pre>
+<p>This time, things should be all good.</p>
+<p>If you are still unable to get Python 3, please alert your instructor now.</p>
+<hr />
+<a class="header" href="#installation-instructions-windows" id="installation-instructions-windows"><h2>Installation Instructions: Windows</h2></a>
+<blockquote>
+<p><strong>Pro tip:</strong> If you have Windows XP, you need to be downgraded from Python 3.6 to 3.4. Please ask your instructor for help if you plan on using Windows XP.</p>
+</blockquote>
+<a class="header" href="#1-download-the-python-installer" id="1-download-the-python-installer"><h3>1. Download the Python installer.</h3></a>
+<p>Visit <a href="https://www.python.org/downloads/release/python-365/">python.org</a> and download the web-based installer for Windows. You'll find this under a &quot;Files&quot; section at the bottom of the page.</p>
+<p>If you have 64-bit Windows, use the link that contains <code>64</code>. If you have 32-bit Windows, download the one without <code>64</code>. If you have no idea what you have, <a href="#windows-64-bit-or-32-bit">click here to learn how to find out</a>.</p>
+<a class="header" href="#2-run-the-installer" id="2-run-the-installer"><h3>2. Run the installer.</h3></a>
+<ul>
+<li>Make sure both <code>Add Python 3.6 to PATH</code> and <code>Install for all users</code> are checked.</li>
+<li>Click <code>Install Now</code>.</li>
+</ul>
+<a class="header" href="#3-disable-length-limit" id="3-disable-length-limit"><h3>3. Disable length limit.</h3></a>
+<p>After the initial installation is finished, there will be an additional option that says something about a max character limit. <strong>You want this!</strong> Provide permission for this setting to be changed.</p>
+<a class="header" href="#4-open-your-terminal" id="4-open-your-terminal"><h3>4. Open your terminal.</h3></a>
+<pre><code class="language-text">    * Click *Start*.
+    * Open *Windows System* menu.
+    * Select *Command Prompt*.
+</code></pre>
+<a class="header" href="#5-run-the-py-command" id="5-run-the-py-command"><h3>5. Run the <code>py</code> command.</h3></a>
+<pre><code class="language-bash">py
+</code></pre>
+<p>You should get a message telling you what version of Python you're using as well as opening an in-terminal REPL. If you did, great! Skip to the next step.</p>
+<p>If you instead received an error message like the one below, something went wrong and Python didn't install correctly.</p>
+<pre><code class="language-bash">'py' is not recognized as an internal or external command,
+operable program or batch file.
+</code></pre>
+<p>In this case, ask your instructor for assistance.</p>
+<a class="header" href="#windows-64-bit-or-32-bit" id="windows-64-bit-or-32-bit"><h2>Windows 64-Bit or 32-Bit</h2></a>
+<blockquote>
+<p><strong>Pro tip:</strong> These directions are for Windows 7 and Windows Vista operating systems. If you have Windows 10, you most likely have a 64-bit machine, but if you want to be extra sure, <a href="https://support.microsoft.com/en-us/help/13443/windows-which-operating-system">check here</a>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Open &quot;System&quot; by clicking the &quot;Start&quot; button.</p>
+</li>
+<li>
+<p>Right click &quot;Computer.&quot;</p>
+</li>
+<li>
+<p>Click &quot;Properties.&quot;</p>
+</li>
+<li>
+<p>Under &quot;System,&quot; you can view the system type.</p>
+</li>
+</ol>
+<p>This will give you a bunch of stats about your machine, including whether it is 32-bit or 64-bit.</p>
+<ol start="5">
+<li>Return to <a href="#installation-instructions-windows">Installation Instructions: Windows</a>.</li>
+</ol>
+<a class="header" href="#-parking-lot" id="-parking-lot"><h2>🚗 Parking Lot</h2></a>
+<ul>
+<li><a href="http://docs.python-guide.org/en/latest/starting/install3/osx/">Official OSX Installation Instructions</a></li>
+<li><a href="https://docs.python.org/3/using/windows.html">Official Windows Installation Instructions</a></li>
+<li><a href="https://docs.python.org/3/library/windows.html#mswin-specific-services">Windows-Specific Modules</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Intro/environment.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Intro/jupyter_notebooks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Intro/environment.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Intro/jupyter_notebooks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

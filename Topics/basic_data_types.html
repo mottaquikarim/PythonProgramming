@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Basic Data Types - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html" class="active"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next": "Topics/conditionals.md","title": "Basic Data Types"}
+-->
+<a class="header" href="#basic-data-types" id="basic-data-types"><h1>Basic Data Types</h1></a>
+<p>Let's discuss data types, variables, and naming.</p>
+<a class="header" href="#variables" id="variables"><h3>Variables</h3></a>
+<p>A data type is a unit of information that can be stored and retrieved using a program language. We store data into, and retrieve data from, <strong>variables</strong>.</p>
+<a class="header" href="#creating-a-variable" id="creating-a-variable"><h3>Creating a Variable</h3></a>
+<pre><code class="language-python">first_prime = 2
+</code></pre>
+<a class="header" href="#reading-a-variable" id="reading-a-variable"><h3>Reading a Variable</h3></a>
+<pre><code class="language-python">print(first_prime) # expect to see 2
+</code></pre>
+<a class="header" href="#a-hrefhttpsmottaquikarimgithubiopydev-psetspset_basic_data_typesbasicsp2ipynbpracticea" id="a-hrefhttpsmottaquikarimgithubiopydev-psetspset_basic_data_typesbasicsp2ipynbpracticea"><h4><a href="https://mottaquikarim.github.io/pydev-psets/#pset_basic_data_types/basics/p2.ipynb">PRACTICE</a></h4></a>
+<a class="header" href="#naming-variables" id="naming-variables"><h3>Naming Variables</h3></a>
+<p>In python, the best practice is to <strong>snake_case</strong> variables, where we delimit spaces within variable names with the <code>_</code> character.</p>
+<pre><code class="language-python">this_is_snake_cased = 1
+</code></pre>
+<a class="header" href="#integers" id="integers"><h2>Integers</h2></a>
+<pre><code class="language-python">
+example_int = 1
+example_int_type = type(1) # &lt;class 'int'&gt;
+
+</code></pre>
+<a class="header" href="#floats" id="floats"><h2>Floats</h2></a>
+<p>Floats are defined as decimals</p>
+<pre><code class="language-python">
+example_float = 1.001
+example_float_type = type(1.001) # &lt;class 'float'&gt;
+
+</code></pre>
+<a class="header" href="#intfloat-operators" id="intfloat-operators"><h2>Int/Float Operators</h2></a>
+<p>We can operate on integers/floats in the following ways</p>
+<pre><code class="language-python">example_int = 1
+
+another_int = example_int + 5 # addition
+another_int = example_int * 5 # multiplication
+another_int = example_int - 5 # subtraction
+another_int = example_int / 5 # division
+another_int = example_int % 5 # modulus operator
+</code></pre>
+<a class="header" href="#strings" id="strings"><h2>Strings</h2></a>
+<p>Sequences of characters are called &quot;strings&quot;</p>
+<pre><code class="language-python">my_name = 'Taq Karim'
+your_name = &quot;John Smith&quot; # single or double quotes are valid
+
+string_type = type(&quot;testing&quot;) # &lt;class 'str'&gt;
+</code></pre>
+<p>You can also store several separate snippets of text within a single string. Let's say you're storing song lyrics, so you want to have a line break between each line of the song. To do this, you can use triple quotes i.e. <code>'''</code> or <code>&quot;&quot;&quot;</code>. You can use single and double quotes within the string freely, so no need to worry about that detail!</p>
+<pre><code class="language-python">'''
+'Cause if you liked it, then you should have put a ring on it
+If you liked it, then you should have put a ring on it
+Don't be mad once you see that he want it
+If you liked it, then you should have put a ring on it
+'''
+</code></pre>
+<a class="header" href="#string-operators" id="string-operators"><h2>String operators</h2></a>
+<p>We can &quot;add&quot; strings</p>
+<pre><code class="language-python">print(&quot;this string&quot; + &quot;that string&quot;) # what does this output?
+</code></pre>
+<p>We cannot add strings to non strings</p>
+<pre><code class="language-python">print(&quot;this will not work&quot; + 4) # 4 is not stype str
+</code></pre>
+<p>As a convenience, we can format strings like so:</p>
+<pre><code class="language-python">a = 1
+b = 2
+
+formatted_string = f&quot;{a} is {b}&quot; # notice how a, b are formatted into string even tho they are ints
+
+print(formatted_string) # &quot;1 is 2&quot;
+</code></pre>
+<a class="header" href="#booleans" id="booleans"><h2>Booleans</h2></a>
+<p>Booleans represent true/false</p>
+<pre><code class="language-python">
+is_it_winter = True
+is_it_warm_out = False
+
+boolean_type = type(True) # &lt;class 'bool'&gt;
+
+</code></pre>
+<p>We use booleans primarily in conditional statements</p>
+<a class="header" href="#nonetype" id="nonetype"><h2>Nonetype</h2></a>
+<p><code>None</code> represents variables that have not yet been defined.</p>
+<pre><code class="language-python">print(type(None)) # &lt;class 'NoneType'&gt;
+</code></pre>
+<a class="header" href="#typecasting" id="typecasting"><h2>Typecasting</h2></a>
+<p>Sometimes, we need to convert one datatype to another. Typecasting allows us to convert between types</p>
+<pre><code class="language-python">
+# convert string to int
+int('10') # 10 - but as type int
+int('tasdfa') # throws a ValueError
+
+</code></pre>
+<pre><code class="language-python">
+# convert int to str
+str(10) # '10' - but as type str
+
+</code></pre>
+<pre><code class="language-python">
+# convert int to bool
+bool(10) # True
+bool(0) # False
+</code></pre>
+<p>To check the type of a data type:</p>
+<pre><code class="language-python">
+# check types
+isinstance(-1, bool) # False
+isinstance(False, bool) # True
+
+# ..etc
+
+</code></pre>
+<a class="header" href="#-problems" id="-problems"><h2>🚗 Problems</h2></a>
+<p><strong><a href="https://github.com/mottaquikarim/pydev-psets#getting-started">How to use the PSETS Repo</a></strong></p>
+<ul>
+<li><strong><a href="https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p1.py">PRACTICE: Shopping List Calculator I</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p2.py">PRACTICE: Shopping List Calculator II</a></strong></li>
+</ul>
+<ul>
+<li><strong><a href="https://github.com/mottaquikarim/pydev-psets/blob/master/pset_basic_data_types/shopping_list/p3.py">PRACTICE: Shopping List Calculator III</a></strong></li>
+</ul>
+<a class="header" href="#-additional-resources" id="-additional-resources"><h2>🚗 Additional Resources</h2></a>
+<ul>
+<li><a href="https://repl.it/@brandiw/Python-01-Variables-4?lite=true">A Repl.it Summarizing Print Statements</a></li>
+<li><a href="http://www.pythonforbeginners.com/basics/python-variables">Python For Beginners</a></li>
+<li><a href="https://www.youtube.com/watch?v=vKqVnr0BEJQ">Python Programming Tutorial: Variables</a></li>
+<li><a href="https://www.guru99.com/variables-in-python.html">Variables in Python</a></li>
+<li><a href="http://python-reference.readthedocs.io/en/latest/docs/operators/">Operators Cheatsheet</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles">Python Style Guide: Naming</a></li>
+</ul>
+<ul>
+<li><a href="https://www.tutorialspoint.com/python/python_strings.htm">Python-Strings</a></li>
+<li><a href="http://www.pythonforbeginners.com/concatenation/string-concatenation-and-formatting-in-python">String Concatenation and Formatting</a></li>
+<li><a href="https://www.youtube.com/watch?v=jA5LW3bR0Us">String Concatenation and Formatting - Video</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/essential_terminology.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/conditionals.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/essential_terminology.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/conditionals.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

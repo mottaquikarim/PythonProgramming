@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Course Review - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html" class="active"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next": "Topics/project_ideas.md","title": "Course Review"}
+-->
+<a class="header" href="#course-review" id="course-review"><h1>Course Review</h1></a>
+<a class="header" href="#data-structures" id="data-structures"><h2>Data Structures</h2></a>
+<a class="header" href="#lists" id="lists"><h3>Lists</h3></a>
+<pre><code class="language-python">colors = ['red', 'yellow', 'green'] #strings
+grades = [100, 99, 65, 54, 19] #numbers
+bools = [True, False, True, True] #booleans
+</code></pre>
+<pre><code class="language-python">grades = [100, 99, 65, 54, 19]
+grades[0] # 100
+len(grades) # 5
+sum(grades) # 337
+
+ascending = sorted(grades) # [19, 54, 65, 99, 100]
+descending = sorted(grades, reverse=True) # [100, 99, 65, 54, 19]
+</code></pre>
+<pre><code class="language-python"># UPDATE
+my_class = ['Brandi', 'Zoe', 'Steve', 'Dayton', 'Dasha', 'Sonyl']
+my_class[3] = &quot;Aleksander&quot;
+# changes in place to ['Brandi', 'Zoe', 'Steve', 'Aleksander', 'Dasha', 'Sonyl']
+
+# REMOVE
+student_that_left = my_class.pop() # Sonyl
+    # or
+student_that_left = my_class.pop(3) # Steve
+print(my_class) # ['Brandi', 'Zoe', 'Aleksander', 'Dasha']
+
+
+# ADD
+new_students = [&quot;Raju&quot;, &quot;Chloe&quot;]
+my_class.extend(new_students)
+# changes in places to ['Brandi', 'Zoe', 'Aleksander', 'Dasha', 'Raju', 'Chloe']
+
+my_class.insert(1, &quot;Phoebe&quot;)
+# changes in places to ['Brandi', 'Zoe', 'Aleksander', 'Dasha', 'Raju', 'Chloe']
+</code></pre>
+<pre><code class="language-python"># JOIN
+words = ['this', 'is', 'fun']
+sentence = ' '.join(words)
+print(sentence) # 'this is fun'
+
+words = ['this', 'is', 'fun']
+sentence = ' '.join(words)
+print(f'{sentence}.') # 'this is fun.'
+
+# SPLIT
+person = 'Sandra,hi@email.com,646-212-1234,8 Cherry Lane,Splitsville,FL,58028'
+contact_info = person.split(',')
+print(data) # ['Sandra', 'hi@email.com', '646-212-1234', '8 Cherry Lane', 'Splitsville', 'FL', '58028']
+</code></pre>
+<a class="header" href="#dicts" id="dicts"><h3>Dicts</h3></a>
+<p>Creating Dicts:</p>
+<pre><code class="language-python">names = ['Taq', 'Zola', 'Valerie', 'Valerie']
+scores = [[98, 89, 92, 94], [86, 45, 98, 100], [100, 100, 100, 100], [76, 79, 80, 82]]
+
+grades = dict(zip(names,scores))
+print(grades) # {'Taq': [98, 89, 92, 94], 'Zola': [86, 45, 98, 100], 'Valerie': [76, 79, 80, 82]}
+</code></pre>
+<p>Accessing Dict Data:</p>
+<pre><code class="language-python">state_capitals = {
+    'NY': 'Albany',
+    'NJ': 'Trenton',
+    'CT': 'Hartford',
+    'MA': 'Boston',
+    'CA': 'Sacramento'
+}
+
+MAcap = state_capitals['MA'] # Boston
+print(state_capitals.get('PA', []))
+# PA is not in our dict, so .get() returns []
+
+state_capitals.keys()
+# dict_keys(['NY', 'NJ', 'CT', 'MA'])
+
+state_capitals.values()
+# dict_values(['Albany', 'Trenton', 'Hartford', 'Boston'])
+
+state_capitals.items()
+# dict_items([('NY', 'Albany'), ('NJ', 'Trenton'), ('CT', 'Hartford'), ('MA', 'Boston')])
+</code></pre>
+<pre><code class="language-python">more_states = {
+    'WA': 'Olympia',
+    'OR': 'Salem',
+    'AZ': 'Phoenix',
+    'GA': 'Atlanta'
+}
+
+# Add or update group of key/value pairs
+state_capitals.update(more_states)
+
+# Remove item by key
+state_capitals.pop('AZ', [])
+</code></pre>
+<a class="header" href="#control-flow" id="control-flow"><h2>Control Flow</h2></a>
+<a class="header" href="#conditionals" id="conditionals"><h3>Conditionals</h3></a>
+<pre><code class="language-python">speed_limit = 65
+my_speed = 32
+
+my_speed &lt; speed_limit # True
+my_speed &gt; speed_limit # False
+my_speed &lt;= speed_limit # True
+my_speed &gt;= speed_limit # False
+(speed_limit == my_speed) # False
+(speed_limit != my_speed) # True
+</code></pre>
+<pre><code class="language-python">if temp &lt; 65 and is_it_raining:
+    print('wear a raincoat and bring an umbrella!')
+elif temp &gt; 65 and is_it_raining:
+    print('bring an umbrella!')
+elif temp &lt; 65:
+    print('wear a jacket!')
+else:
+    print('the weather is beautiful!')
+
+temp = 41
+is_it_raining = True
+# wear a raincoat and bring an umbrella!
+
+temp = 73
+is_it_raining = True
+# bring an umbrella!
+
+temp = 56
+is_it_raining = False
+# wear a jacket!
+
+temp = 80
+is_it_raining = False
+# the weather is beautiful!
+</code></pre>
+<a class="header" href="#loops" id="loops"><h3>Loops</h3></a>
+<p>While Loops:</p>
+<pre><code class="language-python">s = ''
+n = 5
+
+while n &gt; 0:
+    n -= 1
+    if (n % 2) == 0:
+        continue
+
+    a = ['foo', 'bar', 'baz']
+    while a:
+        s += str(n) + a.pop(0)
+        if len(a) &lt; 2:
+            break
+
+print(s) # '3foo3bar1foo1bar'
+
+###############################
+
+a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+    if len(a) &lt; 3:
+        break
+    print(a.pop())
+print('Done.')
+
+## This loop will output...
+&quot;&quot;&quot;
+corge
+qux
+baz
+Done.
+&quot;&quot;&quot;
+</code></pre>
+<p>For Loops:</p>
+<pre><code class="language-python">transaction = {
+  &quot;amount&quot;: 10.00,
+  &quot;payee&quot;: &quot;Joe Bloggs&quot;,
+  &quot;account&quot;: 1234
+}
+
+for key, value in transaction.items():
+    print(&quot;{}: {}&quot;.format(key, value))
+
+# Output:
+account: 1234
+payee: Joe Bloggs
+amount: 10.0
+
+###############################
+
+# else DOES execute
+for i in ['foo', 'bar', 'baz', 'qux']:
+  print(i)
+else:
+  print('Done.') # foo, bar, baz, qux, Done.
+
+# else DOES NOT execute
+for i in ['foo', 'bar', 'baz', 'qux']:
+  if i == 'bar':
+    break
+  print(i)
+else:
+  print('Done.') # foo
+</code></pre>
+<p>Infinite Loops (Yikes!)</p>
+<pre><code class="language-python"># Infinite Loop
+a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+    if len(a) &lt; 3:
+        continue
+    print(a.pop())
+print('Done.')
+
+# Fixing the Infinite Loop
+while a:
+    if len(a) &lt; 3:
+        break
+    print(a.pop())
+print('Done.', a) # Done. ['foo', 'bar']
+</code></pre>
+<a class="header" href="#oop-object-oriented-programming" id="oop-object-oriented-programming"><h2>OOP (Object-Oriented Programming)</h2></a>
+<a class="header" href="#functions" id="functions"><h3>Functions</h3></a>
+<pre><code class="language-python">def function_name(parameters):
+    &quot;&quot;&quot;docstring&quot;&quot;&quot;
+    # statement(s)
+
+def num_squared(num):
+    &quot;&quot;&quot;Find the square of some number passed in&quot;&quot;&quot;
+    square = num*num # code to find the square
+    return square
+
+sq12 = num_squared(12)
+print(sq12) # 144
+</code></pre>
+<a class="header" href="#classes" id="classes"><h3>Classes</h3></a>
+<p>Parent class:</p>
+<pre><code class="language-python">class Animal:
+    def __init__(self, species = '', diet= ''):
+        self.species = species
+        self.diet = diet
+
+    kingdom = 'Animalia'
+
+    def my_kingdom(self):
+        print(self.kingdom)
+
+    def feed_me(self):
+        if self.diet == 'omnivore':
+            food = 'plants and meat'
+        elif self.diet == 'carnivore':
+            food = 'meat'
+        elif self.diet == 'herbivore':
+            food = 'plants'
+        print(f'{self.species} eat {food}!')
+        return None
+</code></pre>
+<p>Child class w. inheritance:</p>
+<pre><code class="language-python">class Elephant(Animal):
+    def __init__(self, name, genus = '', species = '', habitat = '', age = None):
+        self.name = name
+        self.genus = genus
+        self.species = species
+        self.habitat = habitat
+        self.age = age
+        self.taxonomy = {'Kingdom': Animal.kingdom, 'Class': self.common_taxonomy['Class'], 'Family': self.common_taxonomy['Family'], 'Genus': self.genus, 'Species': self.species} # C.
+
+    diet = 'Herbivore'
+
+    common_taxonomy = {
+    'Class': 'Mammalia',
+    'Family': 'Elephantidae',
+    }
+
+    def summary(self):
+      print(f'All about {self.name} -')
+      print(f'Elephant, age {self.age}\nHabitat: {self.habitat}\nDiet: {self.diet}\n\nTaxonomy:')
+      for k,v in self.taxonomy.items():
+        print(f'{k}: {v}')
+</code></pre>
+<a class="header" href="#data-science-strategy" id="data-science-strategy"><h2>Data Science Strategy</h2></a>
+<p><em>More coming soon...</em></p>
+<a class="header" href="#pandas" id="pandas"><h2>Pandas</h2></a>
+<a class="header" href="#basic-objects-ndarrays-series--dataframes" id="basic-objects-ndarrays-series--dataframes"><h3>Basic Objects: ndarrays, Series &amp; DataFrames</h3></a>
+<a class="header" href="#data-vizualization" id="data-vizualization"><h3>Data Vizualization</h3></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/data_viz.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/project_ideas.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/data_viz.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/project_ideas.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

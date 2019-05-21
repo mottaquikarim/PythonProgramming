@@ -1,0 +1,504 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Conditionals - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html" class="active"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next": "Topics/lists.md","title": "Conditionals"}
+-->
+<a class="header" href="#conditionals" id="conditionals"><h1>Conditionals</h1></a>
+<p>In order for code to be useful, it is imperative to have the ability to make decisions. In most languages, we use the <strong>conditional</strong> statement to facilitate decision making.</p>
+<p>Before we dig deeper into conditionals, let us first examine the <code>Boolean</code> datatype.</p>
+<a class="header" href="#booleans" id="booleans"><h2>Booleans</h2></a>
+<p>In short, a boolean represents a &quot;yes&quot; or &quot;no&quot; value. In python, booleans are written as:</p>
+<pre><code class="language-python">True # this is a boolean, for &quot;yes&quot;
+False # this is a boolean, for &quot;no&quot;
+</code></pre>
+<p>Because booleans are just datatypes, we can store them into variables.</p>
+<pre><code class="language-python">is_it_summer = False
+will_it_be_summer_soon = True
+</code></pre>
+<p>Moreover, because booleans are data types, certain operators will <em>evaluate</em> to booleans:</p>
+<pre><code class="language-python">age = 13
+is_eligible_to_buy_lotto = age &gt; 13
+
+# ^^ this will evaluate to False and then 
+# that value, False, will be stored in variable
+# is_eligible_to_buy_lotto
+</code></pre>
+<p>The operator above, <code>&gt;</code> is called a <strong>boolean</strong> operator. Notice how we stored the evaluation of the <code>&gt;</code> expression into a variable. Remember, booleans are just datatypes, therefore they work the same way we would expect numbers and strings to work - except that the operators look / do different things (but in principle they are one and the same!)</p>
+<p>Let's now explore the <em>boolean operators</em> available in python.</p>
+<a class="header" href="#greater-than--greater-than-or-equal-to" id="greater-than--greater-than-or-equal-to"><h2>Greater Than / Greater Than or Equal To</h2></a>
+<pre><code class="language-python">my_money = 37.00
+total = 35.00
+
+enough_money = my_money &gt; total # True
+just_enough_money = my_money &gt;= total # also True
+</code></pre>
+<a class="header" href="#less-than--less-than-or-equal-to" id="less-than--less-than-or-equal-to"><h2>Less Than / Less Than or Equal To</h2></a>
+<pre><code class="language-python">speed_limit = 65
+my_speed = 32
+
+under_speed_limit = my_speed &lt; speed_limit # True
+at_or_under_speed_limit = my_speed &lt;= speed_limit # also True
+</code></pre>
+<a class="header" href="#equal-to--not-equal-to" id="equal-to--not-equal-to"><h2>Equal to / Not equal to</h2></a>
+<p>Because we use the <code>=</code> symbol for identity (ie: to set a variable), it is not available for comparison operations. Instead, we must use the <code>==</code> and <code>!=</code> symbols.</p>
+<pre><code class="language-python">speed_limit = 65
+my_speed = 32
+
+are_they_equal = (speed_limit == my_speed) # False
+are_they_not_equal = (speed_limit != my_speed) # True
+</code></pre>
+<p>Note that the parens are unnecessary here, but we add them anyways for the sake of clarity.</p>
+<p>Also worth noting that the <code>is</code> keyword can be used in lieu of the <code>==</code>:</p>
+<pre><code class="language-python">pi = 3.14
+
+result = pi is 3.14 # True
+</code></pre>
+<a class="header" href="#chaining-comparison-operators" id="chaining-comparison-operators"><h2>Chaining comparison operators</h2></a>
+<pre><code class="language-python">x = 2
+# a
+1 &lt; x &lt; 3 # True
+
+# b
+10 &lt; x &lt; 20 # False
+
+# c
+3 &gt; x &lt;= 2 # True
+
+# d
+2 == x &lt; 4 # True
+</code></pre>
+<p>For <strong>a</strong>, we check to see if 1 is less than <code>x</code> AND <code>x</code> is less than 3.</p>
+<p>For <strong>b</strong>, we check to see if 10 is less than <code>x</code> (it is not) and stop right there</p>
+<p>For <strong>c</strong>, we check to see if 3 is greater than <code>x</code> AND <code>x</code> is less than or equal to 2.</p>
+<p>For <strong>d</strong>, we check to see if <code>x</code> is equal to 2 AND <code>x</code> is less than 4.</p>
+<a class="header" href="#logical-operators" id="logical-operators"><h2>Logical operators</h2></a>
+<p>In addition to comparison operators, python also offers support for <em>logical</em> operators - in the form of:</p>
+<ol>
+<li><strong>not</strong></li>
+<li><strong>or</strong></li>
+<li><strong>and</strong></li>
+</ol>
+<a class="header" href="#not-operator" id="not-operator"><h3><code>not</code> operator</h3></a>
+<p>The <strong>not</strong> operator simply negates. For instance,</p>
+<pre><code class="language-python">is_it_cold = True
+
+result = not is_it_cold # False
+</code></pre>
+<p>Likewise,</p>
+<pre><code class="language-python">is_it_hot = False
+
+result = not is_it_hot # True
+</code></pre>
+<a class="header" href="#or-operator" id="or-operator"><h3><code>or</code> operator</h3></a>
+<p>The <strong>or</strong> operator evaluates to <code>True</code> if any one of the operands is true.</p>
+<pre><code class="language-python">is_it_warm = True
+is_it_cold = False
+is_it_foggy = False
+
+result = is_it_warm or is_it_cold or is_it_foggy # True
+</code></pre>
+<p>Will be true since at least once of the items is <code>True</code></p>
+<a class="header" href="#and-operator" id="and-operator"><h3><code>and</code> operator</h3></a>
+<p>The <strong>and</strong> operator evaluates to <code>True</code> is all of the operands are true.</p>
+<pre><code class="language-python">is_it_warm = True
+is_it_foggy = True
+is_it_humid = True
+
+result = is_it_warm or is_it_humid or is_it_foggy # True
+</code></pre>
+<p>Will be true since at ALL of the items are <code>True</code></p>
+<a class="header" href="#membership-operators" id="membership-operators"><h2>Membership operators</h2></a>
+<p>Membership operators are: <code>in</code> and <code>not in</code>. They are used to determine if a value is in a sequence, for instance:</p>
+<pre><code class="language-python">line = 'a b c d e f g'
+
+result = 'a' in line # True
+result = 'z' in line # False
+result = 'k' not in line # True
+result = 'a' not in line # False
+</code></pre>
+<a class="header" href="#conditional-statements" id="conditional-statements"><h2>Conditional Statements</h2></a>
+<p>A conditional will attempt to evaluate an expression down to a boolean value - either <code>True</code> or <code>False</code>. Based on the boolean evaluation, the program will then execute or skip a block of code.</p>
+<p>So for instance:</p>
+<pre><code class="language-python">if True:
+    print(&quot;this will always run!&quot;)
+
+if False:
+    print(&quot;this will NEVER run!&quot;)
+</code></pre>
+<p>However, since we know booleans to be datatypes, <em>any</em> of the operators discussed above can <em>also</em> be used:</p>
+<pre><code class="language-python">temp = 43
+
+if temp &lt; 65:
+    print(&quot;wear a jacket!&quot;)
+</code></pre>
+<p>The code above will only run if <code>temp</code> is less than 65.</p>
+<p>We can also do something like:</p>
+<pre><code class="language-python">temp = 43
+is_it_raining = True
+
+if is_it_raining and temp &lt; 65:
+    print('wear a jacket and bring an umbrella!')
+</code></pre>
+<p>In the example above, we make use of comparison operators <em>and</em> logical operators in a compound statement.</p>
+<a class="header" href="#elses-and-elifs" id="elses-and-elifs"><h2><code>else</code>s and <code>elif</code>s</h2></a>
+<p>If we have a condition that can only go two ways (ie: it will only be true or false), we can leverage the <code>else</code> statement:</p>
+<pre><code class="language-python">temp = 43
+
+if temp &lt; 65:
+    print('wear a coat!')
+else:
+    print('you will not need a coat!')
+</code></pre>
+<p>But what if we wanted support for multiple possibilities? That's where the <code>elif</code> statement comes in:</p>
+<pre><code class="language-python">temp = 43
+
+if temp &lt; 30:
+    print('wear a heavy jacket')
+elif temp &lt; 50:
+    print('wear a light jacket')
+elif temp &lt; 60:
+    print('wear a sweater')
+else:
+    print('you do not need any layers!')
+</code></pre>
+<p>In the example above, we print one of 4 possibilities - the elif allows us to go from 2 potential conditions to N potential conditions.</p>
+<a class="header" href="#-a-hrefhttpsgithubcommottaquikarimpydev-psetspsetsa" id="-a-hrefhttpsgithubcommottaquikarimpydev-psetspsetsa"><h2>🚗 <a href="https://github.com/mottaquikarim/pydev-psets">PSETS</a></h2></a>
+<p>The problems are reproduced below, but you will want to run on github. First,</p>
+<pre><code class="language-bash">$ . ./update
+</code></pre>
+<a class="header" href="#-1-generate-traffic-light" id="-1-generate-traffic-light"><h2>🚗 1. Generate Traffic Light</h2></a>
+<pre><code class="language-python">from random import randint
+
+randn = randint(1,3) # generates a random number from 1 to 3
+# if 1, print 'red'
+# if 2, print 'green',
+# if 3, print 'blue'
+</code></pre>
+<a class="header" href="#-2-generate-phone-number-warea-code" id="-2-generate-phone-number-warea-code"><h2>🚗 2. Generate Phone Number w/Area Code</h2></a>
+<pre><code class="language-python">from random import randint
+
+# generate a random phone number of the form:
+# 1-718-786-2825
+# This should be a string
+# Valid Area Codes are: 646, 718, 212
+# if phone number doesn't have this area code, pick
+# one of the above at random
+</code></pre>
+<a class="header" href="#-3-play-rps" id="-3-play-rps"><h2>🚗 3. Play RPS</h2></a>
+<pre><code class="language-python">
+p1 = 'r' # or 'p' or 's'
+p2 = 'r' # or 'p' or 's'
+
+# Given a p1 and p2
+# print 1 if p1 has won
+# print 2 if p2 has won
+# print 0 if tie
+# print -1 if invalid input
+# expects both p1 and p2 inputs to be either
+# &quot;r&quot;, &quot;p&quot;, or &quot;s&quot;
+
+</code></pre>
+<a class="header" href="#-4-play-rps-wcomputer" id="-4-play-rps-wcomputer"><h2>🚗 4. Play RPS w/Computer</h2></a>
+<pre><code class="language-python">from random import randint
+
+p1 = # randomly choose 'r' or 'p' or 's'
+p2 = # randomly choose 'r' or 'p' or 's'
+
+# Given a p1 and p2
+# print 1 if p1 has won
+# print 2 if p2 has won
+# print 0 if tie
+# print -1 if invalid input
+# expects both p1 and p2 inputs to be either
+# &quot;r&quot;, &quot;p&quot;, or &quot;s&quot;
+
+</code></pre>
+<a class="header" href="#-5-play-rps-winput" id="-5-play-rps-winput"><h2>🚗 5. Play RPS w/Input</h2></a>
+<pre><code class="language-python">
+p1 = # from user input
+p2 = # from user input
+
+# Given a p1 and p2
+# print 1 if p1 has won
+# print 2 if p2 has won
+# print 0 if tie
+# print -1 if invalid input
+# expects both p1 and p2 inputs to be either
+# &quot;r&quot;, &quot;p&quot;, or &quot;s&quot;
+</code></pre>
+<a class="header" href="#-6-play-rps-wbad-input" id="-6-play-rps-wbad-input"><h2>🚗 6. Play RPS w/Bad Input</h2></a>
+<p>This is the same as the original RPS problem, except that cannot expect the input to be valid. While we <em>want</em> <code>r</code> or <code>p</code> or <code>s</code>, there is a possibility that input can be anything like...</p>
+<ul>
+<li><code>ROCK</code> (all caps)</li>
+<li><code>R</code> (<code>r</code> but capitalized)</li>
+<li><code>PAPrrRR</code> (incorrectly spelled, upper/lowercased)</li>
+</ul>
+<p>Implement conditional statements that will sanitize the user input or let user know that input is invalid.</p>
+<pre><code class="language-python">p1 = # from user input
+p2 = # from user input
+
+# Given a p1 and p2
+# print 1 if p1 has won
+# print 2 if p2 has won
+# print 0 if tie
+# print -1 if invalid input
+# expects both p1 and p2 inputs to be either
+# &quot;r&quot;, &quot;p&quot;, or &quot;s&quot;
+</code></pre>
+<a class="header" href="#-7-play-rps-against-computer" id="-7-play-rps-against-computer"><h2>🚗 7. Play RPS against Computer</h2></a>
+<pre><code class="language-python">
+p1 = # from user input - we still want validation from above!
+p2 = # randomly generated against computer
+
+# Given a p1 and p2
+# print 1 if p1 has won
+# print 2 if p2 has won
+# print 0 if tie
+# print -1 if invalid input
+# expects both p1 and p2 inputs to be either
+# &quot;r&quot;, &quot;p&quot;, or &quot;s&quot;
+
+</code></pre>
+<a class="header" href="#-8-calculate-grade" id="-8-calculate-grade"><h2>🚗 8. Calculate Grade</h2></a>
+<pre><code class="language-python">grade = 15 # expect this to be a number
+
+# write a program that will print the &quot;letter&quot; 
+# equivalent of the grade, for example:
+# when grade = 90 # -&gt; expect A
+# when grade = 80 # -&gt; expect B
+# when grade = 70 # -&gt; expect C
+# when grade = 60 # -&gt; expect D
+# when grade = 54 # -&gt; expect F
+# when grade = -10 # -&gt; expect Error
+# when grade = 10000 # -&gt; expect Error
+# when grade = &quot;lol skool sucks&quot; # -&gt; expect Error
+</code></pre>
+<p><strong>Challenge</strong>: Can you <code>raise</code> an error if unexpected input supplied vs just printing out <code>Error</code>? What's the difference?</p>
+<a class="header" href="#-9-sign-of-product" id="-9-sign-of-product"><h2>🚗 9. Sign of Product</h2></a>
+<p>Given three numbers, <code>a, b, c</code>, <strong>without</strong> multiplying, determine the <strong>sign</strong> of their product.</p>
+<p><strong>EXAMPLE</strong>: <code>a = -5, b = 6, c = -4</code>, print <code>1</code></p>
+<p><strong>EXAMPLE</strong>: <code>a = 5, b = 6, c = -4</code>, print <code>-1</code></p>
+<a class="header" href="#-10-any-uppercase" id="-10-any-uppercase"><h2>🚗 10. Any Uppercase</h2></a>
+<p>Given a string <code>str</code>, determine if there are any uppercase values in it. Use only conditional statements and string methods (you may have to look some up!)</p>
+<p><strong>EXAMPLE</strong>: <code>str = &quot;teSt&quot;</code>, print <code>True</code></p>
+<a class="header" href="#-11-isemptystring" id="-11-isemptystring"><h2>🚗 11. IsEmptyString</h2></a>
+<p>Given any empty string, of the form:</p>
+<pre><code class="language-python">''
+' '
+'  '
+# ...
+'        ' # etc
+</code></pre>
+<p>determine if the <code>str</code> is empty or not (print <code>True</code> or <code>False</code>)</p>
+<a class="header" href="#-12-truthtableevaluator" id="-12-truthtableevaluator"><h2>🚗 12. truthTableEvaluator</h2></a>
+<p>Given the following inputs:</p>
+<pre><code class="language-python">P = # True or False
+Q = # True or False
+op = # '^' (logical AND, conjunction)
+     # OR, 'v' (logical OR, disjunction)
+     # OR, '-&gt;' (logical conditional, implication)
+     # OR, '&lt;-&gt;' (biconditional)
+</code></pre>
+<p>determine the correct outcome.</p>
+<p><strong><a href="https://medium.com/i-math/intro-to-truth-tables-boolean-algebra-73b331dd9b94">Info on truthtables</a></strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/basic_data_types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/lists.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/basic_data_types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/lists.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

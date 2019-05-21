@@ -1,0 +1,415 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Classes - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html" class="active"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/data_science.md","title":"Classes"}
+-->
+<a class="header" href="#classes--inheritance" id="classes--inheritance"><h1>Classes &amp; Inheritance</h1></a>
+<p>We already know that Python is based on the concept of <strong>OOP, or Object-Oriented Programming</strong>. Almost everything in Python is an object -- even functions are objects! <strong>Classes</strong>, and their facilitation of <strong>inheritance</strong>, are one of the most important and valuable Python objects. In this section, we'll cover:</p>
+<ul>
+<li>Class structure</li>
+<li>Class attributes</li>
+<li>Class methods</li>
+<li>The <code>__init__()</code> method</li>
+<li>The <code>self</code> keyword</li>
+<li>Class vs. instance variables</li>
+<li>Class instantiation</li>
+<li>Inheritance and child classes</li>
+</ul>
+<a class="header" href="#high-level-overview" id="high-level-overview"><h2>High-Level Overview</h2></a>
+<a class="header" href="#creating--structuring-classes" id="creating--structuring-classes"><h4>Creating &amp; Structuring Classes</h4></a>
+<p>A <strong>class</strong> is essentially a data structure that serves as a blueprint for categorizing other objects and storing metadata about them. Once you have your &quot;blueprint&quot;, you can create new <strong>instances</strong> of that class, which store unique metadata values.</p>
+<p>Creating a class is similar to defining a function. You start with the <code>class</code> keyword and then specify a name for the class. Note that class names are generally the only objects, which use a <strong>CamelCase notation</strong> naming convention. For example, if you were a zoologist, you might create a class called <code>Animal</code>. Each instance might represent a type of animal at your zoo.</p>
+<pre><code class="language-python"># Define a class called Animal
+class Animal:
+    # attributes
+    # methods
+    # etc ...
+
+# Create the most basic instance
+chameleons = Animal()
+</code></pre>
+<p>Before we go into the details of thoroughly defining a class, let's isolate some basic elements and concepts to get a general understanding of them.</p>
+<a class="header" href="#attributes--methods" id="attributes--methods"><h4>Attributes &amp; Methods</h4></a>
+<p>Each piece of a class's metadata is called an <strong>attribute</strong>. Once you have your &quot;blueprint&quot;, you can create new <strong>instances</strong> of that class, which stores unique attribute values. As a zoologist, you would want define your <code>Animals</code> class so that it could store attributes of each type animal at your zoo such as species, natural habitat, etc..</p>
+<pre><code class="language-python">class Animal:
+    kingdom = 'Animalia' # attribute
+    
+    # some other code...
+</code></pre>
+<p>In addition to attributes, classes also contain custom <strong>methods</strong>. Methods are essentially functions that belong to the class. You can call a function without referencing any other object, but to call a method, you need to reference its class. <em>Thus, all methods are functions, but not all functions are methods.</em> We've already used some <code>List</code> methods like <code>my_list.pop()</code>, <code>my_list.append()</code>, <code>my.list.insert(index)</code>, etc.. When you create a class, you can define methods to serve as shortcuts for actions you might want to call frequently on instances of your class.</p>
+<pre><code class="language-python">class Animal:
+    # some other code...
+
+    def method1(self): # method
+        # some action
+</code></pre>
+<p>Once you've defined attributes and methods, here's how you call them on your class instance:</p>
+<pre><code class="language-python">chameleons = Animal() # Create the instance.
+
+print(chameleons.kingdom) # 'Animalia'
+
+chameleons.method1() # This completes the defined method operations.
+</code></pre>
+<a class="header" href="#inheritance-basics" id="inheritance-basics"><h4>Inheritance Basics</h4></a>
+<p>Classes can inherit attributes and methods from other classes according to a parent-child class hierarchy. Naturally, a <strong>child class</strong> inherits from a <strong>parent class</strong>. When you define a brand new class, Python 3 implicitly uses the generic, built-in <code>object</code> as the parent class. That means, whether we explicitly see it or not, every parent class is also the child class of its own parent class!</p>
+<p>In the context of our zoo example, the different instances of <code>Animal</code> each store general information about a certain type of animal. Imagine you want to expand on an instance of <code>Animal</code> called <code>elephants</code>. In order to document information about each elephant at the zoo, you might create an <code>Elephant</code> class that inherits from your <code>Animal</code> class. To do so, you use this general syntax:</p>
+<pre><code class="language-python">class Elephant(Animal):
+    # attributes
+    # methods
+    # etc ...
+</code></pre>
+<p>Although the child class has access to everything defined for its parent class, the child class can also override or extend the parent class's traits and behavior. Note that this <em>does NOT redefine the parent class</em>. The new attributes and methods the child class declares apply only to instances of the child class. Parent class instances still adhere to the original parent class specs. For example:</p>
+<pre><code class="language-python">class Animal:
+    category = 'Animals'
+    # etc ...
+
+class Toucan(Animal):
+    category = 'Birds'
+    # etc ...
+</code></pre>
+<p>If you wanted, the <code>Toucan</code> class could simply inherit the <code>category</code> class attribute from its parent class <code>Animal</code>. In this case, every instance of <code>Toucan</code> would  would have the same value for <code>category</code> -- <code>Animals</code>. However, it makes sense that you'd want to differentiate further for the child class <code>Toucan</code>. To do that, you'd simply override <code>category</code> when you define <code>Toucan</code> by setting its value to <code>Birds</code>.</p>
+<a class="header" href="#the-init-method--the-self-keyword" id="the-init-method--the-self-keyword"><h4>The <strong>init</strong>() Method &amp; the self Keyword</h4></a>
+<p>When you create a new instance of your Class, you might want to it to exist in some default state. For example, you might want to initially assign default values for its attributes. In Python terms - <em>when you <strong>instantiate</strong> a new instance object, you <strong>initialize</strong> it with pre-defined default values</em>.</p>
+<p><strong>The <strong>init</strong>() method</strong> is where you give instructions for how you want each instance to exist in its initial state. Every time you instantiate a new instance object of your Class, you automatically invoke the <code>__init__()</code> method. That means when you create a new Class, the first thing you want to do is create its <code>__init__()</code> method. In general, the syntax looks like this:</p>
+<pre><code class="language-python">class Animal():
+    def __init__(self):
+        # ...
+</code></pre>
+<p>Notice we used the same notation as we did for defining functions. The <code>__init__()</code> method must have at least one argument, including the <strong>self variable</strong>. The <code>self</code> variable serves as a reference to the <em>current instance of the class</em>, and it must be the first parameter of <em>any</em> method in a class, including the <code>__init__()</code> method.</p>
+<a class="header" href="#class-vs-instance-variables" id="class-vs-instance-variables"><h2>Class vs. Instance Variables</h2></a>
+<p>Now we can get to the good stuff! As you define attributes and methods for your class, keep in mind their <em>scope</em>. If you want a certain attribute or method to be shared by ALL instances of a class, define it as a <strong>class variable</strong>. If you instead want it to be unique to each instance, define it as an <strong>instance variable</strong>. Before we see this in context, we first have to understand the two most basic elements of every Python class...</p>
+<a class="header" href="#the-init-method--the-self-keyword-1" id="the-init-method--the-self-keyword-1"><h4>The <strong>init</strong>() Method &amp; the self Keyword</h4></a>
+<p>When you create a new instance of your Class, you might want to it to exist in some default state. For example, you might want to initially assign default values for its attributes. In Python terms - <em>when you <strong>instantiate</strong> a new instance object, you <strong>initialize</strong> it with pre-defined default values</em>.</p>
+<p><strong>The <strong>init</strong>() method</strong> is where you give instructions for how you want each instance to exist in its initial state. Every time you instantiate a new instance object of your Class, you automatically invoke the <code>__init__()</code> method. That means when you create a new Class, the first thing you want to do is create its <code>__init__()</code> method. In general, the syntax looks like this:</p>
+<pre><code class="language-python">class Animal():
+    def __init__(self):
+        # ...
+</code></pre>
+<p>Notice we used the same notation as we did for defining functions. The <code>__init__()</code> method must have at least one argument, including the <strong>self variable</strong>. The <code>self</code> variable serves as a reference to the <em>current instance of the class</em>, and it must be the first parameter of <em>any</em> method in a class, including the <code>__init__()</code> method.</p>
+<p><strong>NOTE!</strong> Any methods defined inside the <code>__init__()</code> method <strong>will NOT be <em>called</em></strong> upon instantiation.</p>
+<a class="header" href="#class-definition-example-1---basic-elements-in-context" id="class-definition-example-1---basic-elements-in-context"><h2>Class Definition Example 1 - Basic Elements in Context</h2></a>
+<p>Now that we've isolated each key component of classes, let's put everything together by completing the code for our zoology scenario. At the highest level, we define a class called <code>Animal</code>. The annotated code below illustrates how each key structural element we covered above fits into this task.</p>
+<pre><code class="language-python">class Animal: # A.
+    def __init__(self, species = '', diet= ''): # B. 
+        self.species = species # C.
+        self.diet = diet # C.
+
+    kingdom = 'Animalia' # D.
+
+    def my_kingdom(self):
+        print(self.kingdom)
+
+    def feed_me(self): # E.
+        if self.diet == 'omnivore':
+            food = 'plants and meat'
+        elif self.diet == 'carnivore':
+            food = 'meat'
+        elif self.diet == 'herbivore':
+            food = 'plants'
+        print(f'{self.species} eat {food}!')
+        return None
+</code></pre>
+<p>A. <code>Animal</code> is a <em>child class</em> of <code>object</code> as well as a potential <em>parent class</em>.
+B. Every time we instantiate a new class object, the <code>__init__()</code> method will automatically be called to initialize the instance's values.
+C. Each instance of the <code>Animal</code> class will store unique values for the <strong>instance attributes</strong> <code>species</code> and <code>diet</code>. By default these will be blank or Nonetypes, but each instance can have its own unique values for them.
+D. ALL instances of the Animal class will have the <code>kingdom</code> <strong>class attribute</strong> with the value <code>Animalia</code>.
+E. We can call <strong>instance methods</strong> <code>my_kingdom</code> and <code>feed_me</code> on ANY instance of the <code>Animal</code> class. <strong>Note!</strong> In <code>my_kingdom</code>, we access the class variable <code>kingdom</code>, but still reference it using <code>self</code>.</p>
+<a class="header" href="#class-definition-example-2---child-classes--inheritance" id="class-definition-example-2---child-classes--inheritance"><h2>Class Definition Example 2 - Child Classes &amp; Inheritance</h2></a>
+<p>Let's go into some more detail with a new child class for <code>Animal</code>. In the <code>Elephant</code> class below, we define <code>__init__()</code> method and its parameters, class attributes, and instance methods with the same syntax used for any class we might create. There are a few key differences annotated in the comments below.</p>
+<pre><code class="language-python">class Elephant(Animal): # A.
+    def __init__(self, name, genus = '', species = '', habitat = '', age = None): # B.
+        self.name = name
+        self.genus = genus
+        self.species = species
+        self.habitat = habitat
+        self.age = age
+        self.taxonomy = {'Kingdom': Animal.kingdom, 'Class': self.common_taxonomy['Class'], 'Family': self.common_taxonomy['Family'], 'Genus': self.genus, 'Species': self.species} # C.
+
+    diet = 'Herbivore' # D.
+
+    common_taxonomy = {
+    'Class': 'Mammalia',
+    'Family': 'Elephantidae',
+    }
+
+    def summary(self):
+      print(f'All about {self.name} -')
+      print(f'Elephant, age {self.age}\nHabitat: {self.habitat}\nDiet: {self.diet}\n\nTaxonomy:')
+      for k,v in self.taxonomy.items():
+        print(f'{k}: {v}')
+</code></pre>
+<p>A. Declares <code>Elephant</code> as a <em>child class</em> of <code>Animal</code> by adding <code>Animal</code> into it as a definition parameter.</p>
+<p>B. Notice that even though <code>taxonomy</code> is not a parameter for the <code>__init__()</code> method, we can still define it as an instance attribute upon every instantiation.</p>
+<p>C. If you look closely, you'll see that the values for <code>taxonomy</code> all come from different places.</p>
+<ul>
+<li>Some of the taxonomy attributes are inherited from <code>Animal</code>; while</li>
+<li>some are constant class attributes across all elephants; and</li>
+<li>others are instance attributes unique to each elephant at the zoo.</li>
+</ul>
+<p>This is a great opportunity to dissect the syntax for referencing attributes from different sources.</p>
+<p>D. Here's a potential &quot;gotcha&quot;. Remember that the <code>Animal</code> class also had an attribute called <code>diet</code>? <code>Elephant</code> does NOT inherit the <code>diet</code> attribute's value from <code>Animal</code>. Why? Two reasons:</p>
+<ul>
+<li>First, <code>Elephant</code> defines <code>diet</code> as a class attribute for itself. This would supercede any variable called <code>diet</code> from the parent class.</li>
+<li>Second, for <code>Animal</code>, <code>diet</code> is an instance attribute. Even if <code>Elephant</code> didn't define any type of attribute called <code>diet</code> for itself, a child class <em>never inherits the instance attributes</em> from their its parent.</li>
+</ul>
+<a class="header" href="#class-instantiation--modification" id="class-instantiation--modification"><h4>Class Instantiation &amp; Modification</h4></a>
+<p>Now we'll create the first instance of the <code>Elephant</code> class. To do so, you would pass arguments for the <code>__init__()</code> parameters defined above. This automatically invokes the <code>__init__()</code> method and assigns the values of the arguments you passed to your new instance attributes. Note that the <code>name</code> argument is required, but the rest are optional. Their values will default to empty strings if no argument for them is passed.</p>
+<pre><code class="language-python">elephant1 = Elephant('Felicia', 'Elephas', 'Elephas maximus', '', 38)
+# Notice we passed the default empty string for the habitat argument.
+</code></pre>
+<p>You can access or modify any <em>instance</em> attribute like so:</p>
+<pre><code class="language-python"># Access
+print(elephant1.name) # Felicia
+
+
+# Add value for an empty attribute
+print(elephant1.habitat) # empty string by default
+elephant1.habitat = 'Asian forests'
+
+
+# Update an existing attribute value
+print(elephant1.age) # 38
+elephant1.age = 39 # Update the value of the age attribute.
+print(elephant1.age) # 39
+
+# Define a new instance attribute, which will apply only to elephant1.
+elephant1.weight_pounds = 6000
+</code></pre>
+<p>Finally, here's what happens when we call the <code>summary()</code> instance method:</p>
+<pre><code class="language-python">elephant1.summary()
+
+# Here's the output
+&quot;&quot;&quot;
+All about Felicia -
+Elephant, age 38
+Habitat: Asian forests
+Diet: Herbivore
+
+Taxonomy:
+Kingdom: Animalia
+Class: Mammalia
+Family: Elephantidae
+Genus: Elephas
+Species: Elephas maximus
+&quot;&quot;&quot;
+</code></pre>
+<a class="header" href="#checking-class-values" id="checking-class-values"><h4>Checking Class Values</h4></a>
+<p>In case someone who is not an expert zoologist like you needs to access the zoo's database of animals, that person could use the <code>isinstance()</code> function is used to determine if an instance is also an instance of a certain parent class. For this example, imagine you have already also defined another class called <code>Toucan</code> with the same input variables as our <code>Elephant</code> class.</p>
+<pre><code class="language-python"># Is elephant1 an instance of Animal()?
+print(isinstance(elephant1, Animal)) # True
+
+# Is toucan1 an instance of Elephant()?
+print(isinstance(toucan1, Elephant)) # False
+</code></pre>
+<a class="header" href="#review-of-classes--inheritance" id="review-of-classes--inheritance"><h2>Review of Classes &amp; Inheritance</h2></a>
+<ul>
+<li>A <strong>class</strong> outlines a set of <strong>attributes</strong> and <strong>methods</strong>, which will help categorize other objects.</li>
+<li>To add objects to the class, you declare them as an <strong>instance</strong> of that class.</li>
+<li><strong>Class variables</strong> store values belonging to ALL instances of a class, whereas <strong>instance variables</strong> store values unique to each instance.</li>
+<li><strong>The <strong>init</strong>() method</strong> is where you give instructions for how you want each instance to exist in its initial state. Every time you instantiate a new instance object of your Class, you automatically invoke the <code>__init__()</code> method.</li>
+<li>The <strong>self variable</strong> serves as a reference to the current instance of the class, and it must be the first parameter of <em>any</em> method in a class, including the <code>__init__()</code> method.</li>
+<li><strong>Child classes</strong> can inherit attributes and methods from <strong>parent classes</strong>.</li>
+<li><strong>Child classes</strong> can also override parent attributes and behaviors without redefining the parent class.</li>
+</ul>
+<a class="header" href="#practice-problems" id="practice-problems"><h2>Practice Problems</h2></a>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/list_comprehensions.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/data_science.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/list_comprehensions.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/data_science.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

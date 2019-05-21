@@ -1,0 +1,595 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Pandas Analysis II - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html" class="active"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next": "Topics/data_viz.md","title": "Pandas Analysis II"}
+-->
+<a class="header" href="#pandas-analysis-ii" id="pandas-analysis-ii"><h1>Pandas Analysis II</h1></a>
+<p>In this lesson, we'll continue exploring Pandas for EDA. Specifically:</p>
+<ul>
+<li>Identify and handle missing values with Pandas.</li>
+<li>Implement groupby statements for specific segmented analysis.</li>
+<li>Use apply functions to clean data with Pandas.</li>
+</ul>
+<a class="header" href="#data-sets" id="data-sets"><h2>Data sets</h2></a>
+<ul>
+<li>
+<p><strong><a href="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/raw_data/production.product.tsv">Adventureworks Cycles | Local</a></strong></p>
+<ul>
+<li><em>You can download a version of the Adventureworks Cycles dataset directly from this Github Repo</em></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://raw.githubusercontent.com/mottaquikarim/PythonProgramming/master/raw_data/movies_rated.csv">OMDB Movies | Local</a></strong></p>
+<ul>
+<li><em>You can download a version of the Adventureworks Cycles dataset directly from this Github Repo</em></li>
+</ul>
+</li>
+</ul>
+<a class="header" href="#lets-continue-with-the-adventureworks-cycles-dataset" id="lets-continue-with-the-adventureworks-cycles-dataset"><h2>Let's continue with the AdventureWorks Cycles Dataset</h2></a>
+<p>Here's the Production.Product table <a href="https://www.sqldatadictionary.com/AdventureWorks2014/Production.Product.html">data dictionary</a>, which is a description of the fields (columns) in the table (the .csv file we will import below):<br></p>
+<ul>
+<li><strong>ProductID</strong> - Primary key for Product records.</li>
+<li><strong>Name</strong> - Name of the product.</li>
+<li><strong>ProductNumber</strong> - Unique product identification number.</li>
+<li><strong>MakeFlag</strong> - 0 = Product is purchased, 1 = Product is manufactured in-house.</li>
+<li><strong>FinishedGoodsFlag</strong> - 0 = Product is not a salable item. 1 = Product is salable.</li>
+<li><strong>Color</strong> - Product color.</li>
+<li><strong>SafetyStockLevel</strong> - Minimum inventory quantity.</li>
+<li><strong>ReorderPoint</strong> - Inventory level that triggers a purchase order or work order.</li>
+<li><strong>StandardCost</strong> - Standard cost of the product.</li>
+<li><strong>ListPrice</strong> - Selling price.</li>
+<li><strong>Size</strong> - Product size.</li>
+<li><strong>SizeUnitMeasureCode</strong> - Unit of measure for the Size column.</li>
+<li><strong>WeightUnitMeasureCode</strong> - Unit of measure for the Weight column.</li>
+<li><strong>DaysToManufacture</strong> - Number of days required to manufacture the product.</li>
+<li><strong>ProductLine</strong> - R = Road, M = Mountain, T = Touring, S = Standard</li>
+<li><strong>Class</strong> - H = High, M = Medium, L = Low</li>
+<li><strong>Style</strong> - W = Womens, M = Mens, U = Universal</li>
+<li><strong>ProductSubcategoryID</strong> - Product is a member of this product subcategory. Foreign key to ProductSubCategory.ProductSubCategoryID.</li>
+<li><strong>ProductModelID</strong> - Product is a member of this product model. Foreign key to ProductModel.ProductModelID.</li>
+<li><strong>SellStartDate</strong> - Date the product was available for sale.</li>
+<li><strong>SellEndDate</strong> - Date the product was no longer available for sale.</li>
+<li><strong>DiscontinuedDate</strong> - Date the product was discontinued.</li>
+<li><strong>rowguid</strong> - ROWGUIDCOL number uniquely identifying the record. Used to support a merge replication sample.</li>
+<li><strong>ModifiedDate</strong> - Date and time the record was last updated.</li>
+</ul>
+<a class="header" href="#loading-the-data" id="loading-the-data"><h2>Loading the Data</h2></a>
+<p>We can load our data as follows:</p>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+
+prod = pd.read_csv('/raw_data/production.product.tsv', sep='\t')
+
+</code></pre>
+<p>Note the <code>sep='\t'</code>; this is because we are pulling in a <code>tsv</code> file, which is basically a csv file but with <code>tabs</code> as delimiters vs commas.</p>
+<p><strong>YOU DO</strong>: Download the <code>tsv</code> file into your local machine, create a python virtualenv and run the code above, but on your machine.</p>
+<a class="header" href="#handling-missing-data" id="handling-missing-data"><h2>Handling missing data</h2></a>
+<p>Recall missing data is a systemic, challenging problem for data scientists. Imagine conducting a poll, but some of the data gets lost, or you run out of budget and can't complete it! 😮<br><br></p>
+<p>&quot;Handling missing data&quot; itself is a broad topic. We'll focus on two components:</p>
+<ul>
+<li>Using Pandas to identify we have missing data</li>
+<li>Strategies to fill in missing data (known in the business as <code>imputing</code>)</li>
+<li>Filling in missing data with Pandas</li>
+</ul>
+<a class="header" href="#identifying-missing-data" id="identifying-missing-data"><h2>Identifying missing data</h2></a>
+<p>Before <em>handling</em>, we must identify we're missing data at all!</p>
+<p>We have a few ways to explore missing data, and they are reminiscient of our Boolean filters.</p>
+<pre><code class="language-python"># True when data isn't missing
+prod.notnull().head(3)
+# True when data is missing
+prod.isnull().head(3)
+</code></pre>
+<p><strong>OUTPUT</strong>: <code>notnull</code></p>
+<pre><code class="language-text">   ProductID  Name  ProductNumber  MakeFlag  FinishedGoodsFlag  Color  ...  ProductModelID  SellStartDate  SellEndDate  DiscontinuedDate  rowguid  ModifiedDate
+0       True  True           True      True               True  False  ...           False           True        False             False     True          True
+1       True  True           True      True               True  False  ...           False           True        False             False     True          True
+2       True  True           True      True               True  False  ...           False           True        False             False     True          True
+
+[3 rows x 25 columns]
+</code></pre>
+<p><strong>OUTPUT</strong>: <code>isnull</code></p>
+<pre><code class="language-text">   ProductID   Name  ProductNumber  MakeFlag  FinishedGoodsFlag  Color  ...  ProductModelID  SellStartDate  SellEndDate  DiscontinuedDate  rowguid  ModifiedDate
+0      False  False          False     False              False   True  ...            True          False         True              True    False         False
+1      False  False          False     False              False   True  ...            True          False         True              True    False         False
+2      False  False          False     False              False   True  ...            True          False         True              True    False         False
+
+[3 rows x 25 columns]
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: count the number of nulls in <code>Name</code> column</li>
+<li><strong>YOU DO</strong>: count the number of notnulls in <code>Name</code> column</li>
+</ul>
+<p>We can also access missing data in aggregate, as follows:</p>
+<pre><code class="language-python"># here is a quick and dirty way to do it
+prod.isnull().sum()
+</code></pre>
+<pre><code class="language-text">Name                       0
+ProductNumber              0
+MakeFlag                   0
+FinishedGoodsFlag          0
+Color                    248
+SafetyStockLevel           0
+ReorderPoint               0
+StandardCost               0
+ListPrice                  0
+Size                     293
+SizeUnitMeasureCode      328
+WeightUnitMeasureCode    299
+Weight                   299
+DaysToManufacture          0
+ProductLine              226
+Class                    257
+Style                    293
+ProductSubcategoryID     209
+ProductModelID           209
+SellStartDate              0
+SellEndDate              406
+DiscontinuedDate         504
+rowguid                    0
+ModifiedDate               0
+dtype: int64
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Wrap the result from above, but into a dataframe. Sort the dataframe by column with the column with most missing data to column on top and the column with least amount of missing data on bottom.</li>
+</ul>
+<a class="header" href="#filling-in-missing-data" id="filling-in-missing-data"><h2>Filling in missing data</h2></a>
+<p>How we fill in data depends largely on why it is missing (types of missingness) and what sampling we have available to us.</p>
+<p>We may:</p>
+<ul>
+<li>Delete missing data altogether</li>
+<li>Fill in missing data with:
+<ul>
+<li>The average of the column</li>
+<li>The median of the column</li>
+<li>A predicted amount based on other factors</li>
+</ul>
+</li>
+<li>Collect more data:
+<ul>
+<li>Resample the population</li>
+<li>Followup with the authority providing data that is missing</li>
+</ul>
+</li>
+</ul>
+<p>In our case, let's focus on handling missing values in <code>Color</code>. Let's get a count of the unique values in that column. We will need to use the <code>dropna=False</code> kwarg, otherwise the <code>pd.Series.value_counts()</code> method will not count <code>NaN</code> (null) values.</p>
+<pre><code class="language-python">prod['Color'].value_counts(dropna=False)
+</code></pre>
+<pre><code class="language-text">NaN             248
+Black            93
+Silver           43
+Red              38
+Yellow           36
+Blue             26
+Multi             8
+Silver/Black      7
+White             4
+Grey              1
+Name: Color, dtype: int64
+</code></pre>
+<p><strong>We have 248 null values for <code>Colors</code>!</strong></p>
+<a class="header" href="#deleting-missing-data" id="deleting-missing-data"><h2>Deleting missing data</h2></a>
+<p>To delete the null values, we can:</p>
+<pre><code class="language-python">prod.dropna(subset=['Color']).head(3)
+</code></pre>
+<p>This will remove all <code>NaN</code> values in the color column</p>
+<a class="header" href="#filling-in-missing-data-1" id="filling-in-missing-data-1"><h2>Filling in missing data</h2></a>
+<p>We can fill in the missing data with a sensible default, for instance:</p>
+<pre><code class="language-python">prod.fillna(value={'Color': 'NoColor'})
+</code></pre>
+<p>This will swap all <code>NaN</code> values in <code>Color</code> column with <code>NoColor</code>.</p>
+<p>We can swap the <code>Color</code> column's null values with essentially anything we want - for instance:</p>
+<pre><code class="language-python">prod.fillna(value={'Color': prod['ListPrice'].mean() })
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Run the code above. What will it do? Does it make sense for this column? Why or why not?</li>
+</ul>
+<a class="header" href="#breather--practice" id="breather--practice"><h2>Breather / Practice</h2></a>
+<ul>
+<li><strong>YOU DO</strong>: Copy the <code>prod</code> dataframe, call it <code>prod_productline_sanitized</code></li>
+<li><strong>YOU DO</strong>: In <code>prod_productline_sanitized</code> drop all NA values from the <code>ProductLine</code> column, <strong>inplace</strong></li>
+<li><strong>YOU DO</strong>: Copy the <code>prod</code> dataframe, call it <code>prod_productline_sanitized2</code></li>
+<li><strong>YOU DO</strong>: In <code>prod_productline_sanitized2</code>, fill all NA values with boolean <code>False</code></li>
+</ul>
+<a class="header" href="#groupby-statements" id="groupby-statements"><h2>Groupby Statements</h2></a>
+<p>In Pandas, groupby statements are similar to pivot tables in that they allow us to segment our population to a specific subset.</p>
+<p>For example, if we want to know the average number of bottles sold and pack sizes per city, a groupby statement would make this task much more straightforward.</p>
+<p>To think how a groupby statement works, think about it like this:</p>
+<ul>
+<li><strong>Split:</strong> Separate our DataFrame by a specific attribute, for example, group by <code>Color</code></li>
+<li><strong>Combine:</strong> Put our DataFrame back together and return some <em>aggregated</em> metric, such as the <code>sum</code>, <code>count</code>, or <code>max</code>.</li>
+</ul>
+<p><img src="http://i.imgur.com/yjNkiwL.png" alt="" /></p>
+<p>Let's group by <code>Color</code>, and get a count of products for each color.</p>
+<pre><code class="language-python">prod.groupby('Color')
+</code></pre>
+<p>Notice how this doesn't actually <em>do</em> anything - or at least, does not print anything.</p>
+<p>Things get more interesting when we start using methods such as <code>count</code>:</p>
+<pre><code class="language-python">prod.groupby('Color').count().head(5)
+</code></pre>
+<p>It is worth noting that count will always return non-null values, and the only way to force <code>groupby().count()</code> to ack null values is to fill nulls with <code>fillna</code> or something to that effect.</p>
+<p>Let's do something a tad more interesting:</p>
+<pre><code class="language-python">prod[['Color', 'ListPrice']].groupby('Color').max().sort_values('ListPrice', ascending=False)
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: Run this code in your machine. What does it do?</li>
+<li><strong>YOU DO</strong>: instead of <code>max</code>, find the <code>min</code> <code>ListPrice</code> by <code>Color</code></li>
+<li><strong>YOU DO</strong>: instead of <code>min</code>, find the <code>mean</code> <code>ListPrice</code> by <code>Color</code></li>
+<li><strong>YOU DO</strong>: instead of <code>mean</code>, find the <code>count</code> of <code>ListPrice</code> by <code>Color</code></li>
+</ul>
+<p>We can also do multi-level groupbys. This is referred to as a <code>Multiindex</code> dataframe. Here, we can see the following fields in a nested group by, with a count of Name (with nulls filled!); effectively giving us a count of the number of products for every unique Class/Style combination:</p>
+<ul>
+<li>Class - H = High, M = Medium, L = Low</li>
+<li>Style - W = Womens, M = Mens, U = Universal</li>
+</ul>
+<pre><code class="language-python">prod.fillna(value={'Name': 'x'}).groupby(by=['Class', 'Style']).count()[['Name']]
+</code></pre>
+<pre><code class="language-text">             Name
+Class Style
+H     U        64
+L     U        68
+M     U        22
+      W        22
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: groupby <code>MakeFlag</code> and <code>FinishedGoodsFlag</code> and return counts of <code>ListPrice</code></li>
+</ul>
+<p>We can also use the <code>.agg()</code> method with multiple arguments, to simulate a <code>.describe()</code> method like we used before:</p>
+<pre><code class="language-python">prod.groupby('Color')['ListPrice'].agg(['count', 'mean', 'min', 'max'])
+</code></pre>
+<pre><code class="language-text">              count         mean     min      max
+Color
+Black            93   725.121075    0.00  3374.99
+Blue             26   923.679231   34.99  2384.07
+Grey              1   125.000000  125.00   125.00
+Multi             8    59.865000    8.99    89.99
+Red              38  1401.950000   34.99  3578.27
+Silver           43   850.305349    0.00  3399.99
+Silver/Black      7    64.018571   40.49    80.99
+White             4     9.245000    8.99     9.50
+Yellow           36   959.091389   53.99  2384.07
+</code></pre>
+<ul>
+<li><strong>YOU DO</strong>: groupby <code>MakeFlag</code> and <code>FinishedGoodsFlag</code> and return <code>agg</code> of <code>ListPrice</code> by <code>['count', 'mean', 'min', 'max']</code>.</li>
+<li><strong>YOU DO</strong>: do the results from above make sense? print out the dataframe of <code>MakeFlag</code>, <code>FinishedGoodsFlag</code> and <code>ListPrice</code> to see if they do or not.</li>
+</ul>
+<a class="header" href="#apply-functions" id="apply-functions"><h2>Apply Functions</h2></a>
+<p>Apply functions allow us to perform a complex operation across an entire columns or rows highly efficiently.</p>
+<p>For example, let's say we want to change our colors from a word, to just a single letter. How would we do that?</p>
+<p>The first step is writing a function, with the argument being the value we would receive from each cell in the column. This function will mutate the input, and return the result. This result will then be <em>applied</em> to the source dataframe (if desired).</p>
+<pre><code class="language-python">def color_to_letter(col):
+    if  pd.isna(col['Color']):
+        return 'N'
+
+    return col['Color'][0].upper()
+
+prod[['Color']].apply(color_to_letter, axis=1).head(10)
+</code></pre>
+<pre><code class="language-text">0    N
+1    N
+2    N
+3    N
+4    N
+5    B
+6    B
+7    B
+8    S
+9    S
+Name: Color, dtype: object
+</code></pre>
+<p>The <code>axis=1</code> refers to a <strong>row</strong> operation. Consider the following:</p>
+<pre><code class="language-python">df = pd.DataFrame([[4, 9],] * 3, columns=['A', 'B'])
+</code></pre>
+<pre><code class="language-text">   A  B
+0  4  9
+1  4  9
+2  4  9
+</code></pre>
+<p>Using <code>apply</code> functions, we can do:</p>
+<pre><code class="language-python">df.apply(np.sqrt)
+</code></pre>
+<p>which would give us:</p>
+<pre><code class="language-text">     A    B
+0  2.0  3.0
+1  2.0  3.0
+2  2.0  3.0
+</code></pre>
+<p>We can also apply to either <code>axis</code>, <code>1</code> for <strong>rows</strong> and <code>0</code> for <strong>columns</strong>.</p>
+<ul>
+<li><strong>YOU DO</strong>: using <code>np.sum</code> as apply function, run along rows of df above.</li>
+<li><strong>YOU DO</strong>: using <code>np.sum</code> as apply function, run along columns of df above.</li>
+</ul>
+<a class="header" href="#wrap-up" id="wrap-up"><h2>Wrap up</h2></a>
+<p>We've covered even more useful information! Here are the key takeaways:</p>
+<ul>
+<li><strong>Missing data</strong> comes in many shapes and sizes. Before deciding how to handle it, we identify it exists. We then derive how the missingness is affecting our dataset, and make a determination about how to fill in values.</li>
+</ul>
+<pre><code class="language-python"># pro tip for identifying missing data
+df.isnull().sum()
+</code></pre>
+<ul>
+<li><strong>Grouby</strong> statements are particularly useful for a subsection-of-interest analysis. Specifically, zooming in on one condition, and determining relevant statstics.</li>
+</ul>
+<pre><code class="language-python"># group by 
+df.groupby('column').agg['count', 'mean', 'max', 'min']
+</code></pre>
+<ul>
+<li><strong>Apply functions</strong> help us clean values across an entire DataFrame column. They are <em>like</em> a for loop for cleaning, but many times more efficient. They follow a common pattern:</li>
+</ul>
+<ol>
+<li>Write a function that works on a single value</li>
+<li>Test that function on a single value</li>
+<li>Apply that function to a whole column</li>
+</ol>
+<a class="header" href="#omdb-movies" id="omdb-movies"><h2>OMDB Movies</h2></a>
+<ol>
+<li><strong>Import the data CSV as dataframe</strong> <em>(See above for link to dataset)</em></li>
+<li><strong>Print first 5 rows</strong></li>
+<li><strong>Print out the num rows and cols in the dataset</strong></li>
+<li><strong>Print out column names</strong></li>
+<li><strong>Print out the column data types</strong></li>
+<li><strong>How many unique genres are available in the dataset?</strong></li>
+<li><strong>How many movies are available per genre?</strong></li>
+<li><strong>What are the top 5 R-rated movies?</strong> <em>(hint: Boolean filters needed! Then sorting!)</em></li>
+<li><strong>What is the average Rotten Tomatoes score for all available films?</strong></li>
+<li><strong>Same question as above, but for the top 5 films</strong></li>
+<li><strong>What is the Five Number Summary like for top rated films as per IMDB?</strong></li>
+<li><strong>Find the ratio between Rotten Tomato rating vs IMDB rating for all films. Update the dataframe to include a <code>Ratings Ratio</code> column <em>(inplace)</em></strong>.</li>
+<li><strong>Find the top 3 ratings ratio movies (rated higher on IMBD compared to Rotten Tomatoes)</strong></li>
+<li><strong>Find the top 3 ratings ratio movies (rated higher on IMBD compared to Rotten Tomatoes)</strong></li>
+</ol>
+<a class="header" href="#pandas-reference" id="pandas-reference"><h2>Pandas Reference</h2></a>
+<p>At a high-level, this section will will cover:</p>
+<ul>
+<li><a href="eda.html#joining--concatenating">Joining &amp; Concatenating</a></li>
+<li><a href="eda.html#grouping">Grouping</a></li>
+<li><a href="eda.html#filtering">Filtering</a></li>
+<li><a href="eda.html#descriptive-statistics">Descriptive Statistics</a></li>
+</ul>
+<a class="header" href="#joining--concatenating" id="joining--concatenating"><h2>Joining &amp; Concatenating</h2></a>
+<ul>
+<li><code>df1.append(df2)</code> -- add the rows in df1 to the end of df2 (columns should be identical)</li>
+<li><code>df.concat([df1, df2],axis=1)</code> —- add the columns in df1 to the end of df2 (rows should be identical)</li>
+<li><code>df1.join(df2,on=col1,how='inner')</code> —- SQL-style join the columns in df1 with the columns on df2 where the rows for col have identical values. how can be equal to one of: 'left', 'right', 'outer', 'inner'</li>
+<li><code>df.merge()</code> -- merge two datasets together into one by aligning the rows from each based on common attributes or columns. how can be equal to one of: 'left', 'right', 'outer', 'inner'</li>
+</ul>
+<a class="header" href="#reshaping" id="reshaping"><h2>Reshaping</h2></a>
+<ul>
+<li><code>df.transform(func[, axis])</code> -- return DataFrame with transformed values</li>
+<li><code>df.transpose(*args, **kwargs)</code> -- transpose rows and columns</li>
+<li><code>df.rank()</code> -- rank every variable according to its value</li>
+<li><code>pd.melt(df)</code> -- gathers columns into rows</li>
+<li><code>df.pivot(columns='var', values='val')</code> -- spreads rows into columns</li>
+</ul>
+<a class="header" href="#grouping-w-groupby-objects" id="grouping-w-groupby-objects"><h2>Grouping w. GroupBy Objects</h2></a>
+<ul>
+<li><code>df.groupby(col)</code> -- returns groupby object for values from a single, specific column</li>
+<li><code>df.groupby([col1,col2])</code> -- returns a groupby object for values from multiple columns, which you can specify</li>
+</ul>
+<a class="header" href="#filtering" id="filtering"><h2>Filtering</h2></a>
+<a class="header" href="#descriptive-statistics" id="descriptive-statistics"><h2>Descriptive Statistics</h2></a>
+<ul>
+<li><code>df[col1].unique()</code> -- returns an ndarray of the distinct values within a given series</li>
+<li><code>df[col1].nunique()</code> -- return # of unique values within a column</li>
+<li><code>.value_counts()</code> -- returns count of each unique value</li>
+<li><code>df.sample(frac = 0.5)</code> - randomly select a fraction of rows of a DataFrame</li>
+<li><code>df.sample(n=10)</code> - randomly select n rows of a DataFrame</li>
+<li><code>mean()</code> -- mean</li>
+<li><code>median()</code> -- median</li>
+<li><code>min()</code> -- minimum</li>
+<li><code>max()</code> -- maximum</li>
+<li><code>quantile(x)</code> -- quantile</li>
+<li><code>var()</code> -- variance</li>
+<li><code>std()</code> -- standard deviation</li>
+<li><code>mad()</code> -- mean absolute variation</li>
+<li><code>skew()</code> -- skewness of distribution</li>
+<li><code>sem()</code> -- unbiased standard error of the mean</li>
+<li><code>kurt()</code> -- kurtosis</li>
+<li><code>cov()</code> -- covariance</li>
+<li><code>corr()</code> -- Pearson Correlation coefficent</li>
+<li><code>autocorr()</code> -- autocorelation</li>
+<li><code>diff()</code> -- first discrete difference</li>
+<li><code>cumsum()</code> -- cummulative sum</li>
+<li><code>comprod()</code> -- cumulative product</li>
+<li><code>cummin()</code> -- cumulative minimum</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/preprocessing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/data_viz.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/preprocessing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/data_viz.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

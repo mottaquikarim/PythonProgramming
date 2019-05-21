@@ -1,0 +1,440 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Loops - Python Programming</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li><a href="../index.html"><strong aria-hidden="true">1.</strong> Guten Tag!</a></li><li><a href="../Intro/index.html"><strong aria-hidden="true">2.</strong> Getting Started</a></li><li><ol class="section"><li><a href="../Intro/tools.html"><strong aria-hidden="true">2.1.</strong> Tools and Resources</a></li><li><a href="../Intro/environment.html"><strong aria-hidden="true">2.2.</strong> Setting Up Our Environment</a></li><li><a href="../Intro/running_py_locally.html"><strong aria-hidden="true">2.3.</strong> Running Python Locally</a></li><li><a href="../Intro/jupyter_notebooks.html"><strong aria-hidden="true">2.4.</strong> Jupyter Notebooks</a></li></ol></li><li><a href="../Lectures/index.html"><strong aria-hidden="true">3.</strong> Lectures</a></li><li><ol class="section"><li><a href="../Lectures/Lecture1.html"><strong aria-hidden="true">3.1.</strong> ✅ Installing Python</a></li><li><a href="../Lectures/Lecture2.html"><strong aria-hidden="true">3.2.</strong> ✅ Thinking Programmatically</a></li><li><a href="../Lectures/Lecture3.html"><strong aria-hidden="true">3.3.</strong> ✅ Basic Data Types</a></li><li><a href="../Lectures/Lecture4.html"><strong aria-hidden="true">3.4.</strong> ✅ Conditionals</a></li><li><a href="../Lectures/Lecture5.html"><strong aria-hidden="true">3.5.</strong> ✅ Lists</a></li><li><a href="../Lectures/Lecture6.html"><strong aria-hidden="true">3.6.</strong> ✅ Dicts</a></li><li><a href="../Lectures/Lecture7.html"><strong aria-hidden="true">3.7.</strong> ✅ Loops</a></li><li><a href="../Lectures/Lecture8.html"><strong aria-hidden="true">3.8.</strong> ✅ Loops Practice</a></li><li><a href="../Lectures/Lecture9.html"><strong aria-hidden="true">3.9.</strong> ✅ Modules &amp; Functions</a></li><li><a href="../Lectures/Lecture10.html"><strong aria-hidden="true">3.10.</strong> ✅ Classes</a></li><li><a href="../Lectures/Lecture11.html"><strong aria-hidden="true">3.11.</strong> ✅ Classes Review</a></li><li><a href="../Lectures/Lecture12.html"><strong aria-hidden="true">3.12.</strong> ✅ Classes (Cont'd)</a></li><li><a href="../Lectures/Lecture13.html"><strong aria-hidden="true">3.13.</strong> ✅ Intro to Data Science</a></li><li><a href="../Lectures/Lecture14.html"><strong aria-hidden="true">3.14.</strong> ✅ Pandas</a></li><li><a href="../Lectures/Lecture15.html"><strong aria-hidden="true">3.15.</strong> ✅ Data Analysis I</a></li><li><a href="../Lectures/Lecture16.html"><strong aria-hidden="true">3.16.</strong> Data Analysis II</a></li><li><a href="../Lectures/Lecture17.html"><strong aria-hidden="true">3.17.</strong> Data Viz</a></li><li><a href="../Lectures/Lecture18.html"><strong aria-hidden="true">3.18.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture19.html"><strong aria-hidden="true">3.19.</strong> Independent Study</a></li><li><a href="../Lectures/Lecture20.html"><strong aria-hidden="true">3.20.</strong> 🎉 Fin.</a></li></ol></li><li><a href="../Topics/index.html"><strong aria-hidden="true">4.</strong> Topics</a></li><li><ol class="section"><li><a href="../Topics/essential_terminology.html"><strong aria-hidden="true">4.1.</strong> Essential Terminology</a></li><li><a href="../Topics/basic_data_types.html"><strong aria-hidden="true">4.2.</strong> Basic Data Types</a></li><li><a href="../Topics/conditionals.html"><strong aria-hidden="true">4.3.</strong> Conditionals</a></li><li><a href="../Topics/lists.html"><strong aria-hidden="true">4.4.</strong> Lists</a></li><li><a href="../Topics/dicts.html"><strong aria-hidden="true">4.5.</strong> Dicts</a></li><li><a href="../Topics/loops.html" class="active"><strong aria-hidden="true">4.6.</strong> Loops</a></li><li><a href="../Topics/modules.html"><strong aria-hidden="true">4.7.</strong> Modules &amp; Packages</a></li><li><a href="../Topics/functions.html"><strong aria-hidden="true">4.8.</strong> Functions</a></li><li><a href="../Topics/list_comprehensions.html"><strong aria-hidden="true">4.9.</strong> List Comprehensions</a></li><li><a href="../Topics/classes.html"><strong aria-hidden="true">4.10.</strong> Classes</a></li><li><a href="../Topics/data_science.html"><strong aria-hidden="true">4.11.</strong> Data Science</a></li><li><a href="../Topics/intro_pandas.html"><strong aria-hidden="true">4.12.</strong> Intro to Pandas Objects</a></li><li><a href="../Topics/preprocessing.html"><strong aria-hidden="true">4.13.</strong> Exploratory Data Analysis w. 🐼</a></li><li><a href="../Topics/eda.html"><strong aria-hidden="true">4.14.</strong> Pandas Analysis II</a></li><li><a href="../Topics/data_viz.html"><strong aria-hidden="true">4.15.</strong> Data Visualization</a></li><li><a href="../Topics/course_review.html"><strong aria-hidden="true">4.16.</strong> Course Review</a></li><li><a href="../Topics/project_ideas.html"><strong aria-hidden="true">4.17.</strong> Python Project Ideas</a></li></ol></li><li><a href="../Homework/index.html"><strong aria-hidden="true">5.</strong> Homework</a></li><li><ol class="section"><li><a href="../Homework/hwk1.html"><strong aria-hidden="true">5.1.</strong> Homework 1</a></li><li><a href="../Homework/hwk2.html"><strong aria-hidden="true">5.2.</strong> Homework 2</a></li><li><a href="../Homework/hwk3.html"><strong aria-hidden="true">5.3.</strong> Homework 3</a></li><li><a href="../Homework/hwk4.html"><strong aria-hidden="true">5.4.</strong> Homework 4</a></li><li><a href="../Homework/hwk5.html"><strong aria-hidden="true">5.5.</strong> Homework 5</a></li><li><a href="../Homework/final.html"><strong aria-hidden="true">5.6.</strong> Final Project Reqs</a></li></ol></li><li><a href="../Resources/index.html"><strong aria-hidden="true">6.</strong> Resources</a></li><li><ol class="section"><li><a href="../Resources/python_glossary.html"><strong aria-hidden="true">6.1.</strong> Python Glossary</a></li><li><a href="../Resources/basic_stats.html"><strong aria-hidden="true">6.2.</strong> Basic Statistics</a></li><li><a href="../Resources/pandas_glossary.html"><strong aria-hidden="true">6.3.</strong> Pandas Glossary</a></li><li><a href="../Resources/genref.html"><strong aria-hidden="true">6.4.</strong> General Reference Guides</a></li><li><a href="../Resources/tools_libs.html"><strong aria-hidden="true">6.5.</strong> Libraries, Packages, &amp; Other Tools</a></li><li><a href="../Resources/cheat_sheets.html"><strong aria-hidden="true">6.6.</strong> Cheat Sheets</a></li><li><a href="../Resources/articles.html"><strong aria-hidden="true">6.7.</strong> Helpful Articles/Tutorials</a></li><li><a href="../Resources/datasets.html"><strong aria-hidden="true">6.8.</strong> Open Source Datasets</a></li></ol></li><li><a href="../about.html"><strong aria-hidden="true">7.</strong> About</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">Python Programming</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <!---
+{"next":"Topics/modules.md","title":"Loops"}
+-->
+<a class="header" href="#loops" id="loops"><h1>Loops</h1></a>
+<a class="header" href="#iterating-with-loops" id="iterating-with-loops"><h2>Iterating with Loops</h2></a>
+<p>In programming, we define <code>iteration</code> to be the act of running the same block of code over and over again a certain number of times.For example, say you want to print out every item within a list. You could certainly do it this way -</p>
+<pre><code class="language-python">visible_colors = [&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;violet&quot;]
+print(visible_colors[0])
+print(visible_colors[1])
+print(visible_colors[2])
+print(visible_colors[3])
+print(visible_colors[4])
+print(visible_colors[5])
+</code></pre>
+<p>Attempting to print each item in this list - while redundant - isn't so bad. But what if there were over 1000 items in that list? Or, worse still, what if that list changed based on user input (ie: <em>either</em> 10 items <em>or</em> 10000 items)?</p>
+<p>To solve such problems, we can create a <strong>loop</strong> that will iterate through each item on our list and run the <code>print()</code> function. This way, we only have to write the print() one time to print out the whole list!</p>
+<p>When you can iterate through an object (e.g. a string, list, dict, tuple, set, etc.), we say that the object is <code>iterable</code>. Python has many built-in iterables. You can reference some of the most common ones in the <code>itertools</code> module (read more about itertools <a href="https://realpython.com/python-itertools/">here</a>).</p>
+<p>You can also define your own Python iterables using the principles of OOP (object-oriented programming). In fact, Python features a construct called a <code>generator</code> to simplify this process for you.</p>
+<a class="header" href="#the-while-loop" id="the-while-loop"><h2>the <code>while</code> loop</h2></a>
+<p>This is the simplest loop and has two primary use cases.</p>
+<a class="header" href="#counting" id="counting"><h4>Counting</h4></a>
+<pre><code class="language-python">i = 0
+while i &lt; 10:
+    print(i)
+    i += 1
+print(i) # will print out numbers 1 through 10
+</code></pre>
+<p>What is happening here is we are running the code block within the <code>while</code> 100 times. We know to stop because the <code>boolean comparison</code> will evaluate to <code>False</code> once i exceeds <code>100</code>, which is possible only because <code>i</code> is being incremented when we write <code>i += 1</code>.</p>
+<a class="header" href="#booleans" id="booleans"><h4>Booleans</h4></a>
+<p>Here's real-life scenario where you might apply a <code>while</code> loop. Let's say you've programmed your Amazon Echo or Google Home to make a pot of coffee whenever you say the trigger word &quot;tired&quot;. Once you say tired, here's a <em>simplified pseudo-code version</em> of what happens behind the scenes:</p>
+<pre><code class="language-python">tired = True
+while tired:
+  print('I\'ll make some coffee!') # this might be a &quot;say&quot; command
+  # code to turn on coffee maker
+  tired = False
+</code></pre>
+<p>Whenever a pot of coffee is made, the smart device sets <code>tired</code> back to <code>False</code>. Next time you say &quot;tired&quot;, it will reset <code>tired</code> to <code>True</code>.</p>
+<a class="header" href="#the-for-loop" id="the-for-loop"><h2>the <code>for</code> loop</h2></a>
+<p>Let's go back to that list of colors we wanted to print out and use a <code>for</code> loop. The most important part of the for loop is the statement <code>for item in obj</code>. This means the code <strong>considers each item in the iterable one at a time</strong> when executing the code below.</p>
+<pre><code class="language-python"># Syntax:
+# for &lt;item&gt; in &lt;iterable&gt;:
+#     &lt;statement(s)&gt;
+
+
+visible_colors = [&quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;violet&quot;]
+for color in visible_colors:
+  print(color)
+</code></pre>
+<a class="header" href="#loops-with-ranges" id="loops-with-ranges"><h2>Loops with Ranges</h2></a>
+<a class="header" href="#range-vs-the-enumerate-object" id="range-vs-the-enumerate-object"><h4><code>range()</code> vs. the <code>enumerate()</code> Object</h4></a>
+<p>If you want to iterate through only a section of a list, the <code>range()</code> and <code>enumerate()</code> functions can facilitate this.</p>
+<p><code>range()</code>:</p>
+<p>With <code>while</code> loops, we saw one way to iterate while counting. Using <code>range()</code> with a for loop allows us to be more concise and more specific. The  <code>range()</code> function uses this syntax: <code>range(&lt;begin&gt;, &lt;end&gt;, &lt;stride&gt;)</code>. It returns an iterable that yields integers starting with <begin>, <em>up to but <strong>NOT</strong> including <end></em>. The <stride> argument isn't required, but if specified, it indicates an amount to skip between values. For example, <code>range(5, 20, 3)</code> would iterate through 5, 8, 11, 14, and 17. If <stride> is omitted, it defaults to incrementing by 1.</p>
+<p>Consider the differences in the loops below:</p>
+<pre><code class="language-python"># numeric range with a while loop
+i = 0
+while i &lt; 5:
+  print i # prints numbers 1, 2, 3, 4
+
+
+# numeric range with a for loop &amp; range()
+x = range(0,5)
+for i in x: 
+    print(i) # prints numbers 1, 2, 3, 4
+</code></pre>
+<p><code>enumerate()</code>:</p>
+<p>When you iterate through an object, <code>enumerate()</code> can allow you to keep track of the current item's index position. It stores each one in a Counter object.</p>
+<pre><code class="language-python">test_scores = [100, 68, 95, 84, 79, 99]
+for idx, score in enumerate(test_scores):
+  print(idx, score)
+</code></pre>
+<a class="header" href="#control-flow-with-break-continue--else" id="control-flow-with-break-continue--else"><h2>Control Flow with <code>break</code>, <code>continue</code>, &amp; <code>else:</code></h2></a>
+<p>Something very important to watch out for here is falling into an <strong>infinite loop</strong>. This is one of the most common traps and can make your code go crazy running the loop over and over without moving through the rest of the program!</p>
+<p>The <strong><code>break</code> keyword</strong>, the <strong><code>continue</code> keyword</strong>, and the <strong><code>else:</code> statement</strong> are three core ways to help control the flow and logic within your loops.</p>
+<a class="header" href="#the-break-keyword" id="the-break-keyword"><h4>The <code>break</code> Keyword</h4></a>
+<p>In a Python loop, the <code>break</code> keyword <em>escapes the loop</em>, regardless of the iteration number and regardless of how much of the loop code it has completed on its current iteration. Once a break executes, the program will continue to execute after the loop.</p>
+<p>We might use a break statement if we only want the loop to iterate under a certain condition. For example:</p>
+<pre><code class="language-python">a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+    if len(a) &lt; 3:
+        break
+    print(a.pop())
+print('Done.')
+
+## This loop will output...
+&quot;&quot;&quot;
+corge
+qux
+baz
+Done.
+&quot;&quot;&quot;
+</code></pre>
+<p>Let's walk through the logic of how we got that outcome:</p>
+<pre><code class="language-python">a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+</code></pre>
+<ul>
+<li>^^^ This tells us that as long as <code>a</code> is <code>True</code> - essentially, as long as it exists - go ahead with the next loop iteration.</li>
+</ul>
+<pre><code class="language-python">if len(a) &lt; 3:
+        break
+    print(a.pop())
+</code></pre>
+<ul>
+<li>^^^ This says that, if the length of <code>a</code> is less than 3, break out of the loop. In the first iteration, <code>a</code> has 5 items. Given this, the <code>break</code> is not executed. Instead, the code removes a random item from <code>a</code> and prints it. Once the loop gets to the 4th iteration, <code>len(a)</code> is 2. This triggers the <code>break</code>.</li>
+</ul>
+<p>After that, the program goes to the next line of code after the break, in this case <code>print('Done.')</code>.</p>
+<p>This works the same with a <code>for</code> loop as in the example below. Can you think through why we get the outcome <code>foo</code> here?</p>
+<pre><code class="language-python">for i in ['foo', 'bar', 'baz', 'qux']:
+  if 'b' in i:
+    break
+  print(i) # foo
+</code></pre>
+<a class="header" href="#the-continue-keyword" id="the-continue-keyword"><h4>The <code>continue</code> Keyword</h4></a>
+<p>You can also use the <code>continue</code> keyword to interrupt the loop code. The difference is that the <code>continue</code> keyword escapes <em>only the current iteration</em>. A <code>break</code> escapes the loop entirely and goes on to execute the code immediately following the loop. A <code>continue</code> tells the program to stop where it is within the within the current iteration and <em>skip to the the next iteration</em> of the loop.</p>
+<p>Here's an example using a <code>while</code> loop. Notice that the <code>continue</code> applies to the <em>outer</em> while loop, whereas the <code>break</code> applies only to the <em>inner</em> while loop.</p>
+<pre><code class="language-python"># Prints out 0,1,2,3,4
+s = ''
+
+n = 5
+while n &gt; 0:
+    n -= 1
+    if (n % 2) == 0:
+        continue
+
+    a = ['foo', 'bar', 'baz']
+    while a:
+        s += str(n) + a.pop(0)
+        if len(a) &lt; 2:
+            break
+
+print(s) # '3foo3bar1foo1bar'
+</code></pre>
+<p>As the program iterates through the decreasing values of <code>n</code>, it determines whether each value is even. The <code>continue</code> executes <em>only for these even-number iterations</em>. Then the loop continues to the next iteration. Thus, the inner while loop only initiates when n is 3 and 1.</p>
+<p>Inside the inner while loop, <code>a.pop(0)</code> removes the first item of a. Once this has occurred twice, yielding 'foo' and 'bar', a has fewer than two items, and the <code>break</code> terminates the inner loop. Thus, the values concatenated onto <code>s</code> are, in turn, 3foo, 3bar, 1foo, and 1bar.</p>
+<p>Again, this works the same with <code>for</code> loops like so:</p>
+<pre><code class="language-python">for i in ['foo', 'bar', 'baz', 'qux']:
+  if 'b' in i:
+    continue
+  print(i) # foo, qux
+</code></pre>
+<a class="header" href="#the-else-statement" id="the-else-statement"><h4>The <code>else</code> Statement</h4></a>
+<p>The <code>else</code> statement works similarly to a <code>break</code> in that it is triggered once the loop has finished all iterations that meet any conditional specifications. Now, you might wonder why you might use this because putting a statement after the loop will also execute once the loop has finished all iterations that meet any conditional specifications.</p>
+<p>Here's the difference:</p>
+<p>Statements after the loop <em>will always execute</em>. But if you place additional statements in an <code>else</code> clause, the program will only execute them if the loop terminates <em>by exhaustion</em>. In other words, it <strong>only</strong> executes if the loop fully completes each iteration until the controlling condition becomes false. If a <code>break</code> terminates the loop before that, for example, the <code>else</code> clause won't be executed.</p>
+<pre><code class="language-python">a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+    print(a.pop())
+else:
+    print('Done.') # foo, bar, baz, qux, Done.
+</code></pre>
+<p>And again, here's are <code>for</code> loop examples where the <code>else</code> statement will and will NOT execute:</p>
+<pre><code class="language-python"># else DOES execute
+for i in ['foo', 'bar', 'baz', 'qux']:
+  print(i)
+else:
+  print('Done.') # foo, bar, baz, qux, Done.
+
+# else DOES NOT execute
+for i in ['foo', 'bar', 'baz', 'qux']:
+  if i == 'bar':
+    break
+  print(i)
+else:
+  print('Done.') # foo
+</code></pre>
+<p>Here, <code>i == 'bar'</code> evaluates to <code>True</code> during the second iteration. Even though the third and fourth iterations could have printed when evaluated by the conditional, the <code>break</code> executed before the loop got there. Therefore, the loop did not exhaust all viable iterations and it does not trigger the <code>else</code> statement.</p>
+<a class="header" href="#infinite-loops" id="infinite-loops"><h4>Infinite Loops</h4></a>
+<p>Infinite loops can occur when there is not proper control flow in the loop's code. See if you can figure out why this loop is infinite.</p>
+<pre><code class="language-python">a = ['foo', 'bar', 'baz', 'qux', 'corge']
+while a:
+    if len(a) &lt; 3:
+        continue
+    print(a.pop())
+print('Done.')
+</code></pre>
+<p>Got it? After the first three iterations, <code>a</code> shrinks to fewer than three items and executes a <code>continue</code> statement. It then returns to the beginning of the loop, where it will find that <code>a</code> still has fewer than three items. So it goes back to the beginning again... and again and again and again...</p>
+<p>Your program will get stuck here, so you want to make sure you pay special attention to the control flow when you write loops!</p>
+<a class="header" href="#iterating-through-dicts" id="iterating-through-dicts"><h2>Iterating Through Dicts</h2></a>
+<p>Iterating over dicts is slightly more complicated than other iterabless because each item consists of two elements, specifically mapped to each other. That said, you can do some really cool stuff with your dicts using loops!</p>
+<a class="header" href="#iterate-through-dict-items" id="iterate-through-dict-items"><h4>Iterate Through Dict Items</h4></a>
+<p>Let's start with a few simple examples. This first one iterates over the dict by each <em>item</em>, i.e. each key-value pair.</p>
+<pre><code class="language-python">transaction = {
+  &quot;amount&quot;: 10.00,
+  &quot;payee&quot;: &quot;Joe Bloggs&quot;,
+  &quot;account&quot;: 1234
+}
+
+for key, value in transaction.items():
+    print(&quot;{}: {}&quot;.format(key, value))
+
+# Output:
+account: 1234
+payee: Joe Bloggs
+amount: 10.0
+</code></pre>
+<a class="header" href="#iterate-through-dict-keys" id="iterate-through-dict-keys"><h4>Iterate Through Dict Keys</h4></a>
+<p>If you only have a dict's keys, you can still iterate through the dict. Notice the loop below results in the same output as the one above iterating through items.</p>
+<pre><code class="language-python">for key in transaction:
+    print(&quot;{}: {}&quot;.format(key, transaction[key]))
+
+# Output:
+account: 1234
+payee: Joe Bloggs
+amount: 10.0
+</code></pre>
+<a class="header" href="#sorting-dicts-with-loops" id="sorting-dicts-with-loops"><h4>Sorting Dicts with Loops</h4></a>
+<p>You can also sort a dict by iterating through its keys.</p>
+<pre><code class="language-python">for key in sorted(transaction): # this is the only difference
+    print(&quot;{}: {}&quot;.format(key, transaction[key]))
+
+# Output:
+account: 1234
+amount: 10.0
+payee: Joe Bloggs
+</code></pre>
+<a class="header" href="#sort-the-values-of-each-key-in-a-dict" id="sort-the-values-of-each-key-in-a-dict"><h4>Sort the Values of Each Key in a Dict</h4></a>
+<p>Note that the dict itself will not be sorted by the first value in each item. Because the keys are the unique element of a dict, you can only sort dict values <em>within each key</em>.</p>
+<pre><code class="language-python">dict1 ={ 
+  &quot;L1&quot;:[87, 34, 56, 12], 
+  &quot;L2&quot;:[23, 00, 30, 10], 
+  &quot;L3&quot;:[1, 6, 2, 9], 
+  &quot;L4&quot;:[40, 34, 21, 67] 
+}
+
+for i, j in dict1.items(): 
+  sorted_dict = {i:sorted(j)} # here is sorting!
+  dict1.update(sorted_dict)
+
+print(dict1)
+&quot;&quot;&quot; # prints out...
+{'L1': [12, 34, 56, 87],
+'L2': [0, 10, 23, 30],
+'L3': [1, 2, 6, 9],
+'L4': [21, 34, 40, 67]
+} &quot;&quot;&quot;
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../Topics/dicts.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../Topics/modules.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../Topics/dicts.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../Topics/modules.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
